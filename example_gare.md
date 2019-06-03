@@ -232,14 +232,17 @@ Example ([Mars' Gare Crater](https://wiki.planmap.eu/display/planmap/Gale+Crater
 ```
 {
 ```
+-----
 **TBD:**
->  "title": "The Gale Crater storymap",
->  "body": "Mars",
->  "view": {
->    "lat": [-6,-5], 
->    "lon": [137,138]
->  },  
-
+```
+  "title": "The Gale Crater storymap",
+  "body": "Mars",
+  "view": {
+    "lat": [-6,-5], 
+    "lon": [137,138]
+  },  
+```
+-----
 ```
   "chapters": [
   
