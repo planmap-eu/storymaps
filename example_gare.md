@@ -191,7 +191,7 @@ geometry: {
 On the other hand, if pinpointing a specific location is not part of the chapter, but instead a whole area (a crater, for example), then an "extent" information looks a better choice.
 
 
-#### Data structure - v2
+## Data structure - v2
 
 It is clear that each stop/chapter is composed by the content that goes to the sidebar/popup/modal (a `div` in general), and a map layer.
 
@@ -371,9 +371,9 @@ map: {
 }
 ```
 
-##### Extra fields:
+### Extra fields:
 * `stoptime`: time to stay in the/each episode.
 
-#### Questions/Discussions:
+### Questions/Discussions:
 * Should `media` items have captions, or is it included in `text` already?
 * If no `map` section if declared, should it use the parent/start `extent`/`layer`, or should it use the previous one?
