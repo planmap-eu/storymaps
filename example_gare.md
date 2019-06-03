@@ -1,6 +1,8 @@
 Example with the Mars' Gare Crater story-map (https://wiki.planmap.eu/display/planmap/Gale+Crater+mapping+Story+Map).
 
-Main JSON file:
+## Data structure - v1
+
+Plain JSON file with the content from https://wiki.planmap.eu/display/planmap/Gale+Crater+mapping+Story+Map
 ```
 {
   "title": "The Gale Crater storymap",
@@ -107,50 +109,50 @@ Main JSON file:
 }
 ```
 
-#### Notes
+### Notes
 
-##### Step 0
+#### Step 0
 The first chapter of the story has no media associated, neither a position/location to focus on,
 It seems the author is thinking about an introductory full page at this moment.
 
-##### Step 4
+#### Step 4
 There is no media associated, but apparently Gwenael wants to highlight a particular vector layer/map on top of the background map. On one hand, we could/should associate a media anyways, which would be the figure of the particular map ("Grotzinger_2014_orbital facies” and “Gale MSL area” layers). On the other hand, a section in the JSON/chapter block needs to be responsible for triggering features in the map: a GeoJSON structure could handle it; the only "problem" is that GeoJSONs store features themselves, not links to maps.
 
-##### Step 5
+#### Step 5
 > Basemap “Gale MSL area”. Display “Bradbury landing” layer with label (marking “Bradbury landing”), and display “MSL_traverse_points” layer, without labels, to mark the traverse onto the HiRISE basemap.
 Again, we need a thumbnail of the corresponding map.
 
-##### Step 6
+#### Step 6
 >  with HiRISE color basemap “Kimberley color crop” layer. Display “Arrow” layer.
 Again, media with picture of map of interest (i.e., Kimberley + Arrow), and corresponding layers over the basemap
 
 
-#### Data
+### Data
 
-##### Step 1
+#### Step 1
 * media
   * sciaparelli_1879: https://cloud.planmap.eu/index.php/f/17841
   * flammarion_antoniadi_1900: https://cloud.planmap.eu/index.php/f/17838
   * antoniadi_1910: https://cloud.planmap.eu/index.php/f/17833
 
-##### Step 2
+#### Step 2
 * map:
   * extent/zoom to Gale
 * media:
   * Gale: https://cloud.planmap.eu/index.php/f/17839
   
-##### Step 3
+#### Step 3
 * map:
   * Grotzinger_2014_orbital facies map: https://cloud.planmap.eu/index.php/f/17899
   * Gale MSL area: https://cloud.planmap.eu/index.php/f/17898
   
-##### Step 4
+#### Step 4
 * media:
   * Curiosity_static: https://cloud.planmap.eu/index.php/f/17837
 * map:
   * Gale MSL area: https://cloud.planmap.eu/index.php/f/17898
 
-##### Step 5
+#### Step 5
 * media:
   * Curiosity_static: https://cloud.planmap.eu/index.php/f/17837
 * map:
@@ -159,19 +161,19 @@ Again, media with picture of map of interest (i.e., Kimberley + Arrow), and corr
   * MSL_traverse_points
   * HiRISE basemap
   
-##### Step 6
+#### Step 6
 * map:
   * extent to "Kimberley outcrop at 1:800"
   * HiRISE "Kimberley color crop" basemap
   * Arrow layer
   
-##### Step 7
+#### Step 7
 * map:
   * extent to "Kimberley outcrop at 1:800"
 * media:
   * pano Kimberley: https://cloud.planmap.eu/index.php/f/17840
   
-##### Step 8
+#### Step 8
 * media:
   * Kimberley_300k_light: https://cloud.planmap.eu/index.php/f/17834
   
@@ -179,17 +181,23 @@ Again, media with picture of map of interest (i.e., Kimberley + Arrow), and corr
   
 ### About geometries
 
-Each chapter may/will have a geometry associated to it. For instance, if we are telling the story of curiosity traversing some surface feature we will use points over a line to locate the steps of the rover throught the story. In this case, for instance, each chapter could be very similar to a GeoJSON node and use a `geometry` structure:
+Each chapter may have a geometry associated to it. For instance, if we are telling the story of Curiosity traversing some surface feature we will use points over a line to locate the steps of the rover through the story. In this case, for instance, each chapter could be very similar to a GeoJSON node and use a `geometry` structure with `Point`s:
 ```
 geometry: {
   coordinates: ["longitude", "latitude"]
   type: Point
 }
 ```
-On the other hand, if pinpointing a specific location is not part of the chapter, but rather a whole area (a crater, for example), then an "extent" information looks a better choice.
+On the other hand, if pinpointing a specific location is not part of the chapter, but instead a whole area (a crater, for example), then an "extent" information looks a better choice.
 
 
+#### Data structure - v2
 
+It is clear that each stop/chapter is composed by the content that goes to the sidebar/popup/modal (a `div` in general), and a map layer.
+
+Previously, it has been discussed about using a GeoJSON as the data structuring holding the story content, which seems to work very well for traverses, but doesn't seem to work for when we need complex, varied features -- like in a (vector) map --, where a whole `FeaturesCollection` (in GeoJSON terms) would be necessary.
+
+Maybe the solution then is to have each stop composed by a `map` and a `div` sections, where each on could be set independently. Analogously, we may think about a structure similar to GeoJSON, but expanded to our needs.
 
 
 
