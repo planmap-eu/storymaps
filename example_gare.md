@@ -197,13 +197,49 @@ It is clear that each stop/chapter is composed by the content that goes to the s
 
 Previously, it has been discussed about using a GeoJSON as the data structuring holding the story content, which seems to work very well for traverses, but doesn't seem to work for when we need complex, varied features -- like in a (vector) map --, where a whole `FeaturesCollection` (in GeoJSON terms) would be necessary.
 
-Maybe the solution then is to have each stop composed by a `map` and a `div` sections, where each on could be set independently. Analogously, we may think about a structure similar to GeoJSON, but expanded to our needs.
+Maybe the solution then is to have each stop composed by a `map` and a `div` sections, where each on could be set independently. That being the case, each episode template would be:
+```
+map: {
+  layer: {
+    path: /some/path/to/features.json,
+    type: geojson
+  },
+  view: {
+    extent: [xmin, ymin, xmax, ymax],
+    marker: [x, y]
+  }
+},
+div: {
+  title: "short title",
+  media: [
+    {
+      path: /some/path/to/image.png,
+      type: image/png
+    },
+    {
+      url: https://youtube.com/some-video,
+      type: video/youtube
+    },
+    {
+      path: /some/path/to/mesh.glb,
+      type: model/gltf-binary
+  ]
+  text: "some text",
+}
+```   
 
+```
+{
+  "title": "The Gale Crater storymap",
+  "body": "Mars",
+  "view": {
+    "lat": [-6,-5], 
+    "lon": [137,138]
+  },  
+  "chapters": [
 
-
-
-
-
-
-
-
+    TBD
+  
+  ]
+}
+```
