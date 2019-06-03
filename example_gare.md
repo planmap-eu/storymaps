@@ -263,6 +263,7 @@ map: {
         }
       ]
     },
+    
     {
       "order": 2,
       "title": "The Gale Crater",
@@ -273,44 +274,75 @@ map: {
       },
       "map": {
         "view": {
-          "extent": "gale crater bbox"
+          "extent": "gale crater"
         }
       }
     },
+    
     {
       "order": 3,
       "title": "Orbital mapping of Gale plains",
-      "text": "Orbital observations give us a very precise view of the surface, its composition and therefore its history. Thus, we can differentiate what we call “orbital facies”: a series of characteristics that define a terrain and tells us more about its formation and evolution through time. For example, in red, the cratered surface are the oldest terrains, having suffered heavy meteoritic bombardments. In kaki, the most recent terrains represent active dune fields, showing natural aeolian processes similar to those on Earth are happening at this very moment on Mars."
+      "text": "Orbital observations give us a very precise view of the surface, its composition and therefore its history. Thus, we can differentiate what we call “orbital facies”: a series of characteristics that define a terrain and tells us more about its formation and evolution through time. For example, in red, the cratered surface are the oldest terrains, having suffered heavy meteoritic bombardments. In kaki, the most recent terrains represent active dune fields, showing natural aeolian processes similar to those on Earth are happening at this very moment on Mars.",
       "map": {
+        "layer": {
+          path: geoserver/wms/"Grotzinger_2014_orbital facies + Gale MSL area",
+          type: wms
+        },
         "view": {
           "extent": "orbital facies",
         }
       }
     },
+    
     {
       "order": 4,
       "title": "A Martian geologist: Curiosity",
       "text": "Orbital data are key to our work, but nothing can replace the ground truth. That’s why we sent Mars Science Laboratory rover Curiosity on Mars.\nCuriosity is a true field geologist. Equipped with high-resolution cameras, microscopes and an entire geochemical lab, this rover allows us to remotely study the terrains encountered in Gale Crater. Using its data, we can learn what kind of rocks are present in Gale, their exact chemical composition or their structures. All these information are important for us understand the paleoenvironmental conditions which they were deposited under, billions of years ago.",
       "media": {
         "path": "/stories/mars/gale_crater/media/Curiosity_static.glb",
-        "type": "model/gltf-binary",
+        "type": "model/gltf-binary"
+      },
+      "map": {
+        view: {
+          extent: "extent to Gale MSL area"
+        },
+        layer: {
+          path: "Gale MSL area",
+          type: wms
+        }
       }
     },
+    
     {
       "order": 5,
       "title": "Curiosity’s traverse",
       "text": "Since august 2012 when it landed on the Red planet at Bradbury, Curiosity travelled about 20 km southwestward. Along the way, the science team behind the rover kept unravelling geological mysteries and deciphering the fluvio-deltaic and lacustrine past of the Gale Crater.",
+      "map": {
+        "layer": {
+          path: geoserver/"Bradbury landing + MSL_traverse_points + HiRISE basemap"
+          type: wms/layer-group
+        },
+        "view": {
+          extent: "extent to Gale MSL area"
+        }
+      }
     },
+    
     {
       "order": 6,
       "title": "Kimberley outcrop",
       "text": "Along the road, in 2014, Curiosity stopped at the Kimberley outcrop to do some Geology at this beautiful place. Look, you can even spot the rover on the satellite picture!",
       "map": {
+        "layer": {
+          "path": http://geoserver.planmap.eu/wms/"HiRISE Kimberley color crop basemap + Arrow",
+          "type": LayerGroup/WMS
+        }
         "view": {
           "extent": "Zoom to Kimberley outcrop at 1:800",
         }
       }
     },
+    
     {
       "order": 7,
       "title": "Kimberley outcrop",
@@ -325,15 +357,14 @@ map: {
         }
       }
     },
+    
     {
       "order": 8,
       "title": "Future mapping work on Kimberley",
-      "extent": undefined,
       "text": "While Curiosity is not at Kimberley any longer, the geological mapping continues! Geologists are currently developing new technologies to improve study and mapping of Mars, by reconstructing in 3D and in Virtual Reality outcrops like Kimberley!",
       "media": {
-        "type": "model/gltf-binary",
         "path": "/stories/mars/gale_crater/media/Kimberley_300k_light.glb",
-        "stoptime": undefined
+        "type": "model/gltf-binary",
       }
     }
   ]
