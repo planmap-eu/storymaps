@@ -1,5 +1,7 @@
 Example with the Mars' Gare Crater story-map (https://wiki.planmap.eu/display/planmap/Gale+Crater+mapping+Story+Map).
 
+* Current model: [Data structure - v2](#data-structure---v2)
+
 ## Data structure - v1
 
 Plain JSON file with the content from https://wiki.planmap.eu/display/planmap/Gale+Crater+mapping+Story+Map
