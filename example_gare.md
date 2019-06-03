@@ -233,7 +233,7 @@ Example ([Mars' Gare Crater](https://wiki.planmap.eu/display/planmap/Gale+Crater
 {
 ```
 -----
-**TBD:**
+**TBD:** not really sure on how to structure the top-level, basemap data. _Probably_ to follow also a `title: ..."The Gare"..., map: {view: ..."global"..., layer: ..."OPM"...}` is reasonable enough.
 ```
   "title": "The Gale Crater storymap",
   "body": "Mars",
