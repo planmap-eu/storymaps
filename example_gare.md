@@ -83,11 +83,25 @@ Main JSON file:
       "media": {}
     },
     {
-      "order": ,
-      "title": ,
-      "extent": ,
-      "text": ,
-      "media": {}
+      "order": 7,
+      "title": "Kimberley outcrop",
+      "extent": "same",
+      "text": "Sedimentary rocks of this place belong to the Bradbury Group, an ensemble of sandstones that were deposited about 3.4-3.6 billion years ago, when rivers ran across the crater.",
+      "media": {
+        "type": "image/jpeg",
+        "path": "/stories/mars/gale_crater/media/Kimberley.jpg"
+      }
+    },
+    {
+      "order": 8,
+      "title": "Future mapping work on Kimberley",
+      "extent": undefined,
+      "text": "While Curiosity is not at Kimberley any longer, the geological mapping continues! Geologists are currently developing new technologies to improve study and mapping of Mars, by reconstructing in 3D and in Virtual Reality outcrops like Kimberley!",
+      "media": {
+        "type": "model/gltf-binary",
+        "path": "/stories/mars/gale_crater/media/Kimberley_300k_light.glb",
+        "stoptime": undefined
+      }
     }
   ]
 }
