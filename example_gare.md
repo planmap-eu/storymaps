@@ -125,6 +125,41 @@ Again, we need a thumbnail of the corresponding map.
 Again, media with picture of map of interest (i.e., Kimberley + Arrow), and corresponding layers over the basemap
 
 
+#### Data
+
+##### Step 1
+* media
+  * sciaparelli_1879: https://cloud.planmap.eu/index.php/f/17841
+  * flammarion_antoniadi_1900: https://cloud.planmap.eu/index.php/f/17838
+  * antoniadi_1910: https://cloud.planmap.eu/index.php/f/17833
+
+##### Step 2
+* map:
+  * extent/zoom to Gale
+* media:
+  * Gale: https://cloud.planmap.eu/index.php/f/17839
+  
+##### Step 3
+* map:
+  * Grotzinger_2014_orbital facies map: https://cloud.planmap.eu/index.php/f/17899
+  * Gale MSL area: https://cloud.planmap.eu/index.php/f/17898
+  
+##### Step 4
+* media:
+  * Curiosity_static: https://cloud.planmap.eu/index.php/f/17837
+* map:
+  * Gale MSL area: https://cloud.planmap.eu/index.php/f/17898
+
+##### Step 5
+* media:
+  * Curiosity_static: https://cloud.planmap.eu/index.php/f/17837
+* map:
+  * extent to Gale MSL area: https://cloud.planmap.eu/index.php/f/17898
+  * “Bradbury landing” layer + "Bradbury landing" layer
+  * MSL_traverse_points
+  * HiRISE basemap
+  
+  
 ### About geometries
 
 Each chapter may/will have a geometry associated to it. For instance, if we are telling the story of curiosity traversing some surface feature we will use points over a line to locate the steps of the rover throught the story. In this case, for instance, each chapter could be very similar to a GeoJSON node and use a `geometry` structure:
@@ -135,3 +170,15 @@ geometry: {
 }
 ```
 On the other hand, if pinpointing a specific location is not part of the chapter, but rather a whole area (a crater, for example), then an "extent" information looks a better choice.
+
+
+
+
+
+
+
+
+
+
+
+
