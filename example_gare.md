@@ -51,6 +51,12 @@ Main JSON file:
         "path": "/stories/mars/gale_crater/media/Gale.jpg",
         "type": "image/jpeg"
        }
+    },
+    {
+      "order": 3,
+      "extent": "orbital facies",
+      "title": "Orbital mapping of Gale plains",
+      "text": "Orbital observations give us a very precise view of the surface, its composition and therefore its history. Thus, we can differentiate what we call “orbital facies”: a series of characteristics that define a terrain and tells us more about its formation and evolution through time. For example, in red, the cratered surface are the oldest terrains, having suffered heavy meteoritic bombardments. In kaki, the most recent terrains represent active dune fields, showing natural aeolian processes similar to those on Earth are happening at this very moment on Mars."
     }
   ]
 }
@@ -58,5 +64,9 @@ Main JSON file:
 
 #### Notes
 
+##### Step 0
 The first chapter of the story has no media associated, neither a position/location to focus on,
 It seems the author is thinking about an introductory full page at this moment.
+
+##### Step 4
+There is no media associated, but apparently Gwenael wants to highlight a particular vector layer/map on top of the background map. On one hand, we could/should associate a media anyways, which would be the figure of the particular map ("Grotzinger_2014_orbital facies” and “Gale MSL area” layers). On the other hand, a section in the JSON/chapter block needs to be responsible for triggering features in the map: a GeoJSON structure could handle it; the only "problem" is that GeoJSONs store features themselves, not links to maps.
