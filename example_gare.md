@@ -159,6 +159,23 @@ Again, media with picture of map of interest (i.e., Kimberley + Arrow), and corr
   * MSL_traverse_points
   * HiRISE basemap
   
+##### Step 6
+* map:
+  * extent to "Kimberley outcrop at 1:800"
+  * HiRISE "Kimberley color crop" basemap
+  * Arrow layer
+  
+##### Step 7
+* map:
+  * extent to "Kimberley outcrop at 1:800"
+* media:
+  * pano Kimberley: https://cloud.planmap.eu/index.php/f/17840
+  
+##### Step 8
+* media:
+  * Kimberley_300k_light: https://cloud.planmap.eu/index.php/f/17834
+  
+  
   
 ### About geometries
 
