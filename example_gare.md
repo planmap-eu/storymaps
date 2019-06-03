@@ -57,6 +57,37 @@ Main JSON file:
       "extent": "orbital facies",
       "title": "Orbital mapping of Gale plains",
       "text": "Orbital observations give us a very precise view of the surface, its composition and therefore its history. Thus, we can differentiate what we call “orbital facies”: a series of characteristics that define a terrain and tells us more about its formation and evolution through time. For example, in red, the cratered surface are the oldest terrains, having suffered heavy meteoritic bombardments. In kaki, the most recent terrains represent active dune fields, showing natural aeolian processes similar to those on Earth are happening at this very moment on Mars."
+    },
+    {
+      "order": 4,
+      "title": "A Martian geologist: Curiosity",
+      "extent": ,
+      "text": "Orbital data are key to our work, but nothing can replace the ground truth. That’s why we sent Mars Science Laboratory rover Curiosity on Mars.\nCuriosity is a true field geologist. Equipped with high-resolution cameras, microscopes and an entire geochemical lab, this rover allows us to remotely study the terrains encountered in Gale Crater. Using its data, we can learn what kind of rocks are present in Gale, their exact chemical composition or their structures. All these information are important for us understand the paleoenvironmental conditions which they were deposited under, billions of years ago.",
+      "media": {
+        "type": "model/gltf-binary",
+        "path": "/stories/mars/gale_crater/media/Curiosity_static.glb",
+        "stoptime": undefined
+      }
+    },
+    {
+      "order": 5,
+      "extent": ,
+      "title": "Curiosity’s traverse",
+      "text": "Since august 2012 when it landed on the Red planet at Bradbury, Curiosity travelled about 20 km southwestward. Along the way, the science team behind the rover kept unravelling geological mysteries and deciphering the fluvio-deltaic and lacustrine past of the Gale Crater.",
+    },
+    {
+      "order": 6,
+      "title": "Kimberley outcrop",
+      "extent": "Zoom to Kimberley outcrop at 1:800",
+      "text": "Along the road, in 2014, Curiosity stopped at the Kimberley outcrop to do some Geology at this beautiful place. Look, you can even spot the rover on the satellite picture!",
+      "media": {}
+    },
+    {
+      "order": ,
+      "title": ,
+      "extent": ,
+      "text": ,
+      "media": {}
     }
   ]
 }
@@ -70,3 +101,23 @@ It seems the author is thinking about an introductory full page at this moment.
 
 ##### Step 4
 There is no media associated, but apparently Gwenael wants to highlight a particular vector layer/map on top of the background map. On one hand, we could/should associate a media anyways, which would be the figure of the particular map ("Grotzinger_2014_orbital facies” and “Gale MSL area” layers). On the other hand, a section in the JSON/chapter block needs to be responsible for triggering features in the map: a GeoJSON structure could handle it; the only "problem" is that GeoJSONs store features themselves, not links to maps.
+
+##### Step 5
+> Basemap “Gale MSL area”. Display “Bradbury landing” layer with label (marking “Bradbury landing”), and display “MSL_traverse_points” layer, without labels, to mark the traverse onto the HiRISE basemap.
+Again, we need a thumbnail of the corresponding map.
+
+##### Step 6
+>  with HiRISE color basemap “Kimberley color crop” layer. Display “Arrow” layer.
+Again, media with picture of map of interest (i.e., Kimberley + Arrow), and corresponding layers over the basemap
+
+
+### About geometries
+
+Each chapter may/will have a geometry associated to it. For instance, if we are telling the story of curiosity traversing some surface feature we will use points over a line to locate the steps of the rover throught the story. In this case, for instance, each chapter could be very similar to a GeoJSON node and use a `geometry` structure:
+```
+geometry: {
+  coordinates: ["longitude", "latitude"]
+  type: Point
+}
+```
+On the other hand, if pinpointing a specific location is not part of the chapter, but rather a whole area (a crater, for example), then an "extent" information looks a better choice.
