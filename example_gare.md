@@ -4,7 +4,6 @@ Example with the Mars' Gare Crater story-map (https://wiki.planmap.eu/display/pl
 
 ## Data structure - v1
 
-Plain JSON file with the content from https://wiki.planmap.eu/display/planmap/Gale+Crater+mapping+Story+Map
 ```
 {
   "title": "The Gale Crater storymap",
@@ -229,6 +228,7 @@ map: {
 }
 ```   
 
+Example ([Mars' Gare Crater](https://wiki.planmap.eu/display/planmap/Gale+Crater+mapping+Story+Map)) with current structure:
 ```
 {
   "title": "The Gale Crater storymap",
