@@ -82,4 +82,89 @@ Overall, the app will layout as follows (top-to-bottom, left-to-right):
 
 ![Overall layout](./assets/layout_base_grid.png)
 
-## Simulation
+## Workflow
+
+Let's consider the server hostname `HOST=storymap.planmap.eu`, the storymap
+base url will be `BASEURL=http://$HOST`.
+
+### Entry page
+
+When a user access `$BASEURL` an page with all the stories should be presented.
+Since stories are organized after the celestial body (planet or satellite;
+Mars, Mercury, Moon), the page may display the stories in sections accordingly:
+```
+/ # Entry page
+├── mars # MARS ENTRY PAGE with list of stories
+│   ├── story-name
+│   ├── [...]
+│   └── gale
+├── mercury # MERCURY ENTRY PAGE with list of stories
+│   ├── hokusai
+│   └── ...
+└── moon # MOON ENTRY PAGE with list of stories
+    └── ...
+```
+
+```diff
+- Figure of entry page with list of stories under body sections
+```
+
+Each story displayed is a link to the corresponding storymap page.
+The link is a _route_ URL, for instance, `/mars/gale`.
+In general, storymap URLs may be represented as `STORYURL=$BASEURL/$BODY/$STORYLABEL`.
+
+The list of stories at the entry page is rendered by buttons with the stories title,
+corresponding thumbnail and URL.
+
+Entry page story buttons:
+```
+text: story title
+img: story-icon
+href: story-url
+```
+
+> The name of the stories, `STORYLABEL`, should be URL-friendly which means no
+> special characters or white-spaces. `STORYLABEL` should be a field in the story descriptor.
+
+#### View input
+The entry page HTML/JS code receives an object where _keys_ and _values_ are
+as follows:
+```javascript
+[
+  {
+    body: 'mars',
+    stories: [
+      {
+        title: 'The Gale crater',
+        label: 'gale-crater',
+        storymap: {...}
+      },
+      {
+        title: 'Another story for Mars',
+        label: 'another-story-mars',
+        storymap: {...}
+      }
+    ]
+  },
+  {
+    body: 'mercury',
+    stories: [
+      {
+        title: ...,
+        label: ...,
+        storymap: {...}
+      }
+    ]
+  },
+  {
+    body: 'moon',
+    stories: [...]
+  }
+]
+```
+
+### View action
+
+Considering the App is going to use a _route_ resolver, if the view triggers a
+_link_ to `STORYURL` the next page will be called by the router; no explicit
+callbacks are necessary here.
