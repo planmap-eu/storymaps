@@ -1,10 +1,12 @@
 # MVC design: data flow, user actions
 
+## Story data structure
+
 Currently, the data structure to represent the stories is (`example_gare#data-structure-v2`):
 ```json
 {
   "title": "The Story Title",
-  "thumbnail": "a small image to show in the list of stories",
+  "thumbnail": "an image to show in the list of stories in the entry-page",
   "map": {
     "layer": {
       "path": "/path/to/wtms/mars",
@@ -129,6 +131,12 @@ href: story-url
 #### View input
 The entry page HTML/JS code receives an object where _keys_ and _values_ are
 as follows:
+
+> The data object will be called `stories_data`. For now, let us consider
+> `stories_data` a data object only, without methods for accessing the data.
+> It looks useful to structure a class in the next version of this document,
+> but for the sake of simplicity we will now avoid it.
+
 ```javascript
 [
   {
@@ -163,8 +171,95 @@ as follows:
 ]
 ```
 
-### View action
+#### View action
 
 Considering the App is going to use a _route_ resolver, if the view triggers a
 _link_ to `STORYURL` the next page will be called by the router; no explicit
 callbacks are necessary here.
+
+
+### Story-map page
+
+When a page `STORYURL` is accessed the story corresponding to `BODY/STORYNAME`
+is build.
+
+> The data object `stories_data` containing _all_ body/stories is provided as
+> a global object, when `STORYURL` is going to be rendered that is what is
+> has to handle.
+
+From `BODY` and `STORYNAME` values the page script called by the _router_ searches
+for the corresponding story inside `stories_data` (pseudo-code):
+```
+in 'stories_data' get 'STORYNAME' from 'BODY' and allocate it to 'storymap_data'
+```
+
+The data object `storymap_data` has all the information to set the (Leaflet) map
+and story episodes at hand. No subpages or routings exist under a story-map.
+
+> The `storymap_data` object is the one described at the (first) section
+> [#story-data-structure] of this document.
+
+The `storymap_data` fields will be used as follows:
+* `title`: set the story title at the top bar;
+* `thumbnail`: of no use in here;
+* `map`: send to a "leafletMap" object, together with the `div` element `id` to build the map,
+  * the "leafletMap" object is accessible in the page context for programmatic actions;
+* `episodes`: build the `TOC` list of stops,
+  * the first episode is active from the start, when the story/page is rendered.
+
+In the page context there is a variable `episode_index` with the current, active
+episode index (or order) being displayed.
+At the start, episode index '0' is active.
+
+#### View input
+
+##### TOC, '< | >' elements
+
+The list of episodes in the left -- `TOC` -- display the episode `thumbnail`,
+`title` and `order`.
+
+##### Episode panel
+
+At the right side of the screen there is the "episode panel" (I don't like this
+name either, but it does the job for the moment).
+The panel display the current episode's:
+* `title`
+* `text`
+* `media` (optional, may be `undefined`)
+  * can be one or a set of images, a youtube video, or 3D objects;
+  * For figures and 3D objects a "maxime" button for a greater/better view in an overlay.
+
+##### Media overlay
+
+**TBD:** figures and 3D objects can be maximize out from the episode panel to an
+overlay on top of the (leaflet) map.
+For figures it means just a better view, for 3D meshes it means the actual
+interactive `canvas`.
+
+#### View action
+
+```diff
+- TODO: Define page controller.
++ Page controller method in need: `setEpisode(order) { leafletMap.set(map-data); episodePanel.set(episode-data)}`
+```
+
+##### TOC, '< | >' elements
+
+When an item from `TOC` is toggled, `TOC` sends the correponding `order` value
+to the page controller.
+Analogously, when the "next-episode" or "previous-episode" buttons are toggled
+the corresponding ("next" or "previous") index/order is sent to the controller.
+
+##### Episode panel
+
+The only component in the panel allowed to have action associated to is the `media`:
+* if multiple multiple figures, a "carrousel" (or alike) container is to used;
+* if a youtube, the video will be embeded (through `iframe`) and youtube controls available;
+
+> Should 3D meshes be interactive when in the (small) media panel?
+
+##### Media overlay
+
+The overlay does not trigger actions outside it.
+For multiple figures it provides the "carrousel" like in the (right) panel.
+For 3D meshes it is an interactive (3D) `canvas`.
