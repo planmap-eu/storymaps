@@ -70,3 +70,16 @@ to display and vice-versa (the _controller_).
 For instance, the app will associate a _body_ and a _URL_ to each story,
 * a body: Mars, Mercury, Moon
 * a URL: e.g., "https://stories.planmap.eu/mars/the_gale_crater"
+
+## Web interface
+
+Overall, the app will layout as follows (top-to-bottom, left-to-right):
+* a Top menu bar
+* a Table of Contents displaying the running story list of episodes
+* a Map view displaying the Leaflet map
+* a Story panel displaying the episodes content (title, text, media)
+* a Footbar displaying basic controls
+
+![Overall layout](./assets/layout_base_grid.png)
+
+## Simulation
