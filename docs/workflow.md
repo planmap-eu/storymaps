@@ -145,6 +145,7 @@ as follows:
       {
         title: 'The Gale crater',
         label: 'gale-crater',
+        thumbnail: '/path/to/story/thumbnail.png';
         storymap: {...}
       },
       {
