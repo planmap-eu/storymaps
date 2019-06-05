@@ -178,6 +178,7 @@ _link_ to `STORYURL` the next page will be called by the router; no explicit
 callbacks are necessary here.
 
 
+
 ### Story-map page
 
 When a page `STORYURL` is accessed the story corresponding to `BODY/STORYNAME`
@@ -211,6 +212,7 @@ In the page context there is a variable `episode_index` with the current, active
 episode index (or order) being displayed.
 At the start, episode index '0' is active.
 
+
 #### View input
 
 ##### TOC, '< | >' elements
@@ -235,6 +237,7 @@ The panel display the current episode's:
 overlay on top of the (leaflet) map.
 For figures it means just a better view, for 3D meshes it means the actual
 interactive `canvas`.
+
 
 #### View action
 
