@@ -1,0 +1,34 @@
+
+<body style="width:1000vw; height:100vh">
+    <div class="wrapper">
+        {{> menubar}}
+        {{#if isHome}}
+            {{> home}}
+        {{else}}
+            {{> storymap}}
+        {{/if}}
+        {{> statusbar}}
+    </div>
+
+    <!-- <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script> -->
+</body>
+
+
+<template name="menubar">
+    <div id="menubar" class="container-fluid">
+        <a href="/">Home</a>
+    </div>
+</template>
+
+
+<template name="statusbar">
+    <div id="statusbar">
+        statusbar
+    </div>
+</template>

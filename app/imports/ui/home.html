@@ -1,0 +1,23 @@
+
+<template name="home">
+    <div id="home">
+        {{#each stories_listing in stories}}
+            {{> body_stories stories_listing=stories_listing}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="body_stories">
+    <ul>
+        {{#each listing in stories_listing}}
+        <li>
+            {{listing.body}}
+            <ul>
+                {{#each story in listing}}
+                <li>{{story.title}}</li>
+                {{/each}}
+            </ul>
+        </li>
+        {{/each}}
+    </ul>
+</template>

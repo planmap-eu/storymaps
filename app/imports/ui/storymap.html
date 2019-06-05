@@ -1,0 +1,41 @@
+<template name="storymap">
+    <div id="storymap" class="container-fluid" style="height:100%">
+        {{> storytoc}}
+        {{> map_media}}
+        {{> storypanel}}
+    </div>
+</template>
+
+
+<template name="storytoc">
+    <div id="storytoc" class="col-1"
+        style="height:100%">
+        storytoc
+    </div>
+</template>
+
+
+<template name="map_media">
+    <div id="map_media"  class="col-6 col-offset-1"
+        style="height:100%">
+        {{> mapcontainer}}
+        {{> mediaoverlay}}
+    </div>
+</template>
+
+
+<template name="mediaoverlay">
+    <div id="mediaoverlay" class="container-fluid"
+        style="height:100%; z-order:999; background-color:rgba(0,0,0,0.5)"
+        visible="false">
+        mediaoverlay
+    </div>
+</template>
+
+
+<template name="storypanel">
+    <div id="storypanel" class="col-5 col-offset-7"
+        style="height:100%">
+        storypanel
+    </div>
+</template>
