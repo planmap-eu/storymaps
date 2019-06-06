@@ -8,6 +8,8 @@ import { stories } from '/imports/api/stories.js';
 
 Template.home.helpers({
   stories: function() {
-    return stories.getLinks();
+    var links = stories.getLinks();
+    console.log(links);
+    return links;
   }
 })

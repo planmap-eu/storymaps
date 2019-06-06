@@ -41,7 +41,7 @@ class Stories {
           thumbnail: thumbnail
         })
       })
-      stories_listing.push({body: stories_meta});
+      stories_listing.push({body: body, stories: stories_meta});
     })
     return stories_listing;
   }

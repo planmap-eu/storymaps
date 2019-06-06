@@ -13,9 +13,12 @@ import { stories } from '/imports/api/stories.js';
 
 Template.storymap.onRendered(function() {
   console.log('storymap rendered');
-  var BODY = 'mars';
-  // var STORYLABEL = 'the-story-label';
-  var STORYLABEL = 'the-gale-crater';
+  var currentURI = FlowRouter.current();
+  console.log(currentURI);
+  // var BODY = 'mars';
+  // var STORYLABEL = 'the-gale-crater';
+  var BODY = currentURI.params._body;
+  var STORYLABEL = currentURI.params._story;
   var story = stories.getStory(BODY, STORYLABEL);
   Session.set('currentStory', {body: BODY, data: story});
   Session.set('currentEpisodeIndex', 0);

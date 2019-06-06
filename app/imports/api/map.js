@@ -65,18 +65,22 @@ class Map {
     this._map = map;
   }
 
-  update({layer, extent, marker}) {
-    var map = this._map;
-    if (extent) {
-      map.fitBounds([[extent[0],extent[1]],[extent[2],extent[3]]]);
-    }
-    if (marker) {
-      L.marker(marker).addTo(map);
-        // .bindPopup('A marker.')
-        // .openPopup();
-    }
-    if (layer) {
-      // Add the layer. Layers can be GeoJSON, WMS or WFS.
+  update(params) {
+    if (params) {
+      var map = this._map;
+      if (params.extent) {
+        var extent = params.extent;
+        map.fitBounds([[extent[0],extent[1]],[extent[2],extent[3]]]);
+      }
+      if (params.marker) {
+        var marker = params.marker;
+        L.marker(marker).addTo(map);
+          // .bindPopup('A marker.')
+          // .openPopup();
+      }
+      if (params.layer) {
+        // Add the layer. Layers can be GeoJSON, WMS or WFS.
+      }
     }
   }
 }

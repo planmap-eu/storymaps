@@ -1,23 +1,22 @@
 
 <body>
-    <div>
+    <!-- <div>
         {{> menubar}}
         {{#if isHome}}
             {{> home}}
         {{else}}
             {{> storymap}}
         {{/if}}
+        {{> app}}
         {{> statusbar}}
-    </div>
-
-    <!-- <script type="text/javascript">
-        $(document).ready(function() {
-            $('#sidebarCollapse').on('click', function() {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-    </script> -->
+    </div> -->
 </body>
+
+<template name="app">
+  {{> menubar}}
+  {{> Template.dynamic template=main}}
+  {{> statusbar}}
+</template>
 
 
 <template name="menubar">
