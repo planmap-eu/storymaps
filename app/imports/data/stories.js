@@ -29,11 +29,11 @@ var stories_collection = [
             "text": "some text, something 300~500 should be ok",
             "media": [
               {
-                "path": "/some/path/to/image.png",
+                "path": "https://data.planmap.eu/pub/mars/PM-MAR-C-Arsinoes_01/document/PM-MAR-C-Arsinoes_01_frt00008233_07_if164s_trr3_FEM.browse.png",
                 "type": "image/png"
               },
               {
-                "path": "https://youtube.com/some-video",
+                "path": "https://www.youtube.com/embed/ZdQweZuxR3E",
                 "type": "video/youtube"
               },
               {

@@ -27,7 +27,6 @@
 <template name="map_media">
     <div id="map_media">
         {{> mapcontainer}}
-        {{> mediaoverlay}}
     </div>
 </template>
 
@@ -38,9 +37,22 @@
         <h3>{{title}}</h3>
         <p>{{text}}</p>
         {{#each media}}
-          <img src={{path}}>
-          {{type}}
+          {{> mediacanvas media=this height=200 width=400}}
         {{/each}}
       {{/with}}
+      <!-- <button onclick="on()">Turn on overlay effect</button> -->
+      <script>
+        function on() {
+          document.getElementById("mediaoverlay").style.display = "block";
+        }
+        function off() {
+          document.getElementById("mediaoverlay").style.display = "none";
+        }
+      </script>
     </div>
+</template>
+
+
+<template name="mediacanvas">
+  {{{setCanvas media.type media.path width height}}}
 </template>
