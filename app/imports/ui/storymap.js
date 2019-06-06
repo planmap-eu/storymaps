@@ -16,7 +16,8 @@ Template.storymap.onRendered(function() {
   var BODY = 'mars';
   var STORYLABEL = 'the-story-label';
   var story = stories.getStory(BODY, STORYLABEL);
-  Session.set('currentStory', {body: BODY, data: story, episode: 0});
+  Session.set('currentStory', {body: BODY, data: story});
+  Session.set('currentEpisodeIndex', 0);
 })
 
 
@@ -24,7 +25,6 @@ Template.storytoc.helpers({
   episodes: function() {
     var story = Session.get('currentStory');
     if (story) {
-      // return stories.getEpisodes(story);
       return story.data.episodes;
     }
   }
@@ -40,10 +40,10 @@ Template.storytoc.events({
 
 Template.storypanel.helpers({
   episode: function() {
+    console.log('storypanel helpers episode');
     var episode_index = Session.get('currentEpisodeIndex');
     var story = Session.get('currentStory');
-    if (episode_index) {
-      // return JSON.stringify(story.data.episodes[episode_index]);
+    if (episode_index >= 0) {
       return story.data.episodes[episode_index];
     }
   }
