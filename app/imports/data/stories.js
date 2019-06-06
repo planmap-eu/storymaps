@@ -19,10 +19,7 @@ var stories_collection = [
         label: "the-story-label",
         thumbnail: "an image to show in the list of stories in the entry-page",
         map: {
-          layer: {
-            path: "http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/mola-gray/{z}/{x}/{y}.png",
-            type: "tms"
-          },
+          default: "opm_mars",
           extent: [0, 0, 50, 50],
         },
         episodes: [

@@ -1,3 +1,16 @@
+var default_maps = {
+  opm_mars: {
+    url: "http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/mola-gray/{z}/{x}/{y}.png",
+    options: {
+      crs: L.CRS.EPSG3857,
+      maxNativeZoom: 9,
+      tms: true,
+      autoZIndex: true,
+      attribution: "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
+    }
+  }
+}
+
 class Map {
   constructor() {
     this._map = null;
@@ -21,23 +34,23 @@ class Map {
 
   build(map_settings, element) {
     console.log(map_settings, element)
+
+    var map = L.map(element);
+
     var extent = map_settings.extent;
     console.log(extent);
-    var map = L.map('mapcontainer')
-      .setView([0, 0], 2);
-      // .fitBounds([[extent[0], extent[1]],[extent[2], extent[3]]]);
+    if (extent) {
+      map.fitBounds([[extent[0], extent[1]],[extent[2], extent[3]]]);
+    } else {
+      map.setView([0, 0], 2);
+    }
 
-    var url = map_settings.layer.path;
-    L.tileLayer(url, {
-        maxNativeZoom: 9,
-        tms: map_settings.layer.type == "tms",
-        autoZIndex: true,
-        attribution: "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
-    }).addTo(map);
-
-    // L.marker([0, 0]).addTo(map)
-    //   .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    //   .openPopup();
+    if (map_settings.default) {
+      var def = default_maps[map_settings.default];
+      L.tileLayer(def.url, def.options).addTo(map);
+    } else {
+      L.tileLayer.wms(map_settings.layer.url, map_settings.layer.options).addTo(map);
+    }
 
     this._map = map;
   }
@@ -48,9 +61,12 @@ class Map {
       map.fitBounds([[extent[0],extent[1]],[extent[2],extent[3]]]);
     }
     if (marker) {
-      L.marker(marker).addTo(map)
-        .bindPopup('A marker.')
-        .openPopup();
+      L.marker(marker).addTo(map);
+        // .bindPopup('A marker.')
+        // .openPopup();
+    }
+    if (layer) {
+      // Add the layer. Layers can be GeoJSON, WMS or WFS.
     }
   }
 }
