@@ -1,5 +1,5 @@
 <template name="storymap">
-    <div id="storymap" class="container-fluid" style="height:100%">
+    <div id="storymap">
         {{> storytoc}}
         {{> map_media}}
         {{> storypanel}}
@@ -8,34 +8,39 @@
 
 
 <template name="storytoc">
-    <div id="storytoc" class="col-1"
-        style="height:100%">
+    <div id="storytoc">
         storytoc
+        <ul>
+          {{#each episode in episodes}}
+          <li>
+            <img src="{{episode.thumbnail}}">
+            <button id="{{@index}}">
+              {{episode.title}}
+            </button>
+          </li>
+          {{/each}}
+        </ul>
     </div>
 </template>
 
 
 <template name="map_media">
-    <div id="map_media"  class="col-6 col-offset-1"
-        style="height:100%">
+    <div id="map_media">
         {{> mapcontainer}}
         {{> mediaoverlay}}
     </div>
 </template>
 
 
-<template name="mediaoverlay">
-    <div id="mediaoverlay" class="container-fluid"
-        style="height:100%; z-order:999; background-color:rgba(0,0,0,0.5)"
-        visible="false">
-        mediaoverlay
-    </div>
-</template>
-
-
 <template name="storypanel">
-    <div id="storypanel" class="col-5 col-offset-7"
-        style="height:100%">
-        storypanel
+    <div id="storypanel">
+      {{#with episode}}
+        <h3>{{title}}</h3>
+        <p>{{text}}</p>
+        {{#each media}}
+          <img src={{path}}>
+          {{type}}
+        {{/each}}
+      {{/with}}
     </div>
 </template>

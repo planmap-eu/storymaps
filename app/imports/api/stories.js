@@ -1,4 +1,4 @@
-import { stories_collection } from './data/stories.js';
+import { stories_collection } from '../data/stories.js';
 
 class Stories {
   constructor() {
@@ -10,17 +10,19 @@ class Stories {
   }
 
   getStory(currentBody, storyLabel) {
-    this._all.forEach((body_and_stories) => {
-      var body = body_and_stories.body;
-      if (body == currentBody) {
+    console.log(currentBody +':'+ storyLabel);
+    for (let body_and_stories of this._all) {
+      console.log(body_and_stories.body);
+      if (body_and_stories.body == currentBody) {
         var stories = body_and_stories.stories;
-        stories.forEach((story) => {
+        for (let story of stories) {
+          console.log(story.label);
           if (story.label == storyLabel) {
             return story;
           }
-        })
+        }
       }
-    })
+    }
     return null;
   }
 
@@ -39,9 +41,19 @@ class Stories {
           thumbnail: thumbnail
         })
       })
-      stories_listing.push(body: stories_meta);
+      stories_listing.push({body: stories_meta});
     })
     return stories_listing;
+  }
+
+  getEpisodes({body, label}) {
+    var story = this.getStory(body, label);
+    return story.episodes;
+  }
+
+  getEpisode({body, label, index}) {
+    var story = this.getStory(body, label);
+    return story.episodes;
   }
 }
 
