@@ -163,3 +163,22 @@ The object containing the stories is structured as:
 ```
 
 #### `storymap`
+
+The `storymap` template, in the `storymap.{html,js}`, is called when a Story-map
+is called by the interface.
+The call happens throught `FlowRouter + BlazeLayout` (when the app is asked for
+`/body/story`, as explained in section [#routes].
+`storymap` will build `storytoc` (left-side list of episodes of the story),
+`mapcontainer` (the Leaflet map), `storypanel` (panel with story's content: title,
+text, media).
+
+##### Session variables
+
+In the `storymap` component we make use of extensively of Meteor `Session` variable,
+those the reactive, global variables used to communicate between templates.
+For instance, as soon as `storymap` is rendered (`onRendered` method in `storymap.js`)
+the name of the body (_e.g._, mars) and the label of the story (_e.g._, the-gale-crater)
+are parsed from the current URL and used to initialized the _session_ variable (object)
+`currentStory`.
+Likewise, the current stop/episode the user is watching to is kept in the (scalar)
+variable `currentEpisodeIndex`; initialized at `0`.
