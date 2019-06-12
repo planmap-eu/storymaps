@@ -2,6 +2,8 @@
 
 Planmap app data are either locally served or fetched from remote server (tms, wms, etc.). The Planmap StoryMap App uses Leaflet and [OpepnPlanetaryMap](https://openplanetary.github.io/opm) basemaps as background, plus, as needed, local, regional or global tiles/map services.
 
+<img width="352" alt="image" src="https://user-images.githubusercontent.com/5766599/59322778-2ac6b180-8cd8-11e9-880e-1d472589ae05.png">
+
 ## Remote data
 
 ### Tile Servers
