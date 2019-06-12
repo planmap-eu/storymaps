@@ -11,9 +11,11 @@ Planmap app data are either locally served or fetched from remote server (tms, w
 
 ### OGC WMS
 
-WMS servers, e.g. Planmap wms - 
+WMS servers, e.g. [Planmap wms](https://geoserver.planmap.eu/web/wicket/bookmarkable/org.geoserver.web.demo.MapPreviewPage?3)
 
 ## Local data
+
+local data for offline use and/or to be stored/served from planmap web site(s).
 
 ### Raster data
 - served as tiles (xyz png), whatever the starting projection is, they need first to changed to web mercator (EPSG:3857) and then converted to tiles (possibly the latter does also the proj conversion)
@@ -29,7 +31,11 @@ tile creation:
 gdal2tiles.py -v -p mercator -s EPSG:3857 -w leaflet <raster_webmercator.tif> <output_tile_directory?
 ```
 
-
-
 ### Vector data
-- served as geojson
+
+Vector data to be stored/served as geojson (WGS84), e.g.
+
+```
+ogr2ogr -f 'geojson' -t_srs vector_for_storymapapp.geojson original_vector.gpkg
+```
+
