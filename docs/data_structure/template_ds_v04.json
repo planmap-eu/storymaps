@@ -10,16 +10,38 @@
         "text:": "Sample text of max 500 characters",
         "order:": "1",
         "media:": {
-          "path:": "path_TBA",
-          "type:": "type_TBA",
-          "caption:": "caption_TBA"
-        },
-        "loaded_layers:": {
-          "layer:": {
-            "order:": "order_TBA",
+          "media_01": {
             "path:": "path_TBA",
             "type:": "type_TBA",
-            "credits:": "credits_TBA"
+            "caption:": "caption_TBA",
+            "stoptime": "10s"
+          },
+          "media_02": {
+            "path:": "path_TBA",
+            "type:": "type_TBA",
+            "caption:": "caption_TBA",
+            "stoptime": "10s"
+          },
+          "media_03": {
+            "path:": "path_TBA",
+            "type:": "type_TBA",
+            "caption:": "caption_TBA",
+            "stoptime": "10s"
+          },
+        "loaded_layers:": {
+          "layer:": {
+            "layer_01": {
+              "order:": "order_TBA",
+              "path:": "path_TBA",
+              "type:": "type_TBA",
+              "credits:": "credits_TBA"
+            },
+            "layer_02": {
+              "order:": "order_TBA",
+              "path:": "path_TBA",
+              "type:": "type_TBA",
+              "credits:": "credits_TBA"
+            },
           }
         },
         "view:": {
