@@ -1,0 +1,78 @@
+# storymap title
+
+sample title
+
+# Authors
+
+sample list of authors
+
+# publication
+
+optional text linking publication(s) related to the storymap
+
+# basemap
+
+basemap_xyx_URL
+
+# chapters
+
+## chapter_01
+
+### step_01
+
+#### title:
+
+Why mapping Mars today?
+
+#### text:
+
+Sample text of max 500 characters
+
+#### order:
+
+1
+
+#### media:
+
+##### path:
+
+path_TBA
+
+##### type:
+
+type_TBA
+
+##### caption:
+
+caption_TBA
+
+
+#### loaded_layers:
+
+##### layer:
+
+###### order:
+
+order_TBA
+
+###### path:
+
+path_TBA
+
+###### type:
+
+type_TBA
+
+###### credits:
+
+credits_TBA
+
+#### view:
+
+##### extent:
+
+[-180, -90, 180, 90]
+
+##### marker:
+
+[]
