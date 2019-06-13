@@ -1,0 +1,357 @@
+{
+  "Authors": "Jack Wright et al.",
+  "basemap": "",
+  "chapters": {
+    "chapter_01": {
+      "order:": "1",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "1",
+            "path": "",
+            "type": ""
+          }
+        },
+        "media:": {
+          "media_01": {
+            "path:": "mercury/media/chapter_01/Hokusai_stop1.mp4",
+						"type:": "video/mp4",
+						"caption:": "",
+            "stoptime": ""
+          }
+        },
+        "text:": "I'm Jack Wright from the Open University and I’ve made this geological map of the Hokusai quadrangle of Mercury. Mercury is divided into 15 mapping quadrangles, and whenever the Mariner-10 spacecraft flew past the planet in the 1970s it imaged only one half of the planet’s surface, and left Hokusai unimaged.Now we are able to used data from the MESSENGER spacecraft which orbitted the planet and imaged its surface completely, to make the first geological map of this quadrangle. And I'm going to take you on this tour of the quadrangle now.",
+        "title:": "Introduction",
+        "view": {
+          "extent": "[-180, -90, 180, 90]",
+          "marker": ""
+        }
+      }
+    },
+    "chapter_02": {
+      "order:": "2",
+      "step_01": {
+        "loaded_layers:": {
+          "layer_01": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "1",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+            "type": "wms"
+          },
+          "layer_02": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "2",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+            "type": "wms"
+          },
+          "layer_03": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path": "mercury/media/chapter_01/Hokusai_stop1.mp4",
+            "stoptime": "",
+            "type": "video/mp4"
+          }
+        },
+        "text:": "Hokusai crater. Quadrangle namesake. Pristine (young) impact crater. Bright rays extend over planet. Delivered water to N Pole?",
+        "title:": "Hokusai crater"
+      },
+      "view": {
+        "extent": "[10.77, 53.95, 22.37, 61.80]",
+        "marker": "[16.508987997800766, 57.705134201158891]"
+      }
+    },
+    "chapter_03": {
+      "order:": "3",
+      "step_01": {
+        "loaded_layers:": {
+          "layer_01": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+            "type": "wms"
+          },
+          "layer_02": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "2",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+            "type": "wms"
+          },
+          "layer_03": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path": "mercury/media/chapter_02/Hokusai_stop2.mp4",
+            "stoptime": "",
+            "type": "video/mp4"
+          }
+        },
+        "text:": "Demonstrate crater degradation and burial. Smooth plains as lava flows.",
+        "title:": "Degraded craters buried by smooth plains. "
+      },
+      "view": {
+        "extent": "[27.317548650, 48.575894529, 40.200653255, 55.360996288]",
+        "marker": "[33.227488536894775, 52.173530111108057]"
+      }
+    },
+    "chapter_04": {
+      "order:": "4",
+      "step_01": {
+        "loaded_layers:": {
+          "layer_01": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+            "type": "wms"
+          },
+          "layer_02": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "2",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+            "type": "wms"
+          },
+          "layer_03": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path": "mercury/media/chapter_03/Hokusai_stop3.mp4",
+            "stoptime": "",
+            "type": "video/mp4"
+          },
+          "media_02": {
+            "caption:": "TBA",
+            "path": "mercury/media/chapter_03/WrinkleRidgeRings.png",
+            "stoptime": "",
+            "type": "image/png"
+          }
+        },
+        "text:": "'Ghost craters of different sizes in close proximity require multiple lava flow field events separated in geological time.",
+        "title:": "Wrinkle ridge ring 'ghost craters"
+      },
+      "view": {
+        "extent": "[34.148523394, 44.220710062, 48.927844294, 52.004485736]",
+        "marker": "[41.865971641236023, 48.666650923247929]"
+      }
+    },
+    "chapter_05": {
+      "order:": "5",
+      "step_01": {
+        "loaded_layers:": {
+          "layer_01": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+            "type": "wms"
+          },
+          "layer_02": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "2",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+            "type": "wms"
+          },
+          "layer_03": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path": "mercury/media/chapter_04/Hokusai_stop4.mp4",
+            "stoptime": "",
+            "type": "video/mp4"
+          },
+          "media_02": {
+            "caption:": "TBA",
+            "path": "mercury/media/chapter_04/Pittedground.png",
+            "stoptime": "",
+            "type": "image/png"
+          },
+          "media_03": {
+            "caption:": "TBA",
+            "path": "mercury/media/chapter_04/Pittedground2d.png",
+            "stoptime": "",
+            "type": "image/png"
+          },
+          "media_04": {
+            "caption:": "TBA",
+            "path": "mercury/media/chapter_04/RachmaninoffColour.png",
+            "stoptime": "",
+            "type": "image/png"
+          }
+        },
+        "text:": "Largest impact basin in H05. Deepest surface elevation on Mercury. Colour (therefore compositional) variation. Young lava flows in crater centre. Suge Facula as lava volatile interaction.",
+        "title:": "Rachmaninoff crater",
+        "view": {
+          "extent": "[48.114851914, 22.631782503, 65.556233775, 31.817576949]",
+          "marker": "[57.301868611830621, 27.420663977513094]"
+        }
+      }
+    },
+    "chapter_06": {
+      "order:": "6",
+      "step_01": {
+        "loaded_layers:": {
+          "layer_01": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+            "type": "wms"
+          },
+          "layer_02": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "2",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+            "type": "wms"
+          },
+          "layer_03": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path": "mercury/media/chapter_05/Hokusai_stop5.mp4",
+            "stoptime": "",
+            "type": "video/mp4"
+          },
+          "media_02": {
+            "caption:": "TBA",
+            "path": "mercury/media/chapter_05/NathairVentFigure.png",
+            "stoptime": "",
+            "type": "image/png"
+          }
+        },
+        "text:": "Largest explosive volcanic vent and largest putative explosive volcanic deposit on Mercury. Compound vent: evidence for multiple eruptions. Gullies.",
+        "title:": "Nathair Facula and vent",
+        "view": {
+          "extent": "[57.109108174, 32.644551871, 71.476595081, 40.211428309]",
+          "marker": "[63.985938815365998, 36.439238698162313 ]"
+        }
+      }
+    },
+    "chapter_07": {
+      "order:": "7",
+      "step_01": {
+        "loaded_layers:": {
+          "layer_01": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+            "type": "wms"
+          },
+          "layer_02": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "2",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+            "type": "wms"
+          },
+          "layer_03": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path": "mercury/media/chapter_06/Hokusai_stop6.mp4",
+            "stoptime": "",
+            "type": "video/mp4"
+          },
+          "media_02": {
+            "caption:": "TBA",
+            "path": "mercury/media/chapter_06/UnityCircles.png",
+            "stoptime": "",
+            "type": "image/png"
+          },
+          "media_03": {
+            "caption:": "TBA",
+            "path": "mercury/media/chapter_06/UnityJunction.png",
+            "stoptime": "",
+            "type": "image/png"
+          },
+          "media_04": {
+            "caption:": "TBA",
+            "path": "mercury/media/chapter_06/UnityRupesMercator.png",
+            "stoptime": "",
+            "type": "image/png"
+          }
+        },
+        "text:": "Example of a fault on Mercury. Most prominent lobate scarp in H05. Probable right-lateral ramp at the northernmost extent of a ~2000 km-long thrust system extending southward.",
+        "title:": "Unity Rupes",
+        "view": {
+          "extent": "[82.306365213, 26.037347523, 87.756694717, 28.907854395]",
+          "marker": "[85.422358000487236, 27.433690461604336]"
+        }
+      }
+    },
+    "chapter_08": {
+      "order:": "8",
+      "step_01": {
+        "loaded_layers:": {
+          "layer_01": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+            "type": "wms"
+          },
+          "layer_02": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "2",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+            "type": "wms"
+          },
+          "layer_03": {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "order:": "3",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path": "mercury/media/chapter_07/Hokusai_stop7.mp4",
+            "stoptime": "",
+            "type": "video/mp4"
+          }
+        },
+        "text:": "Magnetic anomalies, hollows, pitted ground, volcanism(?) associated with this crater.",
+        "title:": "Rustaveli crater",
+        "view": {
+          "extent": "[75.782425614, 48.743916294, 89.948948855, 56.204951868]",
+          "marker": "[82.847113166776808, 52.591608378167592]"
+        }
+      }
+    }
+  },
+  "planmap_id": "",
+  "publication": "",
+  "storymap title": ""
+}

@@ -1,0 +1,425 @@
+{
+  "Authors": "Misha Ivanov et al.,",
+  "basemap": "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-moon-basemap-v0-1/all/{z}/{x}/{y}.png",
+  "chapters": {
+    "chapter_01": {
+      "order:": "1",
+      "step_01": {
+        "loaded_layers:": {
+          "layer_01": {
+            "credits": "https://data.planmap.eu/pub/moon/PM-MOO-MS-SPAApollo_01/",
+            "order": "1",
+            "path": "moon:PM-MOO-MS-SPAApollo_01_Apl_large_crater_rims",
+            "type": "wms"
+          },
+          "layer_02": {
+            "credits": "https://data.planmap.eu/pub/moon/PM-MOO-MS-SPAApollo_01/",
+            "order": "2",
+            "path": "moon:PM-MOO-MS-SPAApollo_01_Apl_graben",
+            "type": "wms"
+          },
+          "layer_03": {
+            "credits": "https://data.planmap.eu/pub/moon/PM-MOO-MS-SPAApollo_01/",
+            "order": "3",
+            "path": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Apollo_rimt",
+            "type": "wms"
+          },
+          "layer_04": {
+            "credits": "https://data.planmap.eu/pub/moon/PM-MOO-MS-SPAApollo_01/",
+            "order": "4",
+            "path": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+            "type": "wms"
+          }
+        },
+        "media:": "",
+        "text:": "",
+        "title:": "",
+        "view": {
+          "extent": "[-180, -62.6, -7.7, 90]",
+          "marker": ""
+        }
+      }
+    },
+    "chapter_02": {
+      "order:": "2",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "https://data.planmap.eu/pub/moon/PM-MOO-MS-SPAApollo_01/",
+            "order": "1",
+            "path": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT Ec - Eratosthenian Craters",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "The crater Wilsing C (32 km diameter) has a sharp-crested rim, but no discernable ejecta or rays. It is classified as Eratosthenian in age.",
+        "title:": "Ec - Eratosthenian Craters",
+        "view": {
+          "extent": "[-150.9, -19.5, -154.9, -17.5]",
+          "marker": "[ -152.9, -18.5 ]"
+        }
+      }
+    },
+    "chapter_03": {
+      "order:": "3",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT UIc - Upper Imbrian Craters",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "Dryden crater (52 km diameter) exhibits discernable ejecta, but no rays. It has a crater size-frequency distribution that indicated it is Upper Imbrian in age.",
+        "title:": "UIc - Upper Imbrian Craters",
+        "view": {
+          "extent": "[-158, -34, -154, -32]",
+          "marker": "[ -156, -33 ]"
+        }
+      }
+    },
+    "chapter_04": {
+      "order:": "4",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT LIo - Orientale sculpted terrain",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "Secondary crater chains and grooves that originate from Orientale basin are present on the eastern side of the mapping area, and are Lower Imbrian in age.",
+        "title:": "LIo - Orientale sculpted terrain",
+        "view": {
+          "extent": "[-131.1, -50.8, -127.1, -48.8]",
+          "marker": "[ -129.1, -49.8]"
+        }
+      }
+    },
+    "chapter_05": {
+      "order:": "5",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT LIc - Lower Imbrian craters",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "Fizeau crater has a crater size-frequency distribution that places it as having a Lower Imbrian age.",
+        "title:": "LIc - Lower Imbrian craters",
+        "view": {
+          "extent": "[-135.9, -59, -132.9, -57]",
+          "marker": "[-133.9, -58 ]"
+        }
+      }
+    },
+    "chapter_06": {
+      "order:": "6",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT Ip - Imbrian planins",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "Smooth, light-colored deposits called light plains fill craters and hollows in some locations within the mapping area. These are Upper Imbrian in age.",
+        "title:": "Ip - Imbrian plains",
+        "view": {
+          "extent": "[-171.5, -24.6, -167.5, -22.6]",
+          "marker": "[ -169.5, -23.6 ]"
+        }
+      }
+    },
+    "chapter_07": {
+      "order:": "7",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path": "",
+            "type": ""
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "The dark, smooth plains deposits mapped in this area primarily include mare basalts within Apollo basin and to the southwest towards the center of the South Pole-Aitken basin. These plains are Upper Imbrian in age.",
+        "title:": "UIdp - Uppper Imbrian dark plains",
+        "view": {
+          "extent": "[-154, -37, -150, -35]",
+          "marker": "[ -152, -36 ]"
+        }
+      }
+    },
+    "chapter_08": {
+      "order:": "08",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path:": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT UIlp - Upper Imbrian light plains",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "Some light plains with Upper Imbrian ages similar to the dark plains are also mapped in Apollo basin and towards the center of the South Pole-Aitken basin.",
+        "title:": "UIlp - Upper Imbrian light plains",
+        "view": {
+          "extent": "[-157, -46, -153, -44]",
+          "marker": "[ -155, -45 ]"
+        }
+      }
+    },
+    "chapter_09": {
+      "order:": "09",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path:": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT LIrp - Lower Imbrian rugged plains",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "Low relief, rugged plains have a more rugged appearance than the smooth light and dark plains. These plains appear towards the center of the South Pole-Aitken basin in the southwest corner of the mapping area and are Lower Imbrian in age.",
+        "title:": "LIrp - Lower Imbrian rugged plains",
+        "view": {
+          "extent": "[-162, -57, -158, -55]",
+          "marker": "[ -160, -56 ]"
+        }
+      }
+    },
+    "chapter_10": {
+      "order:": "10",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path:": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT NpNc - Nectarian, pre-Nectarian craters",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "Many larger craters and basins are Nectarian and pre-Nectarian in age. These form the bulk of the mapping area. For example, Langmuir crater (85 km diameter).",
+        "title:": "NpNc - Nectarian, pre-Nectarian craters",
+        "view": {
+          "extent": "[-130.8, -36.8, -126.8, -35.8]",
+          "marker": "[ -128.8, -35.8 ]"
+        }
+      }
+    },
+    "chapter_11": {
+      "order:": "11",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path:": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT pNrmAPL - pre-Nectarian Apollo rim massifs",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "The Apollo basin rim and central peak ring massifs are pre-Nectarian in age.",
+        "title:": "pNrmAPL - pre-Nectarian Apollo rim massifs",
+        "view": {
+          "extent": "[-140, -33.5, -136, -31.5]",
+          "marker": "[ -138, -32.5 ]"
+        }
+      }
+    },
+    "chapter_12": {
+      "order:": "12",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path:": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT pNlrAPL - pre-Nectarian Apollo low rugged terrains",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "Low relief, rugged materials present between the Apollo basin rim and central peak ring massifs are also pre-Nectarian in age and may represent impact material originating from the formation of Apollo basin.",
+        "title:": "pNlrAPL - pre-Nectarian Apollo low rugged terrains",
+        "view": {
+          "extent": "[-148, -39.6, -144, -37.6]",
+          "marker": "[ -146, -38.6 ]"
+        }
+      }
+    },
+    "chapter_13": {
+      "order:": "13",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path:": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT pNmSPAf - pre-Nectarian SPA floor material",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "Low relief, rugged materials present inside the South Pole-Aitken basin rim massifs on the basin floor are also pre-Nectarian in age, but is distinguishable from the low relief, rugged materials within Apollo basin.",
+        "title:": "pNmSPAf - pre-Nectarian SPA floor material",
+        "view": {
+          "extent": "[-162.5, -29, -158.5, -27]",
+          "marker": "[ -160.5, -28 ]"
+        }
+      }
+    },
+    "chapter_14": {
+      "order:": "14",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path:": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT pNrmSPA - pre-Nectarian SPA rim massif",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "In the mapping area, pre-Nectarian rim massifs associated with the South Pole-Aitken basin are observed curving from the northwest to the east.",
+        "title:": "pNrmSPA - pre-Nectarian SPA rim massif",
+        "view": {
+          "extent": "[-162, -23, -158, -21]",
+          "marker": "[ -160, -22 ]"
+        }
+      }
+    },
+    "chapter_15": {
+      "order:": "15",
+      "step_01": {
+        "loaded_layers:": {
+          "layer": {
+            "credits": "",
+            "order": "",
+            "path:": "geoserver/wms/moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full - ONLY UNIT pNmSPAr - pre-Nectarian SPA rim material",
+            "type": "wms"
+          }
+        },
+        "media:": {
+          "media_01": {
+            "caption:": "",
+            "path:": "",
+            "stoptime": "",
+            "type:": ""
+          }
+        },
+        "text:": "Other pre-Nectarian materials with morphologies different from the pre-Nectarian/Nectarian crater materials are observed and classified as South Pole-Aitken crater materials.",
+        "title:": "pNmSPAr - pre-Nectarian SPA rim material",
+        "view": {
+          "extent": "[-163, -20, -159, -18]",
+          "marker": "[ -161, -19 ]"
+        }
+      }
+    }
+  },
+  "planmap_id": "",
+  "publication": "",
+  "storymap title": "SPA Apollo"
+}
