@@ -15,7 +15,7 @@ produdced with
 ```
 
 * [ v4 markdown template](template_ds_v04.md)
-* [ v4 json template](template_ds_v04.md)
+* [ v4 json template](template_ds_v04.json)
 
 ## Directory structure v4
 
