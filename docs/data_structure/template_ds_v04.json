@@ -5,10 +5,10 @@
   "basemap": "basemap_xyx_URL",
   "chapters": {
     "chapter_01": {
+      "order:": "1",
       "step_01": {
         "title:": "Why mapping Mars today?",
         "text:": "Sample text of max 500 characters",
-        "order:": "1",
         "media:": {
           "media_01": {
             "path:": "path_TBA",
