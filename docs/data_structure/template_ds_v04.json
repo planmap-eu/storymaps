@@ -1,5 +1,6 @@
 {
   "storymap title": "sample title",
+  "planmap_id": "",
   "Authors": "sample list of authors",
   "publication": "optional text linking publication(s) related to the storymap",
   "basemap": "basemap_xyx_URL",
