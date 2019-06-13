@@ -8,13 +8,12 @@ generated in markdown originally, parsed with [md_to_json](https://github.com/nj
 
 ## Sample data structure
 
-produdced with
+produdced originally with markdown (then modified directly)
 
 ```
 ~ ❯❯❯ md_to_json template_ds_v04.md > template_ds_v04.json
 ```
 
-* [ v4 markdown template](template_ds_v04.md)
 * [ v4 json template](template_ds_v04.json)
 
 ## Directory structure v4
