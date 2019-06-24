@@ -23,7 +23,7 @@
           "type:": "video/mp4"
         }],
         "view": {
-          "extent": [-180, -90, 180, 90],
+          "extent": [-180, -90, 180, 90]
         }
       }]
     },
@@ -31,7 +31,7 @@
       "order": 2,
       "steps": [{
         "text:": "Hokusai crater. Quadrangle namesake. Pristine (young) impact crater. Bright rays extend over planet. Delivered water to N Pole?",
-        "title:": "Hokusai crater"
+        "title:": "Hokusai crater",
         "layers": [{
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
             "order:": 1,
@@ -99,7 +99,7 @@
       "order": 4,
       "steps": [{
         "text:": "'Ghost craters of different sizes in close proximity require multiple lava flow field events separated in geological time.",
-        "title:": "Wrinkle ridge ring 'ghost craters"
+        "title:": "Wrinkle ridge ring 'ghost craters",
         "layers:": [{
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
             "order:": 1,
@@ -222,7 +222,7 @@
             "path": "mercury/media/chapter_05/NathairVentFigure.png",
             "type": "image/png"
           }
-        ],
+        ]
       }]
     },
     {
@@ -309,5 +309,5 @@
         }
       }]
     }
-  }]
+  ]
 }
