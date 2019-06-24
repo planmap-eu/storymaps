@@ -1,0 +1,51 @@
+{
+  "title": "string",
+  "planmap_id": "string",
+  "publication": "string",
+  "authors": "string",
+  "basemap": {
+    "url": "string",
+    "options": {
+      "crs": "string",
+      "maxNativeZoom": "integer",
+      "tms": "boolean",
+      "autoZIndex": "boolean",
+      "attribution": "string"
+    }
+  },
+  "chapters": [
+    {
+      "order": "integer",
+      "steps": [
+        {
+          "title": "string",
+          "text": "string",
+          "stoptime": "integer",
+          "layers": [
+            {
+              "order:": "integer",
+              "credits": "string",
+              "path": "string",
+              "type": "string"
+            },
+            ...
+          ],
+          "media": [
+            {
+              "path:": "string",
+              "type:": "string"
+              "caption:": "string",
+            },
+            ...
+          ],
+          "view": {
+            "extent": ["float", "float", "float", "float"],
+            "marker": ["float", "float"]
+          }
+        },
+        ...
+      ]
+    },
+    ...
+  ]
+}
