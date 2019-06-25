@@ -11,6 +11,7 @@
       "tms": "false",
       "autoZIndex": "true",
       "attribution": "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
+    }
   },
   "chapters": [{
       "chapter_title":"Chapter 1",
