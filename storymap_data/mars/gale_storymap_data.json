@@ -32,7 +32,7 @@
             "credits": ""
         }],
         "view": {
-          "extent": "[[-180, -90], [180, 90]]",
+          "extent": [-180, -90, 180, 90],
           "marker": ""
         }
       }]
@@ -65,7 +65,7 @@
           "stoptime": "10s"
         }],
         "view": {
-          "extent": "[[-180, -90], [180, 90]]",
+          "extent": [-180, -90, 180, 90],
           "marker": ""
         }
       }]
@@ -88,7 +88,7 @@
           "credits": "CTX mosaic - Calthech/Murray Lab"
         }],
         "view": {
-          "extent": "[[135, -8], [143, 0]]",
+          "extent": [135, -8, 143, 0],
           "marker": ""
         }
       }]
@@ -116,7 +116,7 @@
           "credits": "NASA MRO HiRISE/NASA/JPL/University of Arizona"
         }],
         "view": {
-          "extent": "[[135, -8], [143, 0]]",
+          "extent": [135, -8, 143, 0],
           "marker": ""
         }
       }]
@@ -127,7 +127,7 @@
         "title": "A Martian geologist: Curiosity",
         "text": "Orbital data are key to our work, but nothing can replace the ground truth. That’s why we sent Mars Science Laboratory rover Curiosity on Mars. Curiosity is a true field geologist. Equipped with high-resolution cameras, microscopes and an entire geochemical lab, this rover allows us to remotely study the terrains encountered in Gale Crater. Using its data, we can learn what kind of rocks are present in Gale, their exact chemical composition or their structures. All these information are important for us understand the paleoenvironmental conditions which they were deposited under, billions of years ago.",
         "media": [{
-          "path": "stories/mars/gale/media/stop_05/Curiosity_static.glb",
+          "path": "stories/mars/gale/media/chapter_05/Curiosity_static.glb",
           "type": "model/gltf-binary",
           "caption": "3D mesh by NASA/JPL-Caltech",
           "stoptime": ""
@@ -139,7 +139,7 @@
           "credits": "NASA MRO HiRISE/NASA/JPL/University of Arizona"
         }],
         "view": {
-          "extent": "[[137.2593930, -4.7319811], [137.5040463, -4.5720141]]",
+          "extent": [137.2593930, -4.7319811, 137.5040463, -4.5720141],
           "marker": ""
         }
       }]
@@ -173,7 +173,7 @@
             "credits": "NASA MRO HiRISE/NASA/JPL/University of Arizona"
         }],
         "view": {
-          "extent": "[[137.2593930, -4.7319811], [137.5040463, -4.5720141]]",
+          "extent": [137.2593930, -4.7319811, 137.5040463, -4.5720141],
           "marker": ""
         }
       }]
@@ -185,7 +185,7 @@
         "title": "Kimberley outcrop",
         "text": "Along the road, in 2014, Curiosity stopped at the Kimberley outcrop to do some Geology at this beautiful place. Look, you can even spot the rover on the satellite picture. Sedimentary rocks of this place belong to the Bradbury Group, an ensemble of sandstones that were deposited about 3.4-3.6 billion years ago, when rivers ran across the crater.",
         "media": [{
-            "path": "stories/mars/gale/media/pano Kimberley.jpg",
+            "path": "stories/mars/gale/media/chapter_07/pano_kimberley.jpg",
             "type": "image/jpeg",
             "caption": "NASA/JPL-Caltech/Ken Kremer – kenkremer.com/Marco Di Lorenzo",
             "stoptime": ""
@@ -202,7 +202,7 @@
             "credits": "NASA MRO HiRISE/NASA/JPL/University of Arizona"
         }],
         "view": {
-          "extent": "[[137.3968053, -4.6409855], [137.4181897, -4.6195336]]",
+          "extent": [137.3968053, -4.6409855, 137.4181897, -4.6195336],
           "marker": ""
         }
       }]
@@ -231,12 +231,12 @@
             "credits": "NASA MRO HiRISE/NASA/JPL/University of Arizona"
         }],
         "view": {
-          "extent": "[[137.3968053, -4.6409855], [137.4181897, -4.6195336]]",
+          "extent": [137.3968053, -4.6409855, 137.4181897, -4.6195336],
           "marker": ""
         }
       }]
     },
-    {
+	  {
       "chapter_title":"Chapter 9",
       "chapter_id":"9",
       "steps": [{
@@ -255,7 +255,7 @@
             "credits": ""
         }],
         "view": {
-          "extent": "[[-180, -90], [180, 90]]",
+          "extent": [-180, -90, 180, 90],
           "marker": ""
         }
       }]
