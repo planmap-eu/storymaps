@@ -1,0 +1,189 @@
+html, body, #container {height: 100%; width: 100%; overflow: hidden; color:#666666;}
+body {padding-top: 50px;}
+input[type="radio"], input[type="checkbox"] {margin: 0;}
+
+.table > tbody > tr > td {border-top: 1px solid #f4f4f4;}
+.table-hover > tbody > tr:hover {background-color: rgba(150,150,150,0.1)!important;}
+
+#sidebar {display: block; width: 250px; height: 100%; max-width: 100%; float: left; background-color:#ffffff;}
+.chevron {color: #e5572a; border: none;margin: 0 2px;}
+#rightsidebar {display: block; width: 400px; height: 100%; max-width: 100%; z-index: 100000000000; position: fixed; top: 58px; right: 6px;}
+#rightsidebar .panel-body, #rightsidebar .panel-heading{width: 398px;}
+#map {width: auto; height: 100%;  /*box-shadow: 0 0 10px rgba(0,0,0,0.5);*/}
+#loading {position: absolute; width: 220px; height: 19px; top: 50%; left: 50%; margin: -10px 0 0 -110px; z-index: 20001;}
+#features {margin: 0px; border: none; border-radius: 0px; -webkit-box-shadow: none; box-shadow: none;}
+#sidebar-hide-btn {margin-top: -2px;}
+#aboutTabsContent {padding-top: 10px;}
+#about-btn, #list-btn {color:#666666;}
+#about-btn:hover, #list-btn:hover, #about-btn:focus, #list-btn:focus {background-color: rgba(150,150,150,0.1)!important;color:#666666;}
+
+.progress-bar-full {width: 100%;}
+.white {color: #FFFFFF;}
+.panel-heading{width: 250px; background: #e5572a!important;color:#ffffff!important; font-weight: bold!important;}
+.panel-heading h3 {font-weight: bold!important;}
+.panel-body {width: 250px;}
+.storybox {position: absolute; max-height: 90%; overflow-y:auto; overflow-x: hidden; background: #ffffff url(../../assets/img/mars-bg.jpg) no-repeat scroll bottom right; -webkit-background-size:100% auto; -moz-background-size:100% auto; -o-background-size:100% auto; background-size:100% auto;}
+.feature-row {cursor: pointer; width: 250px;}
+.sidebar-wrapper {width: 100%; height: 100%; position: relative;}
+.sidebar-table {position: absolute; width: 100%; /*top: 103px;*/ top: 37px; bottom: 0px; overflow: auto;}
+.leaflet-control-layers {overflow: auto;}
+.leaflet-control-layers label {font-weight: normal; margin-bottom: 0px;}
+.leaflet-control-layers-list input[type="radio"], input[type="checkbox"] {margin: 2px;}
+.table {margin-bottom: 0px;}
+.navbar .navbar-brand {font-weight: bold; font-size: 25px; color: #FFFFFF;}
+.navbar-collapse.in {overflow-y: hidden;}
+.navbar-header .navbar-icon-container {margin-right: 15px;}
+.navbar-header .navbar-icon {line-height: 50px; height: 50px;}
+.navbar-header a.navbar-icon {margin-left: 25px;}
+.typeahead {background-color: #FFFFFF;}
+.tt-dropdown-menu {background-color: #FFFFFF; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 4px 4px 4px 4px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); margin-top: 4px; padding: 4px 0; width: 100%; max-height: 300px; overflow: auto;}
+.tt-suggestion {font-size: 14px; line-height: 20px; padding: 3px 10px;}
+.tt-suggestion.tt-cursor {background-color: #0097CF; color: #FFFFFF; cursor: pointer;}
+.tt-suggestion p {margin: 0;}
+.tt-suggestion + .tt-suggestion {border-top: 1px solid #ccc;}
+.typeahead-header {margin: 0 5px 5px 5px; padding: 3px 0; border-bottom: 2px solid #333;}
+.has-feedback .form-control-feedback {position: absolute; top: 0; right: 0; display: block; width: 34px; height: 34px; line-height: 34px; text-align: center;}
+.step-row {background: #ffffff;}
+.activestep{font-weight: bold;background-color: #f5f5f5;}
+.fa.pull-right {color: #999999;}
+
+.navbarmap {background-color: #ffffff;border-color: #ffffff;}
+.green {color: #09515C;}
+.caption {font-style: italic;}
+
+a.green:link {color: #09515C;}
+a.green:visited {color: #09515C;}
+a.green:hover {color: #09515C;}
+a.green:active {color: #09515C;}
+
+.chevron_mars{color: #e5572a!important;}
+.chevron_mercury{color: #555f80!important;}
+.chevron_moon{color: #8b8385!important;}
+
+
+@media (max-width: 767px) {
+	#sidebar {display: none;}
+	.url-break {word-break: break-all; word-break: break-word; -webkit-hyphens: auto; hyphens: auto;}
+	.dropdown-menu a i{color: #FFFFFF;}
+	body {font-size: 15px;}
+	#rightsidebar {width: 200px; top:120px;}
+	#rightsidebar .panel-body, #rightsidebar .panel-heading{width: 198px;}
+	.caption {font-size: 13px;}
+	.panel {margin-bottom: 50px;}
+}
+
+@media (min-width: 768px) {
+	body {font-size: 12px;}
+	#rightsidebar {width: 329px;}
+	#rightsidebar .panel-body, #rightsidebar .panel-heading{width: 327px;}
+	#sidebar, .panel-heading {width: 235px;}
+	.caption {font-size: 10px;}
+}
+
+@media (min-width: 992px) {
+	body {font-size: 13px;}
+	#rightsidebar {width: 352px;}
+	#rightsidebar .panel-body, #rightsidebar .panel-heading{width: 350px;}
+	#sidebar, .panel-heading {width: 248px;}
+	.caption {font-size: 11px;}
+}
+
+@media (min-width: 1200px) {
+	body {font-size: 14px;}
+	#rightsidebar {width: 377px;}
+	#rightsidebar .panel-body, #rightsidebar .panel-heading{width: 375px;}
+	#sidebar, .panel-heading {width: 262px;}
+	.caption {font-size: 12px;}
+}
+    
+@media (min-width: 1600px) {
+	body {font-size: 15px;}
+	#rightsidebar {width: 400px;}
+	#rightsidebar .panel-body, #rightsidebar .panel-heading{width: 398px;}
+	#sidebar, .panel-heading {width: 275px;}
+	.caption {font-size: 13px;}
+
+}
+
+
+
+@media print {
+  .navbar {display: none !important;}
+  .leaflet-control-container {display: none !important;}
+}
+
+/* Style the Image Used to Trigger the Modal */
+.imageslide {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.imageslide:hover {opacity: 0.7;}
+/* The Modal (background) */
+#imageModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3000000000; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (Image) */
+#imageModal .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#imageModal #caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+#imageModal .modal-content, #caption { 
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+#imageModal .closemodal {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#imageModal .closemodal:hover,
+#imageModal .closemodal:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  #imageModal .modal-content {
+    width: 100%;
+  }
+}
