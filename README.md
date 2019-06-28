@@ -8,3 +8,4 @@ In the first version of the app we have a fixed set of stories exploring three d
 * a "_traverse-walk_", where the basemap displays a route where the story walks the user through (Mercury/hokusai);
 * an "_interactive-board_", where the basemap presents interactive layers explaining the region (Moon/apollo).
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3260174.svg)](https://doi.org/10.5281/zenodo.3260174)
