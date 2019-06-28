@@ -14,16 +14,15 @@
     }
   },
   "chapters": [{
-      "order": 1,
+      "chapter_id": 1,
       "steps": [{
         "title": "Introduction",
-        "text": "I'm Jack Wright from the Open University and I’ve made this geological map of the Hokusai quadrangle of Mercury. Mercury is divided into 15 mapping quadrangles, and whenever the Mariner-10 spacecraft flew past the planet in the 1970s it imaged only one half of the planet’s surface, and left Hokusai unimaged.Now we are able to used data from the MESSENGER spacecraft which orbitted the planet and imaged its surface completely, to make the first geological map of this quadrangle. And I'm going to take you on this tour of the quadrangle now.",
+        "text": "In this Storymap, you will be taken on a tour of the Hokusai quadrangle of Mercury. Mercury is the smallest and innermost planet in the Solar System. It has been visited by two spacecraft, NASA’s Mariner 10 (1975–1976) and MESSENGER (2008–2015). Mariner 10 made three flybys of Mercury, but imaged only 9 of 15 of the planet’s mapping quadrangles. Hokusai was unimaged, and this meant geological maps of Mercury were not global. MESSENGER orbited Mercury and imaged it completely, which allowed this map of Hokusai, the first of its kind, to be made. This map will provide science context and targets for the ESA-JAXA BepiColombo mission to Mercury, which will arrive in December 2025.",
         "media": [{
-          "path": "mercury/media/chapter_01/Hokusai_stop1.mp4",
+          "path": "https://www.youtube.com/embed/kvOrVqeht6Q",
           "type": "video/mp4"
         }],
         "loaded_layers": [{
-            "order": "",
             "path": "",
             "type": "",
             "credits": ""
@@ -34,31 +33,28 @@
       }]
     },
     {
-      "order": 2,
+      "chapter_id": 2,
       "steps": [{
-        "text": "Hokusai crater. Quadrangle namesake. Pristine (young) impact crater. Bright rays extend over planet. Delivered water to N Pole?",
+        "text": "This is the Hokusai impact crater, which is 114 km across. Impact craters on Mercury are named after practitioners of the arts: artists, writers, composers, performers, etc. Hokusai is the namesake for the whole quadrangle in which it is situated. Bright rays extend thousands of kilometres from Hokusai. Such rays fade in time, which means Hokusai probably formed within the last 350 million years. These rays extend over the north pole and nearly all the way to the opposite side of the planet.",
         "title": "Hokusai crater",
         "loaded_layers": [{
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 1,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 2,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 3,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
             "type": "wms"
           }
         ],
         "media": [{
-          "path": "mercury/media/chapter_01/Hokusai_stop1.mp4",
+          "path": "https://www.youtube.com/embed/XfrvQt8AUmQ",
           "type": "video/mp4"
         }],
         "view": {
@@ -68,31 +64,28 @@
       }]
     },
     {
-      "order": 3,
+      "chapter_id": 3,
       "steps": [{
-        "text": "Demonstrate crater degradation and burial. Smooth plains as lava flows.",
-        "title": "Degraded craters buried by smooth plains.",
+        "text": "Between the impact craters in this view are ‘smooth plains’. These plains cover ~26% of Mercury’s surface. The craters here are much less crisp than Hokusai, which suggests they are older. Hokusai rays are on top of the smooth plains, which means the Hokusai impact came after the smooth plains formed. Some craters in this view are partially buried by smooth plains, which means they formed before the smooth plains. What are the smooth plains? We cannot be certain because no lander has sampled the composition of Mercury’s surface, but they are probably mostly lava flows.",
+        "title": "Smooth plains with degraded craters",
         "loaded_layers": [{
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 1,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 2,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 3,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
             "type": "wms"
           }
         ],
         "media": [{
-          "path": "mercury/media/chapter_02/Hokusai_stop2.mp4",
+          "path": "https://www.youtube.com/embed/ShcIsjT6GQg",
           "type": "video/mp4"
         }],
         "view": {
@@ -102,36 +95,33 @@
       }]
     },
     {
-      "order": 4,
+      "chapter_id": 4,
       "steps": [{
-        "text": "'Ghost craters of different sizes in close proximity require multiple lava flow field events separated in geological time.",
-        "title": "Wrinkle ridge ring 'ghost craters",
+        "text": "The smooth plains in the Hokusai quadrangle constitute a geographic region called ‘Borealis Planitia’. Although smooth compared with more cratered plains on Mercury, they still have some texture, including abundant wrinkle ridges that form a network across Borealis Planitia. Wrinkle ridges have formed because Mercury’s crust has been compressed, which caused it to fold and fracture in places, like the skin of a desiccating apple. Some wrinkle ridges join up in a circular shape, probably because they overlie an impact crater that has been buried completely by smooth plains. These are called ‘ghost craters’.",
+        "title": "Smooth plains with ghost craters",
         "loaded_layers": [{
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 1,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 2,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 3,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
             "type": "wms"
           }
         ],
         "media": [{
-            "path": "mercury/media/chapter_03/Hokusai_stop3.mp4",
+            "path": "https://www.youtube.com/embed/rgonq7rMh80",
             "type": "video/mp4"
           },
           {
             "caption": "TBA",
-            "path": "mercury/media/chapter_03/WrinkleRidgeRings.png",
+            "path": "stories/mercury/hokusai/media/chapter_03/WrinkleRidgeRings.png",
             "type": "image/png"
           }
         ],
@@ -142,177 +132,165 @@
       }]
     },
     {
-      "order": 5,
+      "chapter_id": 5,
       "steps": [{
-        "text": "Largest impact basin in H05. Deepest surface elevation on Mercury. Colour (therefore compositional) variation. Young lava flows in crater centre. Suge Facula as lava volatile interaction.",
-        "title": "Rachmaninoff crater",
+        "text": "The Rachmaninoff impact crater is 305 km across and is the largest impact crater in Hokusai. This is the deepest crater on Mercury, and it has exhumed a great thickness of the planet’s crust. In enhanced colour, the dark blue material in Rachmaninoff is only found in other craters that have excavated deep into the crust, which suggests this material is from the lowermost crust. The smooth, orange material in central Rachmaninoff appears to have buried the rough, blue crater floor. This suggests the orange material is lava, similar to Borealis Planitia. The bright yellow patch in Rachmaninoff is ‘Suge Facula’ (‘facula’ means bright spot). It has a pitted texture, which suggests the lavas here were disrupted as they flowed over the dark blue crater floor materials.",
+        "title": "Rachmaninoff crater and Suge Facula",
         "view": {
           "extent": [48.114851914, 22.631782503, 65.556233775, 31.817576949],
           "marker": [57.301868611830621, 27.420663977513094]
         },
         "loaded_layers": [{
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 1,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 2,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 3,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
             "type": "wms"
           }
         ],
         "media": [{
-            "path": "mercury/media/chapter_04/Hokusai_stop4.mp4",
+            "path": "https://www.youtube.com/embed/sROjuHH2vJo",
             "type": "video/mp4"
           },
           {
             "caption": "TBA",
-            "path": "mercury/media/chapter_04/Pittedground.png",
+            "path": "stories/mercury/hokusai/media/chapter_04/Pittedground.png",
             "type": "image/png"
           },
           {
             "caption": "TBA",
-            "path": "mercury/media/chapter_04/Pittedground2d.png",
+            "path": "stories/mercury/hokusai/media/chapter_04/Pittedground2d.png",
             "type": "image/png"
           },
           {
             "caption": "TBA",
-            "path": "mercury/media/chapter_04/RachmaninoffColour.png",
+            "path": "stories/mercury/hokusai/media/chapter_04/RachmaninoffColour.png",
             "type": "image/png"
           }
         ]
       }]
     },
     {
-      "order": 6,
+      "chapter_id": 6,
       "steps": [{
-        "text": "Largest explosive volcanic vent and largest putative explosive volcanic deposit on Mercury. Compound vent: evidence for multiple eruptions. Gullies.",
-        "title": "Nathair Facula and vent",
+        "text": "This is the largest bright spot on Mercury, called ‘Nathair Facula’. At its centre is a 50 km across crater. This crater is not circular like an impact crater, which means this crater must be a volcanic crater that formed because of multiple explosive volcanic eruptions. Nathair Facula is interpreted as the deposits from these explosive volcanic eruptions. This is similar to active volcanic eruptions on Jupiter’s moon, Io. Explosive volcanic eruptions require a volatile gases in the ascending magma to form the bubbles that drive the explosion, just like shaking up a bottle of fizzy drink. Nathair Facula is a thin deposit and the underlying geology can be seen through it. It is represented on the map with markings, rather than solid colour, to allow the underlying geology to be represented on the map.",
+        "title": "Nathair Facula",
         "view": {
           "extent": [57.109108174, 32.644551871, 71.476595081, 40.211428309],
           "marker": [63.985938815365998, 36.439238698162313]
         },
         "loaded_layers": [{
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 1,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 2,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 3,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
             "type": "wms"
           }
         ],
         "media": [{
-            "path": "mercury/media/chapter_05/Hokusai_stop5.mp4",
+            "path": "https://www.youtube.com/embed/VIb6yWbX4Ys",
             "type": "video/mp4"
           },
           {
             "caption": "TBA",
-            "path": "mercury/media/chapter_05/NathairVentFigure.png",
+            "path": "stories/mercury/hokusai/media/chapter_05/NathairVentFigure.png",
             "type": "image/png"
           }
         ]
       }]
     },
     {
-      "order": 7,
+      "chapter_id": 7,
       "steps": [{
-        "loaded_layers": [{
-            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 1,
-            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
-            "type": "wms"
-          },
-          {
-            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 2,
-            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
-            "type": "wms"
-          },
-          {
-            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 3,
-            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
-            "type": "wms"
-          }
-        ],
-        "media": [{
-            "path": "mercury/media/chapter_06/Hokusai_stop6.mp4",
-            "type": "video/mp4"
-          },
-          {
-            "caption": "TBA",
-            "path": "mercury/media/chapter_06/UnityCircles.png",
-            "type": "image/png"
-          },
-          {
-            "caption": "TBA",
-            "path": "mercury/media/chapter_06/UnityJunction.png",
-            "type": "image/png"
-          },
-          {
-            "caption": "TBA",
-            "path": "mercury/media/chapter_06/UnityRupesMercator.png",
-            "type": "image/png"
-          }
-        ],
-        "text": "Example of a fault on Mercury. Most prominent lobate scarp in H05. Probable right-lateral ramp at the northernmost extent of a ~2000 km-long thrust system extending southward.",
+        "text": "This cliff-like feature shown here is a type of feature called a lobate scarp. These are larger versions of wrinkle ridges. They form because compression thrusted one part of Mercury’s crust on top of another by faulting and folding. This lobate scarp is the largest in Hokusai: ‘Unity Rupes’. Lobate scarps are named after ships of discovery and scientific expeditions. The Unity carried Edmond Halley to St Helena, where he observed Mercury pass in front of the Sun in 1677. Unity Rupes is ~350 km long, but it is the northernmost part of a ~2000 km long fault system that extends southward out of Hokusai.",
         "title": "Unity Rupes",
         "view": {
           "extent": [82.306365213, 26.037347523, 87.756694717, 28.907854395],
           "marker": [85.422358000487236, 27.433690461604336]
-        }
-      }]
-    },
-    {
-      "order": 8,
-      "steps": [{
+        },      
         "loaded_layers": [{
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 1,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 2,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
             "type": "wms"
           },
           {
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-            "order": 3,
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
             "type": "wms"
           }
         ],
         "media": [{
-          "path": "mercury/media/chapter_07/Hokusai_stop7.mp4",
-          "type": "video/mp4"
-        }],
-        "text": "Magnetic anomalies, hollows, pitted ground, volcanism(?) associated with this crater.",
+            "path": "https://www.youtube.com/embed/hsSXBkTZOC4",
+            "type": "video/mp4"
+          },
+          {
+            "caption": "TBA",
+            "path": "stories/mercury/hokusai/media/chapter_06/UnityCircles.png",
+            "type": "image/png"
+          },
+          {
+            "caption": "TBA",
+            "path": "stories/mercury/hokusai/media/chapter_06/UnityJunction.png",
+            "type": "image/png"
+          },
+          {
+            "caption": "TBA",
+            "path": "stories/mercury/hokusai/media/chapter_06/UnityRupesMercator.png",
+            "type": "image/png"
+          }
+        ]
+      }]
+    },
+    {
+      "chapter_id": 8,
+      "steps": [{
+        "text": "Rustaveli crater appears to have been partially infilled by volcanic plains after most eruptions elsewhere on the planet had ceased.",
         "title": "Rustaveli crater",
         "view": {
           "extent": [75.782425614, 48.743916294, 89.948948855, 56.204951868],
           "marker": [82.847113166776808, 52.591608378167592]
-        }
+        },        
+        "loaded_layers": [{
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+            "type": "wms"
+          },
+          {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+            "type": "wms"
+          },
+          {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+            "type": "wms"
+          }
+        ],
+        "media": [{
+          "path": "https://www.youtube.com/embed/yDWW8asXOYw",
+          "type": "video/mp4"
+        }]
       }]
   }]
 }

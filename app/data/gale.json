@@ -191,15 +191,15 @@
             "stoptime": ""
         }],
         "loaded_layers": [{
-            "order": "1",
-            "path": "stories/mars/gale/maps/ESP_036128_1755_COLOR_385",
-            "type": "geojson",
-            "credits": "HiRISE ESP_036128_1755, NASA MRO HiRISE/NASA/JPL/University of Arizona"
-          },{
             "order": "",
             "path": "stories/mars/gale/maps/gale_msl_area_3857",
             "type": "tms",
             "credits": "NASA MRO HiRISE/NASA/JPL/University of Arizona"
+          },{
+            "order": "1",
+            "path": "stories/mars/gale/maps/ESP_036128_1755_COLOR_3857",
+            "type": "tms",
+            "credits": "HiRISE ESP_036128_1755, NASA MRO HiRISE/NASA/JPL/University of Arizona"
         }],
         "view": {
           "extent": [137.3968053, -4.6409855, 137.4181897, -4.6195336],
@@ -220,15 +220,15 @@
             "stoptime": ""
         }],
         "loaded_layers": [{
-            "order": "1",
-            "path": "stories/mars/gale/maps/ESP_036128_1755_COLOR_385",
-            "type": "geojson",
-            "credits": "HiRISE ESP_036128_1755, NASA MRO HiRISE/NASA/JPL/University of Arizona"
-          },{
             "order": "",
             "path": "stories/mars/gale/maps/gale_msl_area_3857",
             "type": "tms",
             "credits": "NASA MRO HiRISE/NASA/JPL/University of Arizona"
+          },{
+            "order": "1",
+            "path": "stories/mars/gale/maps/ESP_036128_1755_COLOR_3857",
+            "type": "tms",
+            "credits": "HiRISE ESP_036128_1755, NASA MRO HiRISE/NASA/JPL/University of Arizona"
         }],
         "view": {
           "extent": [137.3968053, -4.6409855, 137.4181897, -4.6195336],
