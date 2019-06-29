@@ -4,14 +4,21 @@
   "title": "Hokusai",
   "authors": "Jack Wright et al.",
   "basemap": {
-    "url": "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-1/0,1,2,3,4/{z}/{x}/{y}.png",
+    "url": "http://access.planetserver.eu/planmap/mdis_mosaic_3857/{z}/{x}/{-y}.png",
     "options": {
       "crs": "L.CRS.EPSG3857",
       "maxNativeZoom": 9,
       "tms": "false",
       "autoZIndex": "true",
+      "center": [40, 40],
       "attribution": "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
-    }
+    },
+    "loaded_layers": [{
+      "order": "",
+      "path": "",
+      "type": "",
+      "credits": ""
+    }]
   },
   "chapters": [{
       "chapter_id": 1,
@@ -26,7 +33,7 @@
             "path": "",
             "type": "",
             "credits": ""
-        }],        
+        }],
         "view": {
           "extent": [-180, -90, 180, 90]
         }
@@ -121,7 +128,7 @@
           },
           {
             "caption": "TBA",
-            "path": "stories/mercury/hokusai/media/chapter_03/WrinkleRidgeRings.png",
+            "path": "stories/mercury/hokusai/media/chapter_04/WrinkleRidgeRings.png",
             "type": "image/png"
           }
         ],
@@ -162,17 +169,17 @@
           },
           {
             "caption": "TBA",
-            "path": "stories/mercury/hokusai/media/chapter_04/Pittedground.png",
+            "path": "stories/mercury/hokusai/media/chapter_05/Pittedground.png",
             "type": "image/png"
           },
           {
             "caption": "TBA",
-            "path": "stories/mercury/hokusai/media/chapter_04/Pittedground2d.png",
+            "path": "stories/mercury/hokusai/media/chapter_05/Pittedground2d.png",
             "type": "image/png"
           },
           {
             "caption": "TBA",
-            "path": "stories/mercury/hokusai/media/chapter_04/RachmaninoffColour.png",
+            "path": "stories/mercury/hokusai/media/chapter_05/RachmaninoffColour.png",
             "type": "image/png"
           }
         ]
@@ -209,7 +216,7 @@
           },
           {
             "caption": "TBA",
-            "path": "stories/mercury/hokusai/media/chapter_05/NathairVentFigure.png",
+            "path": "stories/mercury/hokusai/media/chapter_06/NathairVentFigure.png",
             "type": "image/png"
           }
         ]
@@ -223,7 +230,7 @@
         "view": {
           "extent": [82.306365213, 26.037347523, 87.756694717, 28.907854395],
           "marker": [85.422358000487236, 27.433690461604336]
-        },      
+        },
         "loaded_layers": [{
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
@@ -246,17 +253,17 @@
           },
           {
             "caption": "TBA",
-            "path": "stories/mercury/hokusai/media/chapter_06/UnityCircles.png",
+            "path": "stories/mercury/hokusai/media/chapter_07/UnityCircles.png",
             "type": "image/png"
           },
           {
             "caption": "TBA",
-            "path": "stories/mercury/hokusai/media/chapter_06/UnityJunction.png",
+            "path": "stories/mercury/hokusai/media/chapter_07/UnityJunction.png",
             "type": "image/png"
           },
           {
             "caption": "TBA",
-            "path": "stories/mercury/hokusai/media/chapter_06/UnityRupesMercator.png",
+            "path": "stories/mercury/hokusai/media/chapter_07/UnityRupesMercator.png",
             "type": "image/png"
           }
         ]
@@ -270,7 +277,7 @@
         "view": {
           "extent": [75.782425614, 48.743916294, 89.948948855, 56.204951868],
           "marker": [82.847113166776808, 52.591608378167592]
-        },        
+        },
         "loaded_layers": [{
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
             "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",

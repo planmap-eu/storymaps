@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />    
+    <title>PlanMap</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css">
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.css">
+    <link rel="stylesheet" href="assets/leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">    
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon-152.png">
+    <link rel="icon" sizes="196x196" href="assets/img/favicon-196.png">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top navbarmap" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-icon-container">
+            <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg"></i></a>
+            <a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-search fa-lg"></i></a>
+          </div>
+          <a class="navbar-brand" href="#" style="padding-top: 5px"><img src="assets/img/planmap_logo_white.png" style="width: 160px"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="search" style="display: none">
+            <div class="form-group has-feedback">
+                <input id="searchbox" type="text" placeholder="Search" class="form-control">
+                <span id="searchicon" class="fa fa-search form-control-feedback"></span>
+            </div>
+          </form>
+          <ul class="nav navbar-nav">
+            <li class="hidden-xs"><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="list-btn" class="green"><i class="fa fa-list"></i>&nbsp;&nbsp;Chapters</a></li>
+            <li><a href="/" class="green"><i class="fa fa-home"></i>&nbsp;&nbsp;Stories Home</a></li>
+            <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn" class="green"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;About</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="sidebar">
+        <div class="sidebar-wrapper">
+          <div class="panel panel-default" id="features">
+            <div class="panel-heading">
+              <h3 class="panel-title">Chapters
+              <button type="button" class="btn btn-xs btn-default pull-right chevron" id="sidebar-hide-btn"><i class="fa fa-chevron-left"></i></button></h3>
+            </div>
+            <div class="panel-body">         
+            </div>
+            <div class="sidebar-table">
+              <table class="table table-hover" id="feature-list">
+                <thead class="hidden">
+                  <tr>
+                    <th>Icon</th>
+                  <tr>
+                  <tr>
+                    <th>Name</th>
+                  <tr>
+                  <tr>
+                    <th>Chevron</th>
+                  <tr>
+                </thead>
+                <tbody class="list" id="chapters">
+
+                </tbody>
+              </table>
+            </div>   
+          </div>
+        </div>
+      </div>
+      <div id="map"></div>
+
+
+      <div id="rightsidebar" style="display: none;">
+        <div class="sidebar-wrapper">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><span id="storytitle">Story content</span>
+              <div class="btn-group pull-right" role="group" aria-label="navigation buttons">
+                <button type="button" id="prev_story" class="btn btn-xs btn-default chevron" disabled><i class="fa fa-chevron-left"></i></button>
+                <button type="button" id="next_story" class="btn btn-xs btn-default chevron"><i class="fa fa-chevron-right"></i></button>
+              </div>
+            </h3>
+            </div>
+            <div class="panel-body storybox">
+              <div class="storycontent">
+              </div>
+              <br><br>
+              <div id="media" class="owl-carousel owl-theme"></div>  
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="loading" style="display: none">
+      <div class="loading-indicator">
+        <div class="progress progress-striped active">
+          <div class="progress-bar progress-bar-info progress-bar-full"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">About Storymap</h4>
+          </div>
+          <div class="modal-body">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis elementum magna, vel commodo neque tincidunt at. Vestibulum euismod rhoncus malesuada. Vivamus mollis pretium pretium. Aliquam sodales facilisis nisi, et rhoncus dui. Etiam eget massa mollis, tempus mi non, semper purus. Donec sit amet pulvinar enim. Fusce volutpat blandit purus, lacinia iaculis dolor eleifend et. Cras consequat dignissim velit eget imperdiet. Aenean tincidunt quam sapien. Curabitur eget ullamcorper arcu. Vivamus at arcu sed nisl aliquam tincidunt. Proin in fringilla quam.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="featureModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title text-primary" id="feature-title"></h4>
+          </div>
+          <div class="modal-body" id="feature-info"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="attributionModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">
+              attribution...
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div id="attribution"></div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  <!-- Image zoom -->
+  <div id="imageModal" class="modal" tabindex='-1'>
+    <span class="closemodal">&times;</span>
+    <img class="modal-content" id="bigimg">
+    <div id="caption"></div>
+  </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.5/typeahead.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js"></script>
+    <script src="assets/leaflet-groupedlayercontrol/leaflet.groupedlayercontrol.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+<script type="text/javascript">
+
+/* ------ SETTINGS ------ */
+
+/* some CSS settings for different map */
+
+var mars_color = "#e5572a";
+var mercury_color = "#555f80";
+var moon_color = "#8b8385";
+
+var mars_bgimage = "mars-bg.jpg";
+var mercury_bgimage = "mercury-bg.jpg";
+var moon_bgimage = "moon-bg.jpg";
+
+var markerpng="marker-mars.png";
+var markerpng_mars = "marker-mars.png";
+var markerpng_mercury = "marker-mercury.png";
+var markerpng_moon = "marker-moon.png";
+
+
+var planet='mercury';
+var jsonfile='hokusai';
+//get json file from hash
+if(window.location.hash) {
+  var jsonfile=window.location.hash.substring(1);
+}
+
+
+
+
+/* ------------ */
+
+
+
+$( document ).ready(function() {
+
+if(jsonfile=='gale'){
+  $(".panel-heading").css("cssText", "background-color:"+mars_color+"!important;");
+  $(".chevron").css("cssText", "color:"+mars_color+"!important;");
+  $('.storybox').css('background-image', 'url(assets/img/' + mars_bgimage + ')');  
+  markerpng=markerpng_mars;
+  planet = 'mars';
+}else if(jsonfile=='hokusai'){
+  $(".panel-heading").css("cssText", "background-color:"+mercury_color+"!important;");
+  $(".chevron").css("cssText", "color:"+mercury_color+"!important;");
+  $('.storybox').css('background-image', 'url(assets/img/' + mercury_bgimage + ')');   
+  markerpng=markerpng_mercury;
+  planet = 'mercury';
+}else if(jsonfile=='spaapollo'){
+  $(".panel-heading").css("cssText", "background-color:"+moon_color+"!important;");
+  $(".chevron").css("cssText", "color:"+moon_color+"!important;");
+  $('.storybox').css('background-image', 'url(assets/img/' + moon_bgimage + ')');  
+  markerpng=markerpng_moon;
+  planet = 'moon';   
+}
+
+
+
+/* image zoom modal */
+var imageModal = $("#imageModal");
+var img = $(".imageslide");
+var modalImg = $("#bigimg");
+var captionText = $("#caption");
+$(document).on("click", ".imageslide", function(e) {
+  $("#imageModal").show();
+  var new_src = $(this).attr('src');
+  var caption = $(this).attr('alt');
+
+  $('#bigimg').attr('src', new_src);
+  $("#caption").html(caption);
+});
+$(".closemodal").click(function() {
+  $("#imageModal").hide();
+  return false;
+});
+$("#bigimg").click(function() {
+  $("#imageModal").hide();
+  return false;
+});
+
+/* youtube iframe to emed videos */
+var video_iframe = '<div class="videocontainer"><iframe src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="videoiframe"></iframe></div>';
+
+
+$(window).resize(function() {
+  sizeLayerControl();
+});
+
+$(document).on("click", ".feature-row", function(e) {
+  $(document).off("mouseout", ".feature-row", clearHighlight);
+  sidebarClick(parseInt($(this).attr("id"), 10));
+});
+
+if ( !("ontouchstart" in window) ) {
+  $(document).on("mouseover", ".feature-row", function(e) {
+    highlight.clearLayers().addLayer(L.circleMarker([$(this).attr("lat"), $(this).attr("lng")], highlightStyle));
+  });
+}
+
+$(document).on("mouseout", ".feature-row", clearHighlight);
+
+
+$("#about-btn").click(function() {
+  $("#aboutModal").modal("show");
+  $(".navbar-collapse.in").collapse("hide");
+  return false;
+});
+
+$("#list-btn").click(function() {
+  animateSidebar();
+  return false;
+});
+
+
+$("#nav-btn").click(function() {
+  $(".navbar-collapse").collapse("toggle");
+  return false;
+});
+
+$("#sidebar-toggle-btn").click(function() {
+  animateSidebar();
+  return false;
+});
+
+$("#sidebar-hide-btn").click(function() {
+  animateSidebar();
+  return false;
+});
+
+function animateSidebar() {
+  $("#sidebar").animate({
+    width: "toggle"
+  }, 350, function() {
+    map.invalidateSize();
+  });
+}
+function animateRightSidebar() {
+  $("#rightsidebar").animate({
+    width: "toggle"
+  }, 350, function() {
+    map.invalidateSize();
+  });
+}
+function owlcarouselrefresh() {
+  $owl.trigger('destroy.owl.carousel');
+  $('#media').owlCarousel({
+        center: true,
+        items:1,
+        loop:true,
+        margin:10
+    }); 
+}
+function sizeLayerControl() {
+  $(".leaflet-control-layers").css("max-height", $("#map").height() - 50);
+}
+
+function clearHighlight() {
+  highlight.clearLayers();
+}
+
+function sidebarClick(id) {
+  var layer = markerClusters.getLayer(id);
+  map.setView([layer.getLatLng().lat, layer.getLatLng().lng], 17);
+  layer.fire("click");
+  /* Hide sidebar and go to the map on small screens */
+  if (document.body.clientWidth <= 767) {
+    $("#sidebar").hide();
+    map.invalidateSize();
+  }
+}
+
+// image carousel in story content
+var $owl = $('#media').owlCarousel({
+    center: true,
+    items:1,
+    loop:true,
+    margin:10,
+    lazyLoad:true,
+    autoHeight:true
+});
+
+// navigation buttons on top of story box
+$('#prev_story').click( function() { $('.activestep').prev().trigger('click'); });
+$('#next_story').click( function() { $('.activestep').next().trigger('click'); });
+
+
+/* MAP */
+
+var chapters;
+var layergroup = new L.FeatureGroup();
+var map = L.map('map');
+
+  /* get json data */
+      $.getJSON('data/'+jsonfile+'.json', function(data) {
+        //console.log(JSON.stringify(data));
+        //console.log('Title: '+data.storymap_title);
+        var basemap = data.basemap;
+        var url = basemap.url;
+        var crs = basemap.options.crs;
+        var maxNativeZoom = basemap.options.maxNativeZoom;
+        var tms = basemap.options.tms;
+        var autoZIndex = basemap.options.autoZIndex;
+        var attribution = basemap.options.attribution;
+        var center = basemap.options.center;
+
+        var map_layer = L.tileLayer(url, {
+              crs: crs,
+              maxNativeZoom: maxNativeZoom,
+              //tms: tms,
+              autoZIndex: autoZIndex,
+              attribution: attribution,
+              center: center
+        }).addTo(map);
+        map.setView(new L.LatLng(-20, -150), 4); //verificare !!!!
+
+        $.each( basemap.loaded_layers, function( i, layer ) {
+          if(layer.path!=''){
+            console.log(' --- loaded_layers: ');
+            console.log(' ---- path: '+layer.path);
+            console.log(' ---- credits: '+layer.credits);
+            console.log(' ---- type: '+layer.type);  
+            if(layer.type=='geojson'){
+              Layer = new L.GeoJSON.AJAX(layer.path, { opacity: 0.9, attribution: layer.credits });                 
+            }else if(layer.type=='wms'){
+              var Layer = L.tileLayer.wms('https://geoserver.planmap.eu/'+planet+'/wms?', {
+                  layers: layer.path,
+                  transparent: true,
+                  format: 'image/png',
+                  opacity: 0.5,
+                  attribution: layer.credits
+              });                  
+            }else if(layer.type=='tms'){
+              Layer = new L.tileLayer(layer.path+'/{z}/{x}/{y}.png', { tms: true, opacity: 0.9, attribution: layer.credits });                       
+            }
+            Layer.addTo(map); 
+          }
+        });         
+
+        /* Chapters */
+        chapters = data.chapters;
+
+        $.each( chapters, function( i, item ) {
+        //console.log(' - Chapter title: '+item.chapter_title);
+        //console.log(' - Chapter id: '+item.chapter_id);
+          steps = item.steps;
+          $.each( steps, function( i2, item2 ) {
+            //console.log(' -- Step title: '+item2.title);
+            //console.log(' -- view extent: '+item2.view.extent);
+            //console.log(' -- view marker: '+item2.view.marker);
+            $('#chapters').append('<tr class="step-row" data-chapterID="'+item.chapter_id+'" data-extent="'+item2.view.extent+'"><td style="vertical-align: middle;"><img width="13" height="18" src="assets/img/'+markerpng+'"></td><td class="feature-name">'+item2.title+'</td><td style="vertical-align: middle;"><i class="fa fa-chevron-right pull-right chevron"></i></td></tr>');
+          });
+
+        });
+        //trigger click on first item in the table of contents to load first story
+        $('.step-row').first().addClass('activestep').trigger('click');
+      }); 
+
+// click on stories
+$( "body" ).on( "click", ".step-row", function() {
+
+  /* navigation menu - table of contents */
+    $('.step-row').removeClass('activestep');
+    $(this).addClass('activestep');
+    var n = $( ".step-row" ).length;
+    var index = $( ".step-row" ).index( this );
+    if(index==0){$('#prev_story').attr("disabled", true);}else{$('#prev_story').attr("disabled", false);} 
+    if(index==(n-1)){$('#next_story').attr("disabled", true);}else{$('#next_story').attr("disabled", false);}    
+    
+
+    map.removeLayer(layergroup); /* remove previous loaded layers */
+    layergroup = new L.FeatureGroup();
+    $('#media').html('');
+    var chapterID = $(this).attr('data-chapterID');
+
+    var data_filter = chapters.filter( element => element.chapter_id ==chapterID);
+    $.each(data_filter, function(k, obj) {
+       steps = obj.steps;
+        $.each( steps, function( i2, item2 ) {
+          extent = item2.view.extent;
+          marker = item2.view.marker;
+          //console.log(' -- view extent: '+extent);
+          if(item2.text!=''){
+            $('#rightsidebar').show();
+            $('#storytitle').html(item2.title).fadeTo( 0, 0.5 ).fadeTo( 500, 1 );
+            $('.storycontent').html(item2.text);
+            $('.storybox').fadeTo( 0, 0.5 ).fadeTo( 500, 1 );
+
+                $.each( this.loaded_layers, function( i, layer ) {
+                  if(layer.path!=''){
+                    //console.log(' --- loaded_layers: ');
+                    //console.log(' ---- path: '+layer.path);
+                    //console.log(' ---- credits: '+layer.credits);
+                    //console.log(' ---- type: '+layer.type);  
+                    if(layer.type=='geojson'){
+                      Layer = new L.GeoJSON.AJAX(layer.path, { opacity: 0.9, attribution: layer.credits });                 
+                    }else if(layer.type=='wms'){
+                      var Layer = L.tileLayer.wms('https://geoserver.planmap.eu/mercury/wms?', {
+                          layers: layer.path,
+                          transparent: true,
+                          format: 'image/png',
+                          opacity: 0.5,
+                          attribution: layer.credits
+                      });                  
+                    }else if(layer.type=='tms'){
+                      Layer = new L.tileLayer(layer.path+'/{z}/{x}/{y}.png', { tms: true, opacity: 0.9, attribution: layer.credits });                       
+                    }
+                    layergroup.addLayer(Layer).addTo(map); 
+                  }
+                }); 
+                $.each( this.media, function( i, media ) {
+                  if(media.path!=''){
+                    if(media.type=='image/jpeg' || media.type=='image/png'){      
+                      $('#media').append('<div class="item"><img data-keyboard="true" data-toggle="modal" class="imageslide" src="'+media.path+'" alt="'+media.caption+'"><span class="caption">'+media.caption+'</span></div>');
+                    }
+                    if(media.type=='video/mp4'){
+                      $(video_iframe).appendTo( ".storycontent" ).find('.videoiframe').attr('src', media.path);
+                    }
+                  }
+                });
+          }else{
+            $('#rightsidebar').hide();
+          }
+       });           
+    });
+  
+    owlcarouselrefresh(); //refresh image carousel 
+
+    /* set new bounds */
+    var bounds = [[extent[1], extent[0]], [extent[3], extent[2]]];
+    map.fitBounds(bounds, {
+        animate: true,
+        pan: {
+            duration: .60,
+            easeLinearity: .60
+        }
+    });
+
+    /* add markers, if any */
+    if(marker!='' && typeof marker !== "undefined"){
+      var markers = [marker[1], marker[0]];
+      L.marker(markers).addTo(map);
+    }
+       
+  });
+    
+});
+</script>
+  </body>
+</html>

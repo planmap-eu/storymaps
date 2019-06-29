@@ -1,0 +1,79 @@
+{
+  "storymap_title": "",
+  "Authors": "",
+  "planmap_id": "",
+  "publication": "",
+  "basemap": {
+    "url": "",
+    "options": {
+      "crs": "",
+      "maxNativeZoom": 9,
+      "tms": "false",
+      "autoZIndex": "true",
+      "center": [0, 0],
+      "attribution": "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
+    },
+    "loaded_layers": [{
+      "order": "",
+      "path": "",
+      "type": "",
+      "credits": ""
+    }]
+  },    
+  "chapters": [{
+      "chapter_title":"Chapter 1",
+      "chapter_id":"1",      
+      "steps": [{
+        "title": "",
+        "text": "",
+        "loaded_layers": [{
+          "order": "",
+          "path": "",
+          "type": "",
+          "credits": ""
+        }],
+        "media": [{
+          "path": "",
+          "type": "",
+          "caption": "",
+          "stoptime": ""
+        }],        
+        "view": {
+          "extent": [0, 0, 0, 0],
+          "marker": ""
+        }
+      }]
+    },{
+      "chapter_title":"Chapter 2",
+      "chapter_id":"2",      
+      "steps": [{
+        "title": "",
+        "text": "",
+        "loaded_layers": [{
+          "credits": "",
+          "path": "",
+          "type": ""
+        },{
+          "credits": "",
+          "path": "",
+          "type": ""
+        }],       
+        "media": [{
+          "path": "",
+          "type": "",
+          "caption": "",
+          "stoptime": ""
+        },{
+          "path": "",
+          "type": "",
+          "caption": "",
+          "stoptime": ""
+        }],
+        "view": {
+          "extent": [0, 0, 0, 0],
+          "marker": ""
+        }
+      }]
+    }
+  ]
+}

@@ -6,12 +6,19 @@
   "basemap": {
     "url": "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-1/0,1,2,3,4/{z}/{x}/{y}.png",
     "options": {
-      "crs": "L.CRS.EPSG3857",
+      "crs": "",
       "maxNativeZoom": 9,
       "tms": "false",
       "autoZIndex": "true",
+      "center": [-4.630259002640354, 137.40749814285536],
       "attribution": "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
-    }
+    },
+    "loaded_layers": [{
+      "order": "",
+      "path": "",
+      "type": "",
+      "credits": ""
+    }]
   },    
   "chapters": [{
       "chapter_title":"Chapter 1",
@@ -116,7 +123,7 @@
           "credits": "NASA MRO HiRISE/NASA/JPL/University of Arizona"
         }],
         "view": {
-          "extent": [135, -8, 143, 0],
+          "extent": [137.2593930, -4.7319811, 137.5040463, -4.5720141],
           "marker": ""
         }
       }]
@@ -127,9 +134,9 @@
         "title": "A Martian geologist: Curiosity",
         "text": "Orbital data are key to our work, but nothing can replace the ground truth. That’s why we sent Mars Science Laboratory rover Curiosity on Mars. Curiosity is a true field geologist. Equipped with high-resolution cameras, microscopes and an entire geochemical lab, this rover allows us to remotely study the terrains encountered in Gale Crater. Using its data, we can learn what kind of rocks are present in Gale, their exact chemical composition or their structures. All these information are important for us understand the paleoenvironmental conditions which they were deposited under, billions of years ago.",
         "media": [{
-          "path": "stories/mars/gale/media/chapter_05/Curiosity_static.glb",
-          "type": "model/gltf-binary",
-          "caption": "3D mesh by NASA/JPL-Caltech",
+          "path": "stories/mars/gale/media/chapter_05/Curiosity_static.jpg",
+          "type": "image/jpeg",
+          "caption": "NASA/JPL-Caltech/MSSS",
           "stoptime": ""
         }],
         "loaded_layers": [{
@@ -214,8 +221,8 @@
         "title": "Future mapping work on Kimberley",
         "text": "While Curiosity is not at Kimberley any longer, the geological mapping continues! Geologists are currently developing new technologies to improve study and mapping of Mars, by reconstructing in 3D and in Virtual Reality outcrops like Kimberley.",
         "media": [{
-            "path": "stories/mars/gale/media/Kimberley_300k_light.obj",
-            "type": "model/obj",
+            "path": "stories/mars/gale/media/chapter_08/Kimberley_300k_light.jpg",
+            "type": "image/jpeg",
             "caption": "3D mesh of the Kimberley outcrop, G. Caravaca, S. Le Mouélic, N. Mangold, LPG Nantes",
             "stoptime": ""
         }],

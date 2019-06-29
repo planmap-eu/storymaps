@@ -48,18 +48,16 @@ input[type="radio"], input[type="checkbox"] {margin: 0;}
 .fa.pull-right {color: #999999;}
 
 .navbarmap {background-color: #ffffff;border-color: #ffffff;}
-.green {color: #09515C;}
+.green {color: #09515C!important;}
 .caption {font-style: italic;}
 
-a.green:link {color: #09515C;}
-a.green:visited {color: #09515C;}
-a.green:hover {color: #09515C;}
-a.green:active {color: #09515C;}
+a.green:link {color: #09515C!important;}
+a.green:visited {color: #09515C!important;}
+a.green:hover {color: #09515C!important;}
+a.green:active {color: #09515C!important;}
 
-.chevron_mars{color: #e5572a!important;}
-.chevron_mercury{color: #555f80!important;}
-.chevron_moon{color: #8b8385!important;}
-
+.videocontainer {position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin-top: 20px;}
+.videoiframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 @media (max-width: 767px) {
 	#sidebar {display: none;}
