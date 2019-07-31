@@ -170,7 +170,7 @@ function syncSidebar() {
     // map.fitBounds([[-50,-50],[50,50]])
     map.setView(new L.LatLng(-20, -150), 4);*/
 
-    
+
 /* Basemap Layers */
 
 var mars = L.tileLayer("https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-1/0,1,2,3,4/{z}/{x}/{y}.png", {
