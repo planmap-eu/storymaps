@@ -1,3 +1,5 @@
+import '../imports/ui/body.js';
+
 const getIMG = async (path) => {
   return await new Promise((resolve, reject) => {
     Meteor.call('img.get', { path }, (err, res) => {
