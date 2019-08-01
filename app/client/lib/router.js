@@ -24,6 +24,6 @@ FlowRouter.route('/', {
 FlowRouter.route('/:_body/:_story', {
     action: function(params, queryParams) {
       console.log("Routing to story:", params._body, params._story);
-      BlazeLayout.render('app', {main: 'stories'});
+      BlazeLayout.render('app', {main: 'story'});
     }
 });
