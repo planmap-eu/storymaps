@@ -11,20 +11,30 @@ import { stories } from '/imports/api/stories.js';
 
 
 Template.story.onRendered(function() {
-  console.log('Story page rendered');
-  var currentURI = FlowRouter.current();
-  var BODY = currentURI.params._body;
-  var LABEL = currentURI.params._story;
-  var story = stories.getStory(BODY, LABEL);
-  Session.set('currentStory', {body: BODY, label: LABEL});
-  Session.set('currentData', story);
-  Session.set('currentEpisode', 0);
+    console.log('Story page rendered');
+
+    var currentURI = FlowRouter.current();
+    var BODY = currentURI.params._body;
+    var LABEL = currentURI.params._story;
+    var EPISODE = currentURI.context.hash || 0;
+    console.log(`Story: ${BODY},${LABEL},${EPISODE}`);
+
+    var story = stories.getStory(BODY, LABEL);
+//    var story = getStory(BODY, LABEL);
+    console.log(story);
+    if (story) {
+        Session.set('currentStory', {body: BODY, label: LABEL});
+        Session.set('currentData', story);
+        Session.set('currentEpisode', EPISODE);
+    }
+    else {
+        console.log('XXX: story not available');
+    }
 })
 
 
 Template.storytoc.helpers({
   episodes: function() {
-    // var story = Session.get('currentStory');
     var story = Session.get('currentData');
     if (story) {
       return story.episodes;
@@ -33,10 +43,11 @@ Template.storytoc.helpers({
 })
 
 Template.storytoc.events({
-  'click button' (event,instance) {
-    var index = event.target.id;
-    Session.set('currentEpisodeIndex', index);
-  }
+    'click a.episode' (event,instance) {
+        console.log(`${event.target.id}, ${event.target.href}`);
+        var index = event.target.id;
+        Session.set('currentEpisode', index);
+    }
 })
 
 

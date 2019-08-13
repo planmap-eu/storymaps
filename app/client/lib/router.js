@@ -27,3 +27,19 @@ FlowRouter.route('/:_body/:_story', {
       BlazeLayout.render('app', {main: 'story'});
     }
 });
+
+//FlowRouter.route('/:_body/:_story#:_episode', {
+//    action: function(params, queryParams) {
+//      console.log("Routing to story:", params._body, params._story, params._episode);
+//      BlazeLayout.render('app', {main: 'story'});
+//    }
+//});
+
+// Page not found, go home 
+FlowRouter.notFound = {
+    action() {
+        FlowRouter.go('/');
+        //BlazeLayout.render('app', {main: 'not_found'});
+    }
+};
+
