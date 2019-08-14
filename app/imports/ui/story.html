@@ -1,6 +1,6 @@
 <template name="story">
 
-    <div id="story" class="row">
+    <div id="story" class="row" style="height:100%">
         {{> storytoc}}
         <!--
         {{> map_media}}
@@ -14,34 +14,19 @@
 
 <template name="storytoc">
 
-    <!--
-        <div id="storytoc" class="col col-lg-2">
-        storytoc
-        <ul>
-        {{#each episode in episodes}}
-        <li>
-        <img src="{{episode.thumbnail}}">
-        <button id="{{@index}}">
-        {{episode.title}}
-        </button>
-        </li>
-        {{/each}}
-        </ul>
-        </div>
-    -->
     <div id="wrapper">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    Episodes
+                    {{ story.title }}
                 </li>
-                {{#each episode in episodes}}
+                {{#each chapter in chapters}}
                 <li>
-                    <img src="{{episode.thumbnail}}">
-                    <a href="#{{@index}}" id="{{@index}}" class="episode">
-                        {{episode.title}}
+                    <img src="{{chapter.thumbnail}}">
+                    <a href="#{{@index}}" id="{{@index}}" class="chapter">
+                        {{ chapter.title }}
                     </a>
                 </li>
                 {{/each}}
@@ -55,9 +40,16 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
                         <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                    <div id="content">
+
+                        <!--
+                        {{> mapcontainer}}
+                        -->
+
+                                {{> storypanel }}
                     </div>
                 </div>
             </div>
@@ -75,6 +67,13 @@
     </script>
 
     <style>
+        #panel-wrapper {
+            z-index: 1000;
+            width: 350px;
+            max-height: 75vh;
+            overflow-y: auto;
+        }
+        
         #wrapper {
             padding-left: 0;
             -webkit-transition: all 0.5s ease;
@@ -209,29 +208,37 @@
 
 
 <template name="storypanel">
-    <div id="storypanel">
-      {{#with episode}}
-        <h3>{{title}}</h3>
-        <p>{{text}}</p>
-        {{#each media}}
-          {{> mediacanvas media=this height=200 width=400}}
-        {{/each}}
-      {{/with}}
-      <!-- <button onclick="on()">Turn on overlay effect</button> -->
-      <script>
+    <div id="panel-wrapper" class="pull-right">
+        <div class="panel panel-default">
+            {{#with chapter}}
+            <div class="panel-heading">
+                <h3>{{ title }}</h3>
+            </div>
+            <div class="panel-body">
+                <p>{{ text }}</p>
+                {{#each media}}
+                {{> mediacanvas media=this height=200 width=400}}
+                {{/each}}
+                <!--
+                -->
+            </div>
+            {{/with}}
+        </div>
+    </div>
+    <!-- <button onclick="on()">Turn on overlay effect</button> -->
+    <script>
         function on() {
-          document.getElementById("mediaoverlay").style.display = "block";
+            document.getElementById("mediaoverlay").style.display = "block";
         }
         function off() {
-          document.getElementById("mediaoverlay").style.display = "none";
+            document.getElementById("mediaoverlay").style.display = "none";
         }
-      </script>
-    </div>
+    </script>
 </template>
 
 
 <template name="mediacanvas">
-  {{{setCanvas media.type media.path width height}}}
+  {{{setCanvas media.type media.path width}}}
 </template>
 
 

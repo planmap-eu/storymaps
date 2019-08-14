@@ -17,9 +17,11 @@
 </body>
 
 <template name="app">
-  {{> menubar}}
-  {{> Template.dynamic template=main}}
-  {{> statusbar}}
+    <div class="container-fluid" style="height:100%">
+        <!--{{> menubar}}-->
+        {{> Template.dynamic template=main}}
+        <!--{{> statusbar}}-->
+    </div>
 </template>
 
 

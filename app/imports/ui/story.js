@@ -10,79 +10,100 @@ import './story.html';
 import { stories } from '/imports/api/stories.js';
 
 
-Template.story.onRendered(function() {
+// When 'story' template is rendered;
+// read 'body','label','chapter' from URI
+// -- "http://hostname/body/label#chapter --
+// and set the environment:
+// - 'currentStory': {"body","label"}
+// - 'currentChapter': "chapter"
+// - 'currentData': story data structure
+Template.story.onCreated(function() {
     console.log('Story page rendered');
 
     var currentURI = FlowRouter.current();
     var BODY = currentURI.params._body;
     var LABEL = currentURI.params._story;
-    var EPISODE = currentURI.context.hash || 0;
-    console.log(`Story: ${BODY},${LABEL},${EPISODE}`);
+    var chapter = currentURI.context.hash || 0;
+    console.log(`Story: ${BODY},${LABEL},${chapter}`);
 
-    var story = stories.getStory(BODY, LABEL);
-//    var story = getStory(BODY, LABEL);
-    console.log(story);
-    if (story) {
-        Session.set('currentStory', {body: BODY, label: LABEL});
-        Session.set('currentData', story);
-        Session.set('currentEpisode', EPISODE);
-    }
-    else {
-        console.log('XXX: story not available');
-    }
+    Session.set('currentStory', {body: BODY, label: LABEL});
+    Session.set('currentChapter', chapter);
+
+    _setStory(BODY, LABEL);
 })
 
+const _setStory = async (body,label) => {
+    await Meteor.call('getStory', {body,label}, (err, res) => {
+        if (err) {
+            console.log(`Something went wrong for story ${body},${label}`);
+        }
+        Session.set('currentData', res);
+    })
+}
 
+
+// TABLE OF CONTENTS
 Template.storytoc.helpers({
-  episodes: function() {
-    var story = Session.get('currentData');
-    if (story) {
-      return story.episodes;
+    story: function() {
+        var story = Session.get('currentData');
+        return story;
+    },
+    chapters: function() {
+        var story = Session.get('currentData');
+        if (story) {
+            console.log(story);
+            return story.chapters;
+        }
     }
-  }
 })
 
 Template.storytoc.events({
-    'click a.episode' (event,instance) {
+    'click a.chapter' (event,instance) {
         console.log(`${event.target.id}, ${event.target.href}`);
         var index = event.target.id;
-        Session.set('currentEpisode', index);
+        Session.set('currentChapter', index);
     }
 })
+
 
 
 Template.storypanel.helpers({
-  episode: function() {
-    console.log('storypanel helpers episode');
-    var episode_index = Session.get('currentEpisodeIndex');
-    // var story = Session.get('currentStory');
-    var story = Session.get('currentData');
-    if (episode_index >= 0) {
-      return story.episodes[episode_index];
+    chapter: function() {
+        var chapter_index = Session.get('currentChapter');
+        var story = Session.get('currentData');
+        if (chapter_index >= 0) {
+            if (story) {
+                var chapter = story.chapters[chapter_index];
+                console.log(chapter);
+                return chapter;
+            }
+        }
     }
-  }
 })
 
 
+
 Template.mediacanvas.helpers({
-  setCanvas(type, url, width, height) {
-    var hws = [ "width="+width,
-                "height="+height,
-                "src='"+url+"'"].join(' ');
-    if (type == 'image/png') {
-      return "<img "+hws+"'>";
-    } else {
-      if (type == 'video/youtube') {
-        // return "<iframe src='"+url+"'></iframe>";
-        return '<iframe '+hws+' frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>';
-      } else {
-        if (type == 'model/gltf-binary') {
-          console.log("Not working with 3D models yet.")
-          return type;
+    setCanvas(type, url, width) {
+        var hws = ["src='/"+url+"'"];
+        //var hws = ["width="+width,"height="+height,"src='"+url+"'"].join(' ');
+        var element;
+        if (type == 'image/png' || type == 'image/jpeg' || type == 'image/jpg') {
+            element = "<img style='width:100%' "+hws+">";
+            console.log(element);
+            return element;
+        } else {
+            if (type == 'video/youtube') {
+                // return "<iframe src='"+url+"'></iframe>";
+                return '<iframe '+hws+' frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>';
+            } else {
+                if (type == 'model/gltf-binary') {
+                    console.log("Not working with 3D models yet.")
+                    return type;
+                }
+            }
         }
-      }
+        console.log("I have no idea how to handle " + type);
+        return type;
     }
-    console.log("I have no idea how to handle " + type);
-    return type;
-  }
 })

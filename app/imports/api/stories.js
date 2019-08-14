@@ -48,16 +48,17 @@ class Stories {
 
 
 // Fetch story from server (see server/main.js)
-const _getStory = async (body,label) => {
-    return await new Promise((resolve, reject) => {
-        Meteor.call('getStory', {body,label}, (err, res) => {
-            if (err) {
-                reject(`Something went wrong for story ${body},${label}`);
-            }
-            resolve(res)
-        })
-    })
-}
+//const _getStory = async (body,label) => {
+//    return await new Promise((resolve, reject) => {
+//        Meteor.call('getStory', {body,label}, (err, res) => {
+//            if (err) {
+//                reject(`Something went wrong for story ${body},${label}`);
+//            }
+//            resolve(res)
+//            Session.set('currentData', res);
+//        })
+//    })
+//}
 
 
 var stories = new Stories();
