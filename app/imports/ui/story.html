@@ -14,7 +14,7 @@
 
 <template name="storytoc">
 
-    <div id="wrapper">
+    <div id="wrapper" style="height:100%">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -43,7 +43,8 @@
                         <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                     </div>
-                    <div id="content">
+                    <div id="content" class="col" style="position:relative;
+                        z-index=1;">
 
                         {{> mapcontainer}}
                         {{> storypanel }}
@@ -70,6 +71,7 @@
             width: 350px;
             max-height: 75vh;
             overflow-y: auto;
+                position: absolute;
         }
         
         #wrapper {
@@ -195,7 +197,7 @@
 
 
 <template name="storypanel">
-    <div id="panel-wrapper" class="pull-right">
+    <div id="panel-wrapper">
         <div class="panel panel-default">
             {{#with chapter}}
             <div class="panel-heading">

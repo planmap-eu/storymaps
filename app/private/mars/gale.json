@@ -6,7 +6,7 @@
     "basemap": {
         "url": "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-1/0,1,2,3,4/{z}/{x}/{y}.png",
         "options": {
-            "crs": "L.CRS.EPSG3857",
+            "crs": "EPSG3857",
             "maxNativeZoom": 9,
             "tms": false,
             "autoZIndex": true,
