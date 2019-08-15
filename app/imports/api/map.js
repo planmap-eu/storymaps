@@ -21,6 +21,7 @@ var default_maps = {
   }
 }
 
+
 class Map {
   constructor() {
     this._map = null;
@@ -59,7 +60,8 @@ class Map {
       var def = default_maps[map_settings.default];
       L.tileLayer(def.url, def.options).addTo(map);
     } else {
-      L.tileLayer.wms(map_settings.layer.url, map_settings.layer.options).addTo(map);
+      //L.tileLayer.wms(map_settings.url, map_settings.options).addTo(map);
+      L.tileLayer(map_settings.url, map_settings.options).addTo(map);
     }
 
     this._map = map;

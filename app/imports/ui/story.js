@@ -86,15 +86,12 @@ Template.storypanel.helpers({
 Template.mediacanvas.helpers({
     setCanvas(type, url, width) {
         var hws = ["src='/"+url+"'"];
-        //var hws = ["width="+width,"height="+height,"src='"+url+"'"].join(' ');
         var element;
         if (type == 'image/png' || type == 'image/jpeg' || type == 'image/jpg') {
             element = "<img style='width:100%' "+hws+">";
-            console.log(element);
             return element;
         } else {
             if (type == 'video/youtube') {
-                // return "<iframe src='"+url+"'></iframe>";
                 return '<iframe '+hws+' frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>';
             } else {
                 if (type == 'model/gltf-binary') {
