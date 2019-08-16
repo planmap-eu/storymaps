@@ -67,22 +67,6 @@ Template.storytoc.events({
 
 
 
-Template.storypanel.helpers({
-    chapter: function() {
-        var chapter_index = Session.get('currentChapter');
-        var story = Session.get('currentData');
-        if (chapter_index >= 0) {
-            if (story) {
-                var chapter = story.chapters[chapter_index];
-                console.log(chapter);
-                return chapter;
-            }
-        }
-    }
-})
-
-
-
 Template.mediacanvas.helpers({
     setCanvas(type, url, width) {
         var hws = ["src='/"+url+"'"];

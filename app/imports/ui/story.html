@@ -36,28 +36,19 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Simple Sidebar</h1>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
-                    </div>
-                    <div id="content" class="col" style="position:relative;
-                        z-index=1;">
-
-                        {{> mapcontainer}}
-                        {{> storypanel }}
-
-                    </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Simple Sidebar</h1>
+                    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                </div>
+                <div class="col-lg-12" style="position:relative">
+                    {{> mapcontainer}}
                 </div>
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
-    <!-- Menu Toggle Script -->
+
     <script>
         $("#menu-toggle").click(function(e) {
             e.preventDefault();
@@ -67,11 +58,13 @@
 
     <style>
         #panel-wrapper {
-            z-index: 1000;
-            width: 350px;
-            max-height: 75vh;
-            overflow-y: auto;
-                position: absolute;
+            z-index: 100;
+            top: 10px;
+            right: 10px;
+            bottom: 20px !important;
+            //height: 75%;
+            //overflow-y: auto;
+            position: absolute;
         }
         
         #wrapper {
@@ -193,41 +186,6 @@
         }
     </style>
 
-</template>
-
-
-<template name="storypanel">
-    <div id="panel-wrapper">
-        <div class="panel panel-default">
-            {{#with chapter}}
-            <div class="panel-heading">
-                <h3>{{ title }}</h3>
-            </div>
-            <div class="panel-body">
-                <p>{{ text }}</p>
-                {{#each media}}
-                {{> mediacanvas media=this height=200 width=400}}
-                {{/each}}
-                <!--
-                -->
-            </div>
-            {{/with}}
-        </div>
-    </div>
-    <!-- <button onclick="on()">Turn on overlay effect</button> -->
-    <script>
-        function on() {
-            document.getElementById("mediaoverlay").style.display = "block";
-        }
-        function off() {
-            document.getElementById("mediaoverlay").style.display = "none";
-        }
-    </script>
-</template>
-
-
-<template name="mediacanvas">
-  {{{setCanvas media.type media.path width}}}
 </template>
 
 

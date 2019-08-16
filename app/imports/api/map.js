@@ -1,3 +1,4 @@
+
 var default_maps = {
   opm_mars: {
     url: "http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/mola-gray/{z}/{x}/{y}.png",
