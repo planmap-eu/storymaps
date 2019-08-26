@@ -7,7 +7,7 @@
     "url": "http://access.planetserver.eu/planmap/mdis_mosaic_3857/{z}/{x}/{-y}.png",
     "options": {
       "crs": "L.CRS.EPSG3857",
-      "maxNativeZoom": 9,
+      "maxNativeZoom": 5,
       "tms": "false",
       "autoZIndex": "true",
       "center": [40, 40],
@@ -228,8 +228,8 @@
         "text": "This cliff-like feature shown here is a type of feature called a lobate scarp. These are larger versions of wrinkle ridges. They form because compression thrusted one part of Mercury’s crust on top of another by faulting and folding. This lobate scarp is the largest in Hokusai: ‘Unity Rupes’. Lobate scarps are named after ships of discovery and scientific expeditions. The Unity carried Edmond Halley to St Helena, where he observed Mercury pass in front of the Sun in 1677. Unity Rupes is ~350 km long, but it is the northernmost part of a ~2000 km long fault system that extends southward out of Hokusai.",
         "title": "Unity Rupes",
         "view": {
-          "extent": [82.306365213, 26.037347523, 87.756694717, 28.907854395],
-          "marker": [85.422358000487236, 27.433690461604336]
+          "extent": [80, 24.5, 89.5, 31],
+          "marker": [85, 27.5]
         },
         "loaded_layers": [{
             "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
