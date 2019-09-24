@@ -23,7 +23,8 @@ FlowRouter.route('/', {
 
 FlowRouter.route('/:_body/:_story', {
     action: function(params, queryParams) {
-      console.log("Routing to story:", params._body, params._story);
+      console.log(`Routing to story: '${params._body} , ${params._story}'`);
+      //TODO: give to 'app' the input parameters 'body' and 'story'
       BlazeLayout.render('app', {main: 'story'});
     }
 });
@@ -35,11 +36,10 @@ FlowRouter.route('/:_body/:_story', {
 //    }
 //});
 
-// Page not found, go home 
+// Page not found, go home
 FlowRouter.notFound = {
     action() {
         FlowRouter.go('/');
         //BlazeLayout.render('app', {main: 'not_found'});
     }
 };
-
