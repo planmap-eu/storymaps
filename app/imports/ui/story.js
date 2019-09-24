@@ -10,25 +10,22 @@ import './story.html';
 import { stories } from '/imports/api/stories.js';
 
 
-// When 'story' template is rendered;
+// When 'story' template is created;
 // read 'body','label','chapter' from URI
 // -- "http://hostname/body/label#chapter --
 // and set the environment:
 // - 'currentStory': {"body","label"}
-// - 'currentChapter': "chapter"
+// - 'currentChapter': "chapter-INDEX"
 // - 'currentData': story data structure
 Template.story.onCreated(function() {
-    console.log('Story page rendered');
-
+    console.log(`Template 'story' created.`);
     var currentURI = FlowRouter.current();
     var BODY = currentURI.params._body;
     var LABEL = currentURI.params._story;
-    var chapter = currentURI.context.hash || 0;
-    console.log(`Story: ${BODY},${LABEL},${chapter}`);
-
+    var CHAPTER = currentURI.context.hash || 0;
+    console.log(`Story params: ${BODY},${LABEL},${CHAPTER}`);
     Session.set('currentStory', {body: BODY, label: LABEL});
-    Session.set('currentChapter', chapter);
-
+    Session.set('currentChapter', CHAPTER);
     _setStory(BODY, LABEL);
 })
 
