@@ -2,6 +2,7 @@ console.log(`Greetings from ${module.id}!`);
 
 import { Template } from 'meteor/templating';
 
+import './mapcontainer.css';
 import './mapcontainer.html';
 
 import { map } from '/imports/api/map.js';

@@ -1,5 +1,5 @@
 <template name="story">
-    <div id="story" class="row" style="height:100%">
+    <div id="page-story" class="row">
         {{> storytoc}}
     </div>
 </template>
@@ -8,7 +8,14 @@
 
 <template name="storytoc">
 
-    <div id="wrapper" style="height:100%">
+    <!-- Menubar -->
+    <div id="menubar" class="container">
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+          Toggle Menu
+        </a>
+    </div>
+
+    <div id="wrapper">
 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -18,10 +25,14 @@
                 </li>
                 {{#each chapter in chapters}}
                 <li>
-                    <img src="{{chapter.thumbnail}}">
-                    <a href="#{{@index}}" id="{{@index}}" class="chapter">
+                      <a href="#{{@index}}" id="{{@index}}" class="chapter">
+                    {{#if chapter.thumbnail}}
+                      <img src="{{chapter.thumbnail}}">
+                    {{else}}
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                    {{/if}}
                         {{ chapter.title }}
-                    </a>
+                      </a>
                 </li>
                 {{/each}}
             </ul>
@@ -30,16 +41,7 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- <h1>Simple Sidebar</h1>
-                    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p> -->
-                    <a href="#menu-toggle" class="btn btn-default" style="margin-bottom:10px" id="menu-toggle">Toggle Menu</a>
-                </div>
-                <div class="col-lg-12" style="position:relative">
-                    {{> mapcontainer}}
-                </div>
-            </div>
+            {{> mapcontainer}}
         </div>
     </div>
 

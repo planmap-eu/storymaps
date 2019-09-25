@@ -1,0 +1,36 @@
+div #mapcontainer {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+#panel-wrapper {
+  z-index: 1000;
+  top: 10px;
+  right: 0px;
+  bottom: 10px !important;
+  position: absolute;
+  overflow-y: auto;
+}
+
+.carousel-indicators>li {
+  margin: 0 2px;
+  background-color: #f39c12;
+  border-color: #f39c12;
+  opacity: .7;
+}
+
+.carousel-indicators>li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+.glyphicon-chevron-left,
+.glyphicon-chevron-right {
+  opacity: 0;
+}
+.glyphicon-chevron-left:hover,
+.glyphicon-chevron-right:hover {
+  opacity: 0.75;
+}

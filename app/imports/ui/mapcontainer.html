@@ -1,6 +1,7 @@
 <template name="mapcontainer">
-  <div id="mapcontainer" style="height:80vh; width:100%; z-index:1;"></div>
-  {{> storypanel }}
+  <div id="mapcontainer">
+  </div>
+    {{> storypanel }}
 </template>
 
 
@@ -11,12 +12,14 @@
         <div class="panel-heading">
           <h3>{{ title }}</h3>
         </div>
-        <div class="panel-body" style="margin:auto;overflow-y:auto">
-          <p>{{ text }}</p>
+        <div class="panel-body">
+          <div id="text-content">
+            <p>{{ text }}</p>
+          </div>
           {{#if media}}
             {{#if many_items_in media}}
               <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" style="margin-bottom:50px">
+                <div class="carousel-inner" style="margin-bottom:10px">
                   {{#each media}}
                     {{#unless @index}}
                       <div class="item active">
@@ -33,7 +36,7 @@
                   <span class="glyphicon glyphicon-chevron-left"></span>
                   <span class="sr-only">Previous</span>
                 </a>
-                <ol class="carousel-indicators" style="bottom:-50px">
+                <ol class="carousel-indicators" style="bottom:-30px">
                   {{#each media}}
                     {{#unless @index}}
                       <li data-target="#myCarousel" data-slide-to="{{@index}}" class="active"></li>
@@ -57,7 +60,7 @@
       </div>
     </div>
   {{/with}}
-  
+
   <script>
     function on() {
       document.getElementById("mediaoverlay").style.display = "block";
@@ -65,20 +68,11 @@
     function off() {
       document.getElementById("mediaoverlay").style.display = "none";
     }
+    $('#panel-wrapper').on('mousewheel', function(e) {
+      e.stopPropagation();
+    });
   </script>
-  <style>
-    .carousel-indicators>li {
-      margin: 0 2px;
-      background-color: #f39c12;
-      border-color: #f39c12;
-      opacity: .7;
-    }
-    .carousel-indicators>li.active {
-      width: 10px;
-      height: 10px;
-      opacity: 1;
-    }
-  </style>
+
 </template>
 
 
