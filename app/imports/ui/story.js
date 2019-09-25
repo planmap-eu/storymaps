@@ -5,6 +5,7 @@ import { Session } from 'meteor/session';
 
 import './mapcontainer.js';
 
+import './story.css';
 import './story.html';
 
 import { stories } from '/imports/api/stories.js';
