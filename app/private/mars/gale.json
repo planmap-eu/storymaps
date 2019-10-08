@@ -5,16 +5,17 @@
   "planmap_id": "",
   "basemap": {
     "url": "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-1/0,1,2,3,4/{z}/{x}/{y}.png",
+    "center": [-4.63, 137.40],
     "options": {
       "crs": "EPSG3857",
       "maxNativeZoom": 9,
       "tms": false,
       "autoZIndex": true,
-      "center": [-4.63, 137.40],
       "attribution": "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
     }
   },
-  "chapters": [{
+  "chapters": [
+    {
       "title": "Why mapping Mars today?",
       "text": "Looking for the geological past of Mars is important for us for several reasons: understand what happens on Mars, and how this planet differs from ours? Did Life emerge at its surface, and if yes, for how long? Are Life-compliant conditions still present somewhere on Mars? And of course, to prepare future manned exploration missions: where to land safely and make the most science? That’s where geological mapping comes into play",
       "view": {
@@ -52,7 +53,7 @@
         "type": "image/jpeg",
         "caption": "PIA15687 Source: NASA/JPL-Caltech/ESA/DLR/ FU Berlin/MSSS"
       }],
-      "loaded_layers": [{
+      "layers": [{
         "order": "1",
         "path": "stories/mars/gale/maps/murray-lab_ctx-mosaic_gale_3857",
         "type": "tms",
@@ -70,7 +71,7 @@
         "type": "image/png",
         "caption": "Orbital facies of the Gale Crater by Grotzinger et al (2014)"
       }],
-      "loaded_layers": [{
+      "layers": [{
         "order": "1",
         "path": "stories/mars/gale/maps/grotzinger_orbital_facies_map.geojson",
         "type": "geojson",
