@@ -10,7 +10,7 @@
       "maxNativeZoom": 9,
       "tms": false,
       "autoZIndex": true,
-      "center": [-4.630259002640354, 137.40749814285536],
+      "center": [-4.63, 137.40],
       "attribution": "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
     }
   },
