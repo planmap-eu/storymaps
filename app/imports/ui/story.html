@@ -1,58 +1,58 @@
 <template name="story">
-    <div id="page-story" class="row">
-        {{> storytoc}}
+  <div id="page-story" class="row">
+    {{> menubar}}
+    <div id="wrapper">
+      {{> storytoc edit=edit}}
+      {{> storycontent edit=edit}}
     </div>
+  </div>
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
 </template>
 
 
 
+<template name="menubar">
+  <div id="menubar" class="container">
+    <a href="/">
+      <img id="logo" src="/img/logo-planmap.jpg">
+    </a>
+  </div>
+</template>
+
+
 <template name="storytoc">
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        {{ story.title }}
+      </li>
+      {{#each chapter in chapters}}
+      <li>
+        <a href="#{{@index}}" id="{{@index}}" class="chapter">
+          {{#if chapter.thumbnail}}
+            <img src="{{chapter.thumbnail}}">
+          {{else}}
+            <span class="glyphicon glyphicon-map-marker"></span>
+          {{/if}}
+          {{ chapter.title }}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
 
-    <!-- Menubar -->
-    <div id="menubar" class="container">
-      <a href="/">
-        <img src="/img/logo-planmap.jpg" height="40px">
-      </a>
-        <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
-          Toggle Menu
-        </a> -->
-    </div>
 
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    {{ story.title }}
-                </li>
-                {{#each chapter in chapters}}
-                <li>
-                      <a href="#{{@index}}" id="{{@index}}" class="chapter">
-                    {{#if chapter.thumbnail}}
-                      <img src="{{chapter.thumbnail}}">
-                    {{else}}
-                        <span class="glyphicon glyphicon-map-marker"></span>
-                    {{/if}}
-                        {{ chapter.title }}
-                      </a>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            {{> storymap }}
-        </div>
-    </div>
-
-    <script>
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-    </script>
-
+<template name="storycontent">
+  {{#if edit}}
+    {{> editor}}
+  {{/if}}
+  <div id="page-content-wrapper">
+    {{> storymap }}
+  </div>
 </template>

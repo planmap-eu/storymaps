@@ -29,6 +29,14 @@ FlowRouter.route('/:_body/:_story', {
     }
 });
 
+FlowRouter.route('/edit/:_body/:_story', {
+    action: function(params, queryParams) {
+      console.log(`Routing to story to EDIT: '${params._body} , ${params._story}'`);
+      //TODO: give to 'app' the input parameters 'body' and 'story'
+      BlazeLayout.render('app', {main: 'edit'});
+    }
+});
+
 //FlowRouter.route('/:_body/:_story#:_episode', {
 //    action: function(params, queryParams) {
 //      console.log("Routing to story:", params._body, params._story, params._episode);
