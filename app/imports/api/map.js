@@ -47,7 +47,7 @@ class Map {
   build(map_settings, element) {
     console.log(map_settings, element)
 
-    var map = L.map(element);
+    var map = L.map(element, map_settings.options);
 
     var extent = map_settings.extent;
     console.log(`Map settings extent: ${extent}`);
@@ -65,8 +65,7 @@ class Map {
       map.setView(center, 3);
     }
 
-    map_settings.options.crs = L.CRS.EPSG3857;
-    L.tileLayer(map_settings.url, map_settings.options).addTo(map);
+    L.tileLayer(map_settings.url).addTo(map);
 
     this._map = map;
   }

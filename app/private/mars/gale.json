@@ -5,12 +5,11 @@
   "planmap_id": "",
   "basemap": {
     "url": "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-1/0,1,2,3,4/{z}/{x}/{y}.png",
+    "tms": false,
     "center": [-4.63, 137.40],
+    "crs": "EPSG3857",
     "options": {
-      "crs": "EPSG3857",
       "maxNativeZoom": 9,
-      "tms": false,
-      "autoZIndex": true,
       "attribution": "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
     }
   },
