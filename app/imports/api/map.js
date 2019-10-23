@@ -23,116 +23,126 @@
 
 
 class Map {
-    constructor() {
-        this._map = null;
-        this._data = null;
-        this._overlay = null;
+  constructor() {
+    this._map = null;
+    this._data = null;
+    this._overlay = null;
+  }
+
+  getMap() {
+    return this._map;
+  }
+
+  clean() {
+    if (this._map) {
+      this._map.off();
+      this._map.eachLayer(function(layer) {
+        layer.remove();
+      });
+      this._map.remove();
+      this._map = null;
+    }
+  }
+
+  build(map_settings, element) {
+    console.log(map_settings, element)
+
+    var map = L.map(element);
+
+    var extent = map_settings.extent;
+    console.log(`Map settings extent: ${extent}`);
+    if (extent) {
+      map.fitBounds([
+        [extent[0], extent[1]],
+        [extent[2], extent[3]]
+      ]);
+    } else {
+      var center = map_settings.center;
+      if (!center) {
+        center = [0, 0];
+      }
+      console.log(`Map settings center: ${center}`);
+      map.setView(center, 3);
     }
 
-    getMap() {
-        return this._map;
-    }
+    map_settings.options.crs = L.CRS.EPSG3857;
+    L.tileLayer(map_settings.url, map_settings.options).addTo(map);
 
-    clean() {
-        if (this._map) {
-            this._map.off();
-            this._map.eachLayer(function(layer) {
-                layer.remove();
-            });
-            this._map.remove();
-            this._map = null;
-        }
-    }
+    this._map = map;
+  }
 
-    build(map_settings, element) {
-        console.log(map_settings, element)
-
-        var map = L.map(element);
-
-        var extent = map_settings.extent;
-        console.log(`Map settings extent: ${extent}`);
-        if (extent) {
-            map.fitBounds([
-                [extent[0], extent[1]],
-                [extent[2], extent[3]]
+  update(params) {
+    if (params) {
+      var map = this._map;
+      if (map) {
+        var view = params.view;
+        if (view) {
+          var extent = view.extent;
+          console.log(`View extent: ${extent}`);
+          if (extent) {
+            map.flyToBounds([
+              [extent[1], extent[0]],
+              [extent[3], extent[2]]
             ]);
-        } else {
-            var center = map_settings.center;
-            if (!center) {
-                center = [0, 0];
-            }
-            console.log(`Map settings center: ${center}`);
-            map.setView(center, 3);
+          }
         }
-
-        L.tileLayer(map_settings.url, map_settings.options).addTo(map);
-
-        this._map = map;
+        var marker = params.marker;
+        if (marker) {
+          L.marker(marker).addTo(map);
+          // .bindPopup('A marker.')
+          // .openPopup();
+        }
+        var layers = params.layers;
+        if (layers) {
+          this.setLayers(layers);
+        }
+      }
     }
+  }
 
-    update(params) {
-        if (params) {
-            var map = this._map;
-            if (map) {
-              var view = params.view;
-              if (view) {
-                  var extent = view.extent;
-                  console.log(`View extent: ${extent}`);
-                  if (extent) {
-                    map.flyToBounds([
-                        [extent[1], extent[0]],
-                        [extent[3], extent[2]]
-                    ]);
-                  }
-              }
-              var marker = params.marker;
-              if (marker) {
-                  L.marker(marker).addTo(map);
-                  // .bindPopup('A marker.')
-                  // .openPopup();
-              }
-              var layers = params.layers;
-              if (layers) {
-                this.setLayers(layers);
-              }
-            }
-        }
-    }
-
-    setLayers(layers) {
-      var overlay = new L.FeatureGroup();
-      layers.forEach(({path, credits, type}) => {
-        var layer;
-        if (type == 'tms') {
-          var url = 'http://localhost:8000/' + path + '/{z}/{x}/{y}.png';
-          console.log(url);
-          layer = new L.tileLayer(url,
-                                  {
-                                      tms: true,
-                                      opacity: 0.9,
-                                      attribution: credits
-                                  }
-                                  );
-        }
-        console.log(`Layer: ${layer}`);
+  setLayers(layers) {
+    console.log('Setting new layers(group)');
+    var overlay = new L.FeatureGroup();
+    layers.forEach(({path,credits,type}) => {
+      var layer;
+      if (type == 'tms') {
+        var url = path + '/{z}/{x}/{y}.png';
+        console.log(`TMS url: ${url}`);
+        layer = new L.tileLayer(url, {
+          tms: true,
+          opacity: 0.9,
+          attribution: credits
+        });
         if (!!layer) {
           overlay.addLayer(layer);
         }
-      });
-      console.log(`Overlay: ${overlay}`);
-      this.setOverlay(overlay);
-    }
-
-    setOverlay(overlay) {
-      if (this._overlay) {
-        this._map.removeLayer(this._overlay);
+      } else if (type == 'geojson') {
+        var url = path;
+        console.log(`GeoJSON url: ${url}`);
+        $.getJSON(url).then(function(geojson) {
+          layer = new L.geoJSON(geojson, {
+            attribution: credits
+          });
+          overlay.addLayer(layer);
+        })
+      } else {
+        console.error(`Type '${type}' not supported!`);
       }
-      overlay.addTo(this._map);
-      this._overlay = overlay;
+    });
+    console.log(`Overlay: ${overlay}`);
+    this.setOverlay(overlay);
+  }
+
+  setOverlay(overlay) {
+    if (this._overlay) {
+      this._map.removeLayer(this._overlay);
     }
+    overlay.addTo(this._map);
+    this._overlay = overlay;
+  }
 }
 
 var map = new Map();
 export {
-    map
+  map
 };
