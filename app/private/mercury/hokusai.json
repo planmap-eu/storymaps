@@ -30,17 +30,20 @@
       "title": "Hokusai crater",
       "layers": [{
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Contacts",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
           "type": "wms"
         }
       ],
@@ -58,17 +61,20 @@
       "title": "Smooth plains with degraded craters",
       "layers": [{
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Contacts",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
           "type": "wms"
         }
       ],
@@ -86,17 +92,20 @@
       "title": "Smooth plains with ghost craters",
       "layers": [{
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Contacts",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
           "type": "wms"
         }
       ],
@@ -124,17 +133,20 @@
       },
       "layers": [{
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Contacts",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
           "type": "wms"
         }
       ],
@@ -168,17 +180,20 @@
       },
       "layers": [{
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Contacts",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
           "type": "wms"
         }
       ],
@@ -202,17 +217,20 @@
       },
       "layers": [{
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Contacts",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
           "type": "wms"
         }
       ],
@@ -246,17 +264,20 @@
       },
       "layers": [{
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Linear_Features",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Contacts",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Contacts",
           "type": "wms"
         },
         {
           "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
-          "path": "geoserver/wms/mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+          "path": "https://geoserver.planmap.eu/mercury/wms",
+          "name": "mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
           "type": "wms"
         }
       ],

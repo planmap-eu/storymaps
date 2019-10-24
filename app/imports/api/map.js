@@ -102,7 +102,7 @@ class Map {
   setLayers(layers) {
     console.log('Setting new layers(group)');
     var overlay = new L.FeatureGroup();
-    layers.forEach(({path,credits,type}) => {
+    layers.forEach(({path,credits,type,name}) => {
       var layer;
       if (type == 'tms') {
         var url = path + '/{z}/{x}/{y}.png';
@@ -124,6 +124,17 @@ class Map {
           });
           overlay.addLayer(layer);
         })
+      } else if (type == 'wms' && !!name) {
+        var url = path + "?";
+        console.log(`WMS url: ${url}`);
+        layer = new L.tileLayer.wms(path, {
+          layers: name,
+          transparent: true,
+          format: 'image/png',
+          opacity: 0.5,
+          credits: credits
+        });
+        overlay.addLayer(layer);
       } else {
         console.error(`Type '${type}' not supported!`);
       }
