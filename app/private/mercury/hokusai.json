@@ -19,7 +19,7 @@
       "text": "In this Storymap, you will be taken on a tour of the Hokusai quadrangle of Mercury. Mercury is the smallest and innermost planet in the Solar System. It has been visited by two spacecraft, NASA’s Mariner 10 (1975–1976) and MESSENGER (2008–2015). Mariner 10 made three flybys of Mercury, but imaged only 9 of 15 of the planet’s mapping quadrangles. Hokusai was unimaged, and this meant geological maps of Mercury were not global. MESSENGER orbited Mercury and imaged it completely, which allowed this map of Hokusai, the first of its kind, to be made. This map will provide science context and targets for the ESA-JAXA BepiColombo mission to Mercury, which will arrive in December 2025.",
       "media": [{
         "path": "https://www.youtube.com/embed/kvOrVqeht6Q",
-        "type": "video/mp4"
+        "type": "video/youtube"
       }],
       "view": {
         "extent": [-180, -90, 180, 90]
@@ -49,7 +49,7 @@
       ],
       "media": [{
         "path": "https://www.youtube.com/embed/XfrvQt8AUmQ",
-        "type": "video/mp4"
+        "type": "video/youtube"
       }],
       "view": {
         "extent": [10.77, 53.95, 22.37, 61.80],
@@ -80,7 +80,7 @@
       ],
       "media": [{
         "path": "https://www.youtube.com/embed/ShcIsjT6GQg",
-        "type": "video/mp4"
+        "type": "video/youtube"
       }],
       "view": {
         "extent": [27.317548650, 48.575894529, 40.200653255, 55.360996288],
@@ -111,7 +111,7 @@
       ],
       "media": [{
           "path": "https://www.youtube.com/embed/rgonq7rMh80",
-          "type": "video/mp4"
+          "type": "video/youtube"
         },
         {
           "caption": "TBA",
@@ -152,7 +152,7 @@
       ],
       "media": [{
           "path": "https://www.youtube.com/embed/sROjuHH2vJo",
-          "type": "video/mp4"
+          "type": "video/youtube"
         },
         {
           "caption": "TBA",
@@ -199,7 +199,7 @@
       ],
       "media": [{
           "path": "https://www.youtube.com/embed/VIb6yWbX4Ys",
-          "type": "video/mp4"
+          "type": "video/youtube"
         },
         {
           "caption": "TBA",
@@ -236,7 +236,7 @@
       ],
       "media": [{
           "path": "https://www.youtube.com/embed/hsSXBkTZOC4",
-          "type": "video/mp4"
+          "type": "video/youtube"
         },
         {
           "caption": "TBA",
@@ -283,7 +283,7 @@
       ],
       "media": [{
         "path": "https://www.youtube.com/embed/yDWW8asXOYw",
-        "type": "video/mp4"
+        "type": "video/youtube"
       }]
     }
   ]

@@ -114,8 +114,10 @@ Template.mediacanvas.helpers({
             return element;
         } else {
             if (type == 'video/youtube') {
-                return '<iframe '+hws+' frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>';
+                // return '<div style="width:100px"><iframe '+hws+' frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe></div>';
+                return '<div class="video-container"><iframe '+hws+' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="videoiframe"></iframe></div>';
             } else {
+
                 if (type == 'model/gltf-binary') {
                     console.log("Not working with 3D models yet.")
                     return type;
