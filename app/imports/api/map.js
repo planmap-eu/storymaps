@@ -84,12 +84,11 @@ class Map {
               [extent[3], extent[2]]
             ]);
           }
-        }
-        var marker = params.marker;
-        if (marker) {
-          L.marker(marker).addTo(map);
-          // .bindPopup('A marker.')
-          // .openPopup();
+          var marker = view.marker;
+          if (marker) {
+            console.log(`Marker position: ${marker}`);
+            L.marker([marker[1], marker[0]]).addTo(map);
+          }
         }
         var layers = params.layers;
         if (layers) {

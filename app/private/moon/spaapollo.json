@@ -40,7 +40,7 @@
         "title": "Ec - Eratosthenian Craters",
         "text": "The crater Wilsing C (32 km diameter) has a sharp-crested rim, but no discernable ejecta or rays. It is classified as Eratosthenian in age.",
         "layers": [{
-        "path": "https://geoserver.planmap.eu/moon/wms",
+          "path": "https://geoserver.planmap.eu/moon/wms",
           "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
           "type": "wms",
           "credits": "https://data.planmap.eu/pub/moon/PM-MOO-MS-SPAApollo_01/"

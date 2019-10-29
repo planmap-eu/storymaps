@@ -12,7 +12,13 @@ Template.storytoc.helpers({
             console.log(story);
             return story.chapters;
         }
-    }})
+    },
+    currentChapter: function(index) {
+      var cc = Session.get('currentChapter');
+      // console.log(`C-Chapter: ${index}, ${cc}`);
+      return parseInt(cc) == parseInt(index);
+    }
+})
 
 
 Template.storytoc.events({
