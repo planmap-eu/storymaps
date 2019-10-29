@@ -6,6 +6,7 @@
       {{> storycontent edit=edit}}
     </div>
   </div>
+
   <script>
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
@@ -15,44 +16,10 @@
 </template>
 
 
-
 <template name="menubar">
   <div id="menubar" class="container">
     <a href="/">
       <img id="logo" src="/img/logo-planmap.jpg">
     </a>
-  </div>
-</template>
-
-
-<template name="storytoc">
-  <div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
-      <li class="sidebar-brand">
-        {{ story.title }}
-      </li>
-      {{#each chapter in chapters}}
-      <li>
-        <a href="#{{@index}}" id="{{@index}}" class="chapter">
-          {{#if chapter.thumbnail}}
-            <img src="{{chapter.thumbnail}}">
-          {{else}}
-            <span class="glyphicon glyphicon-map-marker"></span>
-          {{/if}}
-          {{ chapter.title }}
-        </a>
-      </li>
-      {{/each}}
-    </ul>
-  </div>
-</template>
-
-
-<template name="storycontent">
-  {{#if edit}}
-    {{> editor}}
-  {{/if}}
-  <div id="page-content-wrapper">
-    {{> storymap }}
   </div>
 </template>

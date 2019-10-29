@@ -1,0 +1,25 @@
+<template name="storytoc">
+
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <!-- <a href="{{root_url}}" class="title">  -->
+          {{ story.title }}
+        <!-- </a> -->
+      </li>
+      {{#each chapter in chapters}}
+      <li>
+        <a href="#{{@index}}" id="{{@index}}" class="chapter">
+          {{#if chapter.thumbnail}}
+            <img src="{{chapter.thumbnail}}">
+          {{else}}
+            <span class="glyphicon glyphicon-map-marker"></span>
+          {{/if}}
+          {{ chapter.title }}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  
+</template>

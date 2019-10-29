@@ -1,0 +1,20 @@
+<template name="storycontent">
+
+  {{#if edit}}
+    {{> editor}}
+  {{/if}}
+  <div id="page-content-wrapper">
+    {{> storymap }}
+  </div>
+
+</template>
+
+
+<template name="storymap">
+
+  {{#with chapter}}
+    {{> mapcontainer}}
+    {{> storypanel }}
+  {{/with}}
+
+</template>

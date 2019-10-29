@@ -3,7 +3,8 @@ console.log(`Greetings from ${module.id}!`);
 import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
 
-import './mapcontainer.js';
+import './story_toc.js';
+import './story_content.js';
 
 import './story.css';
 import './story.html';
@@ -38,27 +39,3 @@ const _setStory = async (body,label) => {
         Session.set('currentData', res);
     })
 }
-
-
-// TABLE OF CONTENTS
-Template.storytoc.helpers({
-    story: function() {
-        var story = Session.get('currentData');
-        return story;
-    },
-    chapters: function() {
-        var story = Session.get('currentData');
-        if (story) {
-            console.log(story);
-            return story.chapters;
-        }
-    }
-})
-
-Template.storytoc.events({
-    'click a.chapter' (event,instance) {
-        console.log(`${event.target.id}, ${event.target.href}`);
-        var index = event.target.id;
-        Session.set('currentChapter', index);
-    }
-})
