@@ -1,5 +1,5 @@
 #logo {
-  height: 30px;
+  height: 50px;
 }
 
 #page-story {
@@ -7,13 +7,13 @@
 }
 
 #menubar {
-  height: 50px;
+  height: 60px;
   padding: 10px;
   display: inline-block;
 }
 
 #wrapper {
-  height: calc(100% - 50px);
+  height: calc(100% - 0px);
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -59,7 +59,7 @@
 /* Sidebar Styles */
 .sidebar-nav {
   position: absolute;
-  top: 0;
+  /* top: 0; */
   width: 250px;
   margin: 0;
   padding: 0;
