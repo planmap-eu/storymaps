@@ -1,6 +1,5 @@
 <template name="story">
   <div id="page-story" class="row">
-    {{> menubar}}
     <div id="wrapper">
       {{> storytoc edit=edit}}
       {{> storycontent edit=edit}}
@@ -13,13 +12,4 @@
       $("#wrapper").toggleClass("toggled");
     });
   </script>
-</template>
-
-
-<template name="menubar">
-  <div id="menubar" class="container">
-    <a href="/">
-      <img id="logo" src="/img/logo-planmap.jpg">
-    </a>
-  </div>
 </template>

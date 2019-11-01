@@ -1,6 +1,7 @@
 <template name="storytoc">
 
   <div id="sidebar-wrapper">
+    {{> menubar}}
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
         <!-- <a href="{{root_url}}" class="title">  -->
@@ -22,4 +23,13 @@
     </ul>
   </div>
 
+</template>
+
+
+<template name="menubar">
+  <div id="menubar" class="container">
+    <a href="/">
+      <img id="logo" src="/img/logo-planmap.jpg">
+    </a>
+  </div>
 </template>
