@@ -7,11 +7,32 @@
 }
 
 #menubar {
-  height: 60px;
+  height: 70px;
   padding: 10px;
   display: inline-block;
   width: 100%;
 }
+
+.moon .glyphicon, .moon .title {
+    color: rgb(139, 131, 133);
+}
+/* .moon .title {
+    background-color: rgba(139, 131, 133, 0.2);
+} */
+
+.mars .glyphicon, .mars .title {
+    color: rgb(229, 86, 42);
+}
+/* .mars .title {
+    background-color: rgba(229, 86, 42, 0.2);
+} */
+
+.mercury .glyphicon, .mercury .title {
+    color: rgb(85, 95, 128);
+}
+/* .mercury .title {
+    background-color: rgba(85, 95, 128, 0.2);
+} */
 
 #wrapper {
   height: calc(100% - 0px);
@@ -75,9 +96,9 @@
 
 .sidebar-nav li {
   padding: 10px 25px;
-  text-indent: -10px;
+  /* text-indent: -10px; */
   line-height: 20px;
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
   display: inline-block;
   width: 100%;
   /* white-space: nowrap; */
@@ -105,12 +126,14 @@
 
 .sidebar-nav>.sidebar-brand {
   height: 65px;
+  background-color: rgba(200, 200, 200, 0.2);
+  /* padding: auto; */
   width: 100%;
   font-size: 20px;
   font-weight: bold;
   line-height: 60px;
   /* margin-left: 5px; */
-  background-color: rgba(128,128,128,0.1);
+  /* background-color: rgba(128,128,128,0.1); */
 }
 
 .sidebar-nav>.sidebar-brand a {

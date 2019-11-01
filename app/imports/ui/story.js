@@ -39,3 +39,9 @@ const _setStory = async (body,label) => {
         Session.set('currentData', res);
     })
 }
+
+Template.story.helpers({
+    'body': function() {
+        return Session.get('currentStory').body;
+    }
+})
