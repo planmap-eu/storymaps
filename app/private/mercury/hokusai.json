@@ -21,8 +21,16 @@
         "path": "https://www.youtube.com/embed/kvOrVqeht6Q",
         "type": "video/youtube"
       }],
+      "layers": [
+          {
+            "credits": "https://data.planmap.eu/pub/mercury/PM-MER-MS-H05_5cc_01/",
+            "path": "https://geoserver.planmap.eu/mercury/wms",
+            "name": "mercury:PM-MER-MS-H05_5cc_01_Geological_Units_5_Classes",
+            "type": "wms"
+          }
+      ],
       "view": {
-        "extent": [-180, -90, 180, 90]
+        "extent": [40, 20, 120, 60]
       }
     },
     {
