@@ -103,7 +103,7 @@ class Map {
   setLayers(layers) {
     console.log('Setting new layers(group)');
     var overlay = new L.FeatureGroup();
-    layers.forEach(({path,credits,type,name}) => {
+    layers.forEach(({path,credits,type,name,style}) => {
       var layer;
       if (type == 'tms') {
         var url = path + '/{z}/{x}/{y}.png';
@@ -130,6 +130,7 @@ class Map {
         console.log(`WMS url: ${url}`);
         layer = new L.tileLayer.wms(path, {
           layers: name,
+          styles: style ? style : '',
           transparent: true,
           format: 'image/png',
           opacity: 0.5,

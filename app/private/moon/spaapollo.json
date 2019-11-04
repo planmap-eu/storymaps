@@ -42,6 +42,7 @@
         "layers": [{
           "path": "https://geoserver.planmap.eu/moon/wms",
           "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+          "style": "PM-MOO-MS-SPAApollo_01_Apl_Strat_full-Ec",
           "type": "wms",
           "credits": "https://data.planmap.eu/pub/moon/PM-MOO-MS-SPAApollo_01/"
         }],
@@ -55,6 +56,7 @@
         "layers": [{
           "path": "https://geoserver.planmap.eu/moon/wms",
           "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+          "style": "PM-MOO-MS-SPAApollo_01_Apl_Strat_full-UIc",
           "type": "wms"
         }],
         "view": {
@@ -67,6 +69,7 @@
         "layers": [{
           "path": "https://geoserver.planmap.eu/moon/wms",
           "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+          "style": "PM-MOO-MS-SPAApollo_01_Apl_Strat_full-LIo",
           "type": "wms"
         }],
         "view": {
@@ -79,6 +82,7 @@
         "layers": [{
           "path": "https://geoserver.planmap.eu/moon/wms",
           "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+          "style": "PM-MOO-MS-SPAApollo_01_Apl_Strat_full-LIc",
           "type": "wms"
         }],
         "view": {
@@ -100,6 +104,12 @@
     },{
         "title": "UIdp - Uppper Imbrian dark plains",
         "text": "The dark, smooth plains deposits mapped in this area primarily include mare basalts within Apollo basin and to the southwest towards the center of the South Pole-Aitken basin. These plains are Upper Imbrian in age.",
+        "layers": [{
+          "path": "https://geoserver.planmap.eu/moon/wms",
+          "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+          "style": "PM-MOO-MS-SPAApollo_01_Apl_Strat_full-UIdp",
+          "type": "wms"
+        }],
         "view": {
           "extent": [-154, -37, -150, -35],
           "marker": [ -152, -36 ]
@@ -110,6 +120,7 @@
         "layers": [{
           "path": "https://geoserver.planmap.eu/moon/wms",
           "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+          "style": "PM-MOO-MS-SPAApollo_01_Apl_Strat_full-UIlp",
           "type": "wms"
         }],
         "view": {
@@ -122,6 +133,7 @@
         "layers": [{
           "path": "https://geoserver.planmap.eu/moon/wms",
           "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+          "style": "PM-MOO-MS-SPAApollo_01_Apl_Strat_full-LIrp",
           "type": "wms"
         }],
         "view": {
@@ -134,6 +146,7 @@
         "layers": [{
           "path": "https://geoserver.planmap.eu/moon/wms",
           "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+          "style": "PM-MOO-MS-SPAApollo_01_Apl_Strat_full-NpNc",
           "type": "wms"
         }],
         "view": {
@@ -146,6 +159,7 @@
         "layers": [{
           "path": "https://geoserver.planmap.eu/moon/wms",
           "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+          "style": "PM-MOO-MS-SPAApollo_01_Apl_Strat_full-pNrmAPL",
           "type": "wms"
         }],
         "view": {
