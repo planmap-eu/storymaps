@@ -24,7 +24,7 @@ Template.story.onCreated(function() {
     var currentURI = FlowRouter.current();
     var BODY = currentURI.params._body;
     var LABEL = currentURI.params._story;
-    var CHAPTER = currentURI.context.hash || 0;
+    var CHAPTER = currentURI.context.hash;// || 0;
     console.log(`Story params: ${BODY},${LABEL},${CHAPTER}`);
     Session.set('currentStory', {body: BODY, label: LABEL});
     Session.set('currentChapter', CHAPTER);

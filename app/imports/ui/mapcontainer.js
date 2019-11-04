@@ -28,12 +28,15 @@ Template.mapcontainer.onCreated(function() {
         var chapter_index = Session.get('currentChapter');
         var story_data = Session.get('currentData');
         if (chapter_index >= 0) {
+          console.log(`MapContainer autorun: (chapter: '${chapter_index}')`);
             if (story_data) {
                 var chapter_data = story_data.chapters[chapter_index];
-                var view = chapter_data.view;
-                var marker = chapter_data.marker;
-                var layers = chapter_data.layers;
-                map.update({view, marker, layers});
+                if (chapter_data) {
+                  var view = chapter_data.view;
+                  var marker = chapter_data.marker;
+                  var layers = chapter_data.layers;
+                  map.update({view, marker, layers});
+                }
             }
         }
     })
@@ -64,15 +67,22 @@ Template.mapcontainer.events({
       if (index > 0) {
         var prev_index = index-1;
         Session.set('currentChapter', prev_index);
+        window.location.hash = prev_index;
         console.log(prev_index);
       }
     } else {
-      var story = Session.get('currentData');
-      var size = story.chapters.length;
-      console.log(`Size ${size}`);
-      if (index < size-1) {
-        var next_index = index+1;
-        Session.set('currentChapter', next_index);
+      if (isNaN(index)) {
+        Session.set('currentChapter', 0);
+        window.location.hash = '0';
+      } else {
+        var story = Session.get('currentData');
+        var size = story.chapters.length;
+        console.log(`Size ${size}`);
+        if (index < size-1) {
+          var next_index = index+1;
+          Session.set('currentChapter', next_index);
+          window.location.hash = next_index;
+        }
       }
     }
   }
