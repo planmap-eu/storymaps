@@ -67,7 +67,9 @@ class Map {
 
     L.tileLayer(map_settings.url).addTo(map);
     this._map = map;
-    this.setLayers(map_settings.layers);
+    if (map_settings.layers) {
+      this.setLayers(map_settings.layers);
+    }
   }
 
   update(params) {
