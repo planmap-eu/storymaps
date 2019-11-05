@@ -1,0 +1,31 @@
+{
+  "title": "",
+  "authors": "",
+  "reference": "",
+  "planmap_id": "",
+  "basemap": "",    
+  "chapters": [{
+      "title":"",
+      "sections": [{
+        "title": "",
+        "text": "",
+        "layers": [{
+          "order": "",
+          "path": "",
+          "type": "",
+          "credits": ""
+        }],
+        "media": [{
+          "path": "",
+          "type": "",
+          "caption": "",
+          "stoptime": ""
+        }],        
+        "view": {
+          "extent": [0, 0, 0, 0],
+          "marker": ""
+        }
+      }]
+    }
+  ]
+}

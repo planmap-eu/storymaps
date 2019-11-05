@@ -1,0 +1,20 @@
+<template name="edit">
+  {{> story edit=true}}
+</template>
+
+<template name="editor">
+  <div id="editor">
+    <label for="body">Body:</label>
+    <select class="dropdown" name="body">
+      <option value="mars">Mars</option>
+      <option value="mercury">Mercury</option>
+      <option value="moon">Moon</option>
+    </select>
+
+    <label for="color">Color:</label>
+    <input type="color" name="color" value="#cccccc">
+
+    <label for="title">Title:</label>
+    <input type="text" name="title" value="" placeholder="give me a title...">
+  </div>
+</template>

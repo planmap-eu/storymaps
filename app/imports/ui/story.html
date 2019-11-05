@@ -1,0 +1,15 @@
+<template name="story">
+  <div id="page-story" class="row">
+    <div id="wrapper" class="{{body}}">
+      {{> storytoc edit=edit}}
+      {{> storycontent edit=edit}}
+    </div>
+  </div>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+</template>
