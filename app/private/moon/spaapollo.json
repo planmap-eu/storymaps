@@ -95,6 +95,7 @@
         "layers": [{
           "path": "https://geoserver.planmap.eu/moon/wms",
           "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+          "style": "PM-MOO-MS-SPAApollo_01_Apl_Strat_full-Ip",
           "type": "wms"
         }],
         "view": {
@@ -163,8 +164,7 @@
           "type": "wms"
         }],
         "view": {
-          "extent": [-140, -33.5, -136, -31.5],
-          "marker": [ -138, -32.5 ]
+          "extent": [-170, -47, -130, -22]
         }
     },{
         "title": "pNlrAPL - pre-Nectarian Apollo low rugged terrains",
@@ -172,6 +172,7 @@
         "layers": [{
           "path": "https://geoserver.planmap.eu/moon/wms",
           "name" : "moon:PM-MOO-MS-SPAApollo_01_Apl_Strat_full",
+          "style": "PM-MOO-MS-SPAApollo_01_Apl_Strat_full-pNlrAPL",
           "type": "wms"
         }],
         "view": {

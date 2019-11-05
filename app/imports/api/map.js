@@ -20,7 +20,8 @@
 //         },
 //     }
 // }
-
+import './leaflet/mouse_position.js';
+import './leaflet/mouse_position.css';
 
 class Map {
   constructor() {
@@ -48,6 +49,11 @@ class Map {
     console.log(map_settings, element)
 
     var map = L.map(element, map_settings.options);
+    L.control.mousePosition({
+      lngFirst:true,
+      prefix:'Lon/Lat:',
+      separator: ' / '
+    }).addTo(map);
 
     var extent = map_settings.extent;
     console.log(`Map settings extent: ${extent}`);
