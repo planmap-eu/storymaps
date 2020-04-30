@@ -17,6 +17,14 @@
     {
       "title": "INTRODUCTION",
       "text": "Chaotic terrains, as the name suggests, are large areas on Mars with a chaotic arrangement of polygonal blocks and fractures. Despite the scientific community agrees that chaotic terrains were formed by a collapse, the nature of the collapse itself is still debated. In fact, the collapse that generated these enigmatic terrains has been attributed to the interaction between magma and ice, to the overpressure of the groundwater, to the instability of large underground gas bubbles, or to the melting of underground ice lakes. We are currently proposing a new formation mechanism involving volcano-tectonic processes.",
+      "media": [{
+        "path": "/stories/mars/arsinoes/chaotic-terrains.png",
+        "type": "image/png"
+      },
+      {
+        "path": "/stories/mars/arsinoes/cht.png",
+        "type": "image/png"
+      }],
       "view": {
         "extent": [-30.3, -12, -25.5, -5.8]
       }
