@@ -10,7 +10,7 @@ The code -- under [~/app/](/app/) -- is written as a [Meteor](https://meteor.com
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3260174.svg)](https://doi.org/10.5281/zenodo.3260174)
 
-
+<span>
 <a href='http://geoserver.org/'>
   <img width='100px' src='http://geoserver.org/img/geoserver-logo.png' />
 </a>
@@ -22,8 +22,4 @@ The code -- under [~/app/](/app/) -- is written as a [Meteor](https://meteor.com
 <a href='https://www.meteor.com/'>
   <img width='100px' src='https://d14jjfgstdxsoz.cloudfront.net/assets/meteor-logo.svg' />
 </a>
-<img width='10px' src='https://github.com/epn-vespa/vespaapp/blob/master/docs/assets/logos/slider-transparent-placeholder.png' />
-<a href='http://blazejs.org/'>
-  <img width='100px' src='http://blazejs.org/logo/logo.png' />
-</a>
-
+</span>
