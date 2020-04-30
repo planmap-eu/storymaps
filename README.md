@@ -1,11 +1,29 @@
-# Planmap Stories
+# PLANMAP Stories
 
-The Planmap Story-maps app, available at https://stories.planmap.eu, provides a standard platform for planetary data outreach.
-Story-maps define a presentation of data or events in a light, interactive format, it resembles the telling of a story, with scientific data from Mars, Mercury, and the Moon.
+This webapp -- available at https://stories.planmap.eu -- implements the concept of _story-maps_ for presenting 
+the science around the geological maps produced by the PLANMAP collaboration, https://www.planmap.eu.
 
-In the first version of the app we have a fixed set of stories exploring three different presentation styles:
-* a "_slide-show_", where the basemap plots as background for the presentation of media content (Mars/gale);
-* a "_traverse-walk_", where the basemap displays a route where the story walks the user through (Mercury/hokusai);
-* an "_interactive-board_", where the basemap presents interactive layers explaining the region (Moon/apollo).
+The data displayed through WMS/WFS services come from a [GeoServer](http://geoserver.org/) instance, while non-spatial
+data are provided by PlanMap's Data server, https://data.planmap.eu.
+
+The code -- under [~/app/](/app/) -- is written as a [Meteor](https://meteor.com) app using [BlazeJS](http://blazejs.org/) framework to render it.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3260174.svg)](https://doi.org/10.5281/zenodo.3260174)
+
+
+<a href='http://geoserver.org/'>
+  <img width='100px' src='http://geoserver.org/img/geoserver-logo.png' />
+</a>
+<img width='10px' src='https://github.com/epn-vespa/vespaapp/blob/master/docs/assets/logos/slider-transparent-placeholder.png' />
+<a href='https://leafletjs.com'>
+  <img width='100px' src='https://leafletjs.com/docs/images/logo.png' />
+</a>
+<img width='10px' src='https://github.com/epn-vespa/vespaapp/blob/master/docs/assets/logos/slider-transparent-placeholder.png' />
+<a href='https://www.meteor.com/'>
+  <img width='100px' src='https://d14jjfgstdxsoz.cloudfront.net/assets/meteor-logo.svg' />
+</a>
+<img width='10px' src='https://github.com/epn-vespa/vespaapp/blob/master/docs/assets/logos/slider-transparent-placeholder.png' />
+<a href='http://blazejs.org/'>
+  <img width='100px' src='http://blazejs.org/logo/logo.png' />
+</a>
+
