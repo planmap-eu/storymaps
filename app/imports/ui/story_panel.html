@@ -15,6 +15,14 @@
         <div class="panel-body">
           <div id="text-content">
             <p>{{ text }}</p>
+            {{#if link}}
+              <p>
+                See also:
+                <a href={{link.url}} style="color:blue" target="_blank">
+                  {{link.label}}
+                </a>
+              </p>
+            {{/if}}
           </div>
           {{#if media}}
             {{#if many_items_in media}}
