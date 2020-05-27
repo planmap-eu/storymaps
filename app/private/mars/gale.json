@@ -212,7 +212,11 @@
     },
     {
       "title": "Credits",
-      "text": "Original work by PlanMap team and Laboratoire de Planétologie et Géodynamique - Nantes. All other media belong to their respective credited owners. See more at http://www.planmap.eu",
+      "text": "Original work by PlanMap team and Laboratoire de Planétologie et Géodynamique - Nantes. All other media belong to their respective credited owners.",
+      "link": {
+        "url": "https://www.planmap.eu",
+        "label": "www.planmap.eu"
+      },
       "view": {
         "extent": [-180, -90, 180, 90]
       }
