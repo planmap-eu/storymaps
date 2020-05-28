@@ -1,0 +1,76 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #app {
+      width: 100%;
+      height: 100%;
+    }
+
+    #overlay {
+      position: fixed;
+      z-index: 1000;
+      display: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-top: 25vh;
+      background-color: rgba(0,0,0,0.25);
+      text-align: center;
+      vertical-align: middle;
+      /* justify-content: center;
+      align-items: center; */
+    }
+     #overlay-content {
+       width: 100%;
+       height: 100%;
+       margin: auto;
+     }
+  </style>
+
+  <title>Leaflet/OPM</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <button onclick="on()">Overlay On</button>
+    <div id="mapcontainer" style="width:100%; height:100%;"></div>
+  </div>
+  <div id="overlay" onclick="off()">
+    <div id="overlay-content"></div>
+  </div>
+
+  <script type="text/javascript">
+    function load_content() {
+      document.getElementById("overlay-content").innerHTML = '<iframe title="A 3D model" width="400" height="300" src="https://sketchfab.com/models/494482a9bc124dbc887ce85e1a51c98a/embed?preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>';
+    }
+    function on() {
+      load_content();
+      document.getElementById("overlay").style.display = "table-cell";
+    }
+    function off() {
+      document.getElementById("overlay").style.display = "none";
+    }
+
+    var map = L.map('mapcontainer');
+    var basemap_url = 'https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-1/0,1,2,3,4/{z}/{x}/{y}.png';
+    var basemap_options = {
+      crs: L.CRS.EPSG3857,
+      maxNativeZoom: 9,
+      tms: false,
+      autoZIndex: true,
+      attribution: "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
+    };
+    L.tileLayer(basemap_url, basemap_options).addTo(map);
+    map.fitBounds([[-50,-50],[50,50]]);
+  </script>
+</body>
