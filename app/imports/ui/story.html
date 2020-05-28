@@ -1,15 +1,53 @@
 <template name="story">
   <div id="page-story" class="row">
     <div id="wrapper" class="{{body}}">
+      <!-- <button onclick="overlayOn()">Overlay On</button> -->
+      <div id="overlay" onclick="overlayOff()">
+        <div id="overlay-content"></div>
+      </div>
       {{> storytoc edit=edit}}
       {{> storycontent edit=edit}}
     </div>
   </div>
 
   <script>
+    // function load_content(html_element) {
+    //   document.getElementById("overlay-content").innerHTML = html_element;
+    // }
+    // function overlayOn(html_element) {
+    //   load_content('<iframe title="A 3D model" width="400" height="300" src="https://sketchfab.com/models/494482a9bc124dbc887ce85e1a51c98a/embed?preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>');
+    //   document.getElementById("overlay").style.display = "table-cell";
+    // }
+    function overlayOff() {
+      document.getElementById("overlay").style.display = "none";
+    }
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
   </script>
+
+  <style>
+    #overlay {
+      position: fixed;
+      z-index: 9000;
+      display: none;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 10%;
+      background-color: rgba(0,0,0,0.5);
+      text-align: center;
+      vertical-align: middle;
+      /* justify-content: center;
+      align-items: center; */
+    }
+     #overlay-content {
+       max-width: 70%;
+       height: 100%;
+       margin: auto;
+     }
+  </style>
+
 </template>

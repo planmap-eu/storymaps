@@ -180,6 +180,9 @@
         "label": "Te Toffoli"
       },
       "media": [{
+        "path": "https://sketchfab.com/models/494482a9bc124dbc887ce85e1a51c98a/embed?preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1",
+        "type": "3d/sketchfab"
+      },{
         "path": "/stories/mars/gale/media/chapter_09/gale_0_0_barbara_ABCDE.png",
         "type": "image/png",
         "stoptime": "10s"
