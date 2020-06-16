@@ -2,11 +2,11 @@
   "title": "Arsinoes Chaos",
   "authors": "Erica Luzzi",
   "reference": "",
-  "planmap_id": "PM-MAR-C-Arsinoes_01",
+  "planmap_id": "PM-MAR-C-Arsinoes",
   "basemap": {
     "url": "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-1/0,1,2,3,4/{z}/{x}/{y}.png",
     "tms": false,
-    "center": [-4.63, 137.40],
+    "center": [-25, -20],
     "crs": "EPSG3857",
     "options": {
       "maxNativeZoom": 9,
@@ -15,61 +15,112 @@
   },
   "chapters": [
     {
-      "title": "INTRODUCTION",
-      "text": "Chaotic terrains, as the name suggests, are large areas on Mars with a chaotic arrangement of polygonal blocks and fractures. Despite the scientific community agrees that chaotic terrains were formed by a collapse, the nature of the collapse itself is still debated. In fact, the collapse that generated these enigmatic terrains has been attributed to the interaction between magma and ice, to the overpressure of the groundwater, to the instability of large underground gas bubbles, or to the melting of underground ice lakes. We are currently proposing a new formation mechanism involving volcano-tectonic processes.",
+      "title": "Introduction",
+      "text": "Chaotic terrains, as the name suggests, are large areas on Mars with a chaotic arrangement of polygonal blocks and fractures. Despite the scientific community agrees that chaotic terrains were formed by a collapse, the nature of the collapse itself is still debated. In fact, the collapse that generated these enigmatic terrains has been attributed to the interaction between magma and ice, to the overpressure of the groundwater, to the instability of large underground gas bubbles, or to the melting of underground ice lakes. We are currently proposing a new formation mechanism involving volcano-tectonic processes. Here an example of the polygonal blocks characterizing the morphology of chaotic terrains:",
       "media": [{
         "path": "/stories/mars/arsinoes/chaotic-terrains.png",
         "type": "image/png"
-      },
-      {
-        "path": "/stories/mars/arsinoes/cht.png",
-        "type": "image/png"
       }],
+      "layers": [
+          {
+            "credits": "https://data.planmap.eu/pub/mars/PM-MAR-C-Arsinoes/",
+            "path": "https://geoserver.planmap.eu/stories/wms",
+            "name": "stories:chaotics-morfo",
+            "type": "wms"
+          }
+      ],
       "view": {
-        "extent": [-30.3, -12, -25.5, -5.8]
+        "extent": [-49.7227, -17.6, -8.22, 10.01]
       }
     },
     {
-      "title": "FORMATION OF THE CHAOTIC TERRAIN",
-      "text": "Chaotic terrains are broad regions on Mars characterized by depressed basins with polygonal blocks separated by deep fractures, likely due to a massive collapse. Several scenarios were proposed in literature to explain this collapse. Our research focused on the possible volcano-tectonic scenario: in fact, repeated inflations and deflations of a buried magma chamber can generate a collapse consistent with this geological setting.",
+      "title": "Arsinoes and Pyrrhae Chaos",
+      "text": "Arsinoes and Pyrrhae Chaos are two adjacent terrains characterized by the peculiar features of chaotic terrains. A complex history of volcanic and sedimentary processes is recorded in these area: lava flows, collapsed lava conduits, basaltic mineralogy but also hydrated minerals, light-toned layered deposits and unconformities. Let's try to put an order at the geological events that occurred in this area.",
+      "view": {
+        "extent": [-31.13, -11.698, -22.9140, -5.987]
+      },
+      "layers": [
+          {
+            "credits": "https://data.planmap.eu/pub/mars/PM-MAR-C-Arsinoes/",
+            "path": "https://geoserver.planmap.eu/stories/wms",
+            "name": "stories:Arsinoes-morfo",
+            "type": "wms"
+          }
+      ]
+    },
+    {
+      "title": "Formation of the Chaotic Terrain",
+      "text": "Chaotic terrains are broad regions on Mars characterized by depressed basins with polygonal blocks separated by deep fractures, likely due to a massive collapse. Several scenarios were proposed in literature to explain this collapse. Our research focused on the possible volcano-tectonic scenario; in fact, in the area volcanic features are recurring: volcanic grabens with y-shaped bifurcations, a lava flow, basaltic mineralogy of the bedrock, and pit chains interpreted as collapsed lava conduits. On the other hand, we did not find in this area evidences of aqueous processes linked to the collapse as found in the other chaotic terrains. The hydrated minerals and sedimentary deposits that we observed post-date the collapse. For this reason, a process able to produce the features of chaotic terrains even with a minor contribution of water is needed. Magmatic processes can simply explain the collapse: in fact, repeated inflations and deflations of a buried magma chamber or sill can generate a collapse consistent with this geological setting.",
+      "layers": [
+          {
+            "credits": "https://data.planmap.eu/pub/mars/PM-MAR-MS-Arsinoes/",
+            "path": "https://geoserver.planmap.eu/mars/wms",
+            "name": "mars:PM-MAR-MS-Arsinoes",
+            "type": "wms"
+          }
+      ],
       "media": [{
         "path": "/stories/mars/arsinoes/arsinoes_1.png",
+        "type": "image/png"
+      },
+      {
+        "path": "/stories/mars/arsinoes/lava_flow_crop.png",
         "type": "image/png"
       }]
     },
     {
-      "title": "HYDROTHERMAL STAGE",
-      "text": "During the late stage of volcanic activity, a hydrothermal environment likely set: underground water began to rise exploiting the existing fractures as preferential pathways and the heat related to the magmatic activity. Consequently, when the hot water reached the surface deposited hydrated minerals and altered the basaltic bedrock. The arrow indicates the hydrated minerals found in the proximity of a volcano-tectonic collapse structure. The mineralogical variation can be easily distinguished in the figure on the bottom: an RGB composite showing in cyan the higher concentration of hydrated minerals.",
+      "title": "Hydrothermal Stage",
+      "text": "During the late stage of volcanic activity, with the end of lava supply, a hydrothermal environment likely set: underground water began to rise exploiting the existing fractures and conduits as preferential pathways.The heat related to magmatic activity warmed up the rising water. Consequently, when the hot water reached the surface, deposited hydrated minerals and altered the basaltic bedrock. The arrow indicates the hydrated minerals found in the proximity of a volcano-tectonic collapse structure. The mineralogical variation can be easily distinguished in the figure on the bottom: an RGB composite showing in cyan the higher concentration of hydrated minerals.",
+      "layers": [
+          {
+            "credits": "https://data.planmap.eu/pub/mars/PM-MAR-MS-Arsinoes/",
+            "path": "https://geoserver.planmap.eu/mars/wms",
+            "name": "mars:PM-MAR-MS-Arsinoes",
+            "type": "wms"
+          }
+      ],
       "media": [{
         "path": "/stories/mars/arsinoes/arsinoes_2.png",
         "type": "image/png"
       }]
     },
     {
-      "title": "LACUSTRINE/EVAPORITIC ENVIRONMENT",
-      "text": "After the end of the volcanic activity, a sedimentary environment set: when the groundwater level reaches the surface due to natural oscillations, a depressed area such as Arsinoes Chaos can become a basin filled by water, namely a lake, or, if the available water is scant and the evaporation is strong, an evaporitic basin. The layered sedimentary units were deposited on top of the disrupted basaltic bedrock",
+      "title": "Lacustrine/Evaporitic Environment",
+      "text": "After the end of the volcanic activity, a sedimentary environment set: when the groundwater level reaches the surface due to natural oscillations, a depressed area such as Arsinoes Chaos can become a basin filled by water, namely a lake, or, if the available water is scant and the evaporation is strong, an evaporitic basin. The layered sedimentary units were deposited on top of the disrupted basaltic bedrock.",
+      "layers": [
+          {
+            "credits": "https://data.planmap.eu/pub/mars/PM-MAR-MS-Arsinoes/",
+            "path": "https://geoserver.planmap.eu/mars/wms",
+            "name": "mars:PM-MAR-MS-Arsinoes",
+            "type": "wms"
+          }
+      ],
       "media": [{
         "path": "/stories/mars/arsinoes/arsinoes_3.png",
         "type": "image/png"
       }]
     },
     {
-      "title": "DETECTION OF HYDRATED MINERALS",
+      "title": "Detection of Hydrated Minerals",
       "text": "(A) The mineralogical variation is already visible from this image in false color: the hydrated minerals that we interpreted as deposited by hot water during the hydrothermal stage, can be easily distinguished for their light green color (indicated by the black arrow). (B) This is one of the RGB composites that we can observe to better constrain the specific type of mineral. This particular composite is called PFM (Phyllosilicates with Fe and Mg) and it shows that the deposits in cyan are most likely hydrated minerals bearing iron and magnesium.",
       "media": [{
-        "path": "/stories/mars/arsinoes/crism_AB.png",
+        "path": "/stories/mars/arsinoes/crism_A.png",
+        "type": "image/png"
+      },
+      {
+        "path": "/stories/mars/arsinoes/crism_B.png",
         "type": "image/png"
       }],
       "layers": [
           {
-            "credits": "https://data.planmap.eu/pub/mars/PM-MAR-C-Arsinoes_01/",
+            "credits": "https://data.planmap.eu/pub/mars/PM-MAR-C-Arsinoes/",
             "path": "https://geoserver.planmap.eu/stories/wms",
             "name": "stories:frt000196b0_07_if165l_trr3_CAT_FALSE_4326",
             "type": "wms"
           }
       ],
       "view": {
-        "extent": [-25.689, -11.506, -25.454, -11.295]
+        "extent": [-25.689, -11.506, -25.254, -11.295]
       }
     }
   ]

@@ -1,25 +1,3 @@
-// var default_maps = {
-//     opm_mars: {
-//         url: "http://s3-eu-west-1.amazonaws.com/whereonmars.cartodb.net/mola-gray/{z}/{x}/{y}.png",
-//         options: {
-//             crs: L.CRS.EPSG3857,
-//             maxNativeZoom: 9,
-//             tms: true,
-//             autoZIndex: true,
-//             attribution: "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
-//         },
-//     },
-//     opm_moon: {
-//         url: "https://s3.amazonaws.com/opmbuilder/301_moon/tiles/w/hillshaded-albedo/{z}/{x}/{y}.png",
-//         options: {
-//             crs: L.CRS.EPSG3857,
-//             maxNativeZoom: 9,
-//             tms: false,
-//             autoZIndex: true,
-//             attribution: "<a href='https://astrogeology.usgs.gov/search/map/Moon/LMMP/LOLA-derived/Lunar_LRO_LOLA_Shade_Global_128ppd_v04' target='_blank'>LOLA/USGS</a>"
-//         },
-//     }
-// }
 import './leaflet/mouse_position.js';
 import './leaflet/mouse_position.css';
 

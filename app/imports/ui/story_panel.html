@@ -31,11 +31,11 @@
                   {{#each media}}
                     {{#unless @index}}
                       <div class="item active">
-                        {{> mediacanvas media=this width=400}}
+                        {{> mediacanvas media=this}}
                       </div>
                     {{else}}
                       <div class="item">
-                        {{> mediacanvas media=this width=400}}
+                        {{> mediacanvas media=this}}
                       </div>
                     {{/unless}}
                   {{/each}}
@@ -60,7 +60,7 @@
               </div>
             {{else}}
               {{#each media}}
-                {{> mediacanvas media=this width=600}}
+                {{> mediacanvas media=this}}
               {{/each}}
             {{/if}}
           {{/if}}
@@ -69,17 +69,10 @@
     </div>
 
   <script>
-    // function on() {
-    //   document.getElementById("overlay").style.display = "block";
-    // }
-    // function off() {
-    //   document.getElementById("overlay").style.display = "none";
-    // }
     $('#panel-wrapper').on('mousewheel', function(e) {
       e.stopPropagation();
     });
   </script>
-
 </template>
 
 
@@ -87,7 +80,7 @@
   <a class="toOverlay" data-id_="{{media.path}}" href="{{media.path}}" target="_blank">
     <span class="glyphicon glyphicon-modal-window pointer"></span>
   </a>
-  <div id="{{media.path}}" style="max-height:200px; width:100%">
-    {{{setCanvas media.type media.path width}}}
+  <div id="{{media.path}}">
+    {{{setCanvas media.type media.path}}}
   </div>
 </template>
