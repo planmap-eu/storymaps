@@ -11,7 +11,7 @@ Template.mediacanvas.helpers({
         var hws = ["src='"+url+"'"];
         var element;
         if (type == 'image/png' || type == 'image/jpeg' || type == 'image/jpg') {
-            element = "<img style='max-height:200px; max-width:100%' "+hws+">";
+            element = "<img style='max-height:100%; max-width:100%' "+hws+">";
         } else {
             if (type == 'video/youtube') {
                 element = '<div class="video-container"><iframe '+hws+' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="videoiframe"></iframe></div>';
