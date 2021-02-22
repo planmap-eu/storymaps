@@ -1,5 +1,9 @@
 # Deploying
 
+This app was tested with
+* NodeJS 10.13
+* Meteor 1.8
+
 ## Development
 
 To start, install [meteor](https://guide.meteor.com/#quickstart) and clone this repository.
