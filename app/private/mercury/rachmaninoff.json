@@ -1,186 +1,268 @@
 {
-  "title": "Rachmaninoff Crater",
-  "authors": "Jack Wright",
-  "reference": "",
-  "planmap_id": "",
-   "basemap": {
-    "url": "http://access.planetserver.eu/planmap/mdis_mosaic_3857/{z}/{x}/{-y}.png",
-    "tms": false,
-    "center": [40, 40],
-    "crs": "EPSG3857",
-    "options": {
-      "maxZoom": 5,
-      "autoZIndex": true,
-      "attribution": "<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
-    }
-  },
-  "chapters": [
-    {
-      "title": "Stop 0",
-      "text": "In this story map, you will learn how Planmap incorporated spectral information into the geomorphic map of the Hokusai quadrangle of Mercury, shown in an earlier story map. Here, you can see a section of the geomorphic map of the Hokusai quadrangle featuring Rachmaninoff crater and Nathair Facula, the largest explosive volcanic deposit on Mercury. This map was made by dividing the region into rock types (“units”) based on their characteristic surface appearances (“geomorphology”) in monochrome MESSENGER images. Such geomorphic maps can be used to understand Mercury’s geology at a glance, but multispectral MESSENGER data contain even more information about the surface rocks that can be incorporated into the map!",
-      "media": [{
-        "path": "/stories/mercury/Rachmanioff/GIS/vector/Morphostratigraphic_units/PM-MER-MS-Rachmaninoff_5cc_Units.shp",
-        "type": "shapefile",
-        
-      }],
-	   "layers": [{
-        "order": "1",
-        "path": "./GIS/raster/Geomorphic_Basemap.tif",
-		"credits":""
+   "title":"Rachmaninoff Crater",
+   "authors":"Jack Wright",
+   "reference":"",
+   "planmap_id":"",
+   "basemap":{
+      "url":"http://access.planetserver.eu/planmap/mdis_mosaic_3857/{z}/{x}/{-y}.png",
+      "tms":false,
+      "center":[
+         40,
+         40
+      ],
+      "crs":"EPSG3857",
+      "options":{
+         "maxZoom":5,
+         "autoZIndex":true,
+         "attribution":"<a href='https://github.com/openplanetary/opm/wiki/OPM-Basemaps' target='_blank'>OpenPlanetaryMap</a>"
+      }
+   },
+   "chapters":[
+      {
+         "title":"Stop 0",
+         "text":"In this story map, you will learn how Planmap incorporated spectral information into the geomorphic map of the Hokusai quadrangle of Mercury, shown in an earlier story map. Here, you can see a section of the geomorphic map of the Hokusai quadrangle featuring Rachmaninoff crater and Nathair Facula, the largest explosive volcanic deposit on Mercury. This map was made by dividing the region into rock types (“units”) based on their characteristic surface appearances (“geomorphology”) in monochrome MESSENGER images. Such geomorphic maps can be used to understand Mercury’s geology at a glance, but multispectral MESSENGER data contain even more information about the surface rocks that can be incorporated into the map!",
+         "media":[
+            {
+               "path":"/stories/mercury/Rachmanioff/GIS/vector/Morphostratigraphic_units/PM-MER-MS-Rachmaninoff_5cc_Units.shp",
+               "type":"shapefile"
+            }
+         ],
+         "layers":[
+            {
+               "order":"1",
+               "path":"./GIS/raster/Geomorphic_Basemap.tif",
+               "credits":""
+            },
+            {
+               "order":"2",
+               "path":"./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
+               "credits":""
+            }
+         ],
+         "view":{
+            "extent":[
+               49,
+               22.5,
+               70,
+               41
+            ]
+         }
       },
-	  { "order": "2",
-        "path": "./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
-		"credits":""
-      }],
-      "view": {
-        "extent": [49, 22.5,70,41]
-      }
-	  },
-	  {
-      "title": "Stop 1",
-      "text": "Look at Rachmaninoff crater. It’s crater interior contains Mercury’s lowest surface elevation. This crater has excavated material from Mercury’s lowermost crust and potentially some material from beneath the crust (the mantle). To the south, Rachmaninoff is surrounded by patches of smooth plains. These patches are places where molten rock created by the impact that formed Rachmaninoff splashed out of the developing crater and pooled. In this geomorphic map, all of Rachmaninoff’s impact materials are lumped into one unit, despite the likelihood that many different rock types from different parts of Mercury’s crust are included within them. Similarly, Rachmaninoff’s impact melt ponds are classified as smooth plains, even though they probably have a different composition from volcanic smooth plains elsewhere on Mercury. What can be done to include such information in the map?",
-      "media": [{
-        "path": "./GIS/vector/Morphostratigraphic_units/PM-MER-MS-Rachmaninoff_5cc_Units.shp",
-        "type": "shapefile",
-        
-      }],
-	   "layers": [{
-        "order": "1",
-        "path": "./GIS/raster/Geomorphic_Basemap.tif",
-		"credits":""
+      {
+         "title":"Stop 1",
+         "text":"Look at Rachmaninoff crater. It’s crater interior contains Mercury’s lowest surface elevation. This crater has excavated material from Mercury’s lowermost crust and potentially some material from beneath the crust (the mantle). To the south, Rachmaninoff is surrounded by patches of smooth plains. These patches are places where molten rock created by the impact that formed Rachmaninoff splashed out of the developing crater and pooled. In this geomorphic map, all of Rachmaninoff’s impact materials are lumped into one unit, despite the likelihood that many different rock types from different parts of Mercury’s crust are included within them. Similarly, Rachmaninoff’s impact melt ponds are classified as smooth plains, even though they probably have a different composition from volcanic smooth plains elsewhere on Mercury. What can be done to include such information in the map?",
+         "media":[
+            {
+               "path":"./GIS/vector/Morphostratigraphic_units/PM-MER-MS-Rachmaninoff_5cc_Units.shp",
+               "type":"shapefile"
+            }
+         ],
+         "layers":[
+            {
+               "order":"1",
+               "path":"./GIS/raster/Geomorphic_Basemap.tif",
+               "credits":""
+            },
+            {
+               "order":"2",
+               "path":"./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
+               "credits":""
+            }
+         ],
+         "view":{
+            "extent":[
+               51,
+               23,
+               63,
+               32
+            ]
+         }
       },
-	  { "order": "2",
-        "path": "./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
-		"credits":""
-      }],
-      "view": {
-        "extent": [51, 23,63,32]
-      }
-	  },
-	  {
-      "title": "Stop 2",
-      "text": "MESSENGER captured images of Mercury taken through filters that admit only particular wavelengths of light. Planmap investigated the spectral information in these images and created this raster (a type of dataset where pixels store information), where each pixel has a specific spectral class. These spectral classes could then be compared with the geomorphic map to see if certain geomorphic units have a characteristic spectral signature or not.",
-      "media": [{
-        "path": "./GIS/raster/Spectral_Raster.tif",
-        "type": "image/tif",
-        
-      }],
-      "view": {
-        "extent": [49, 22.5,70,41]
-      }
-	  },
-	  {
-      "title": "Stop 3",
-      "text": "Planmap summarised the spectral information in the raster by drawing “spectral contacts” between regions dominated by pixels of different spectral classes. ",
-      "media": [{
-        "path": "./GIS/vector/Spectral_units/PM-MER-C-Rachmaninoff_SpectralUnits.shp",
-        "type": "shapefile",
-        
-      }],
-      "view": {
-        "extent": [49, 22.5,70,41]
-      }
-	  },
-	  {
-      "title": "Stop 4",
-      "text": "The new spectral unit contacts were then compared with the geomorphic contacts. Where spectral and geomorphic contacts closely coincided, we interpret that the geomorphic contact also represents a contact between rock types of different compositions, such as between Rachmaninoff’s impact melt and its ejecta blanket. To make a new combined spectral-geomorphic map (a “geostratigraphic map”), we merged spectral contacts that closely coincided with existing geomorphic contacts. The shape of the original geomorphic contact was always retained, because these were drawn with higher certainty because of the higher spatial resolution of the geomorphic basemap compared with the spectral raster.",
-      "media": [{
-        "path": "./GIS/vector/Spectral_units/PM-MER-C-Rachmaninoff_SpectralUnits.shp",
-        "type": "shapefile",
-      }],
-	   "layers": [{
-        "order": "1",
-        "path": "./GIS/raster/Geomorphic_Basemap.tif",
-		"credits":""
+      {
+         "title":"Stop 2",
+         "text":"MESSENGER captured images of Mercury taken through filters that admit only particular wavelengths of light. Planmap investigated the spectral information in these images and created this raster (a type of dataset where pixels store information), where each pixel has a specific spectral class. These spectral classes could then be compared with the geomorphic map to see if certain geomorphic units have a characteristic spectral signature or not.",
+         "media":[
+            {
+               "path":"./GIS/raster/Spectral_Raster.tif",
+               "type":"image/tif"
+            }
+         ],
+         "view":{
+            "extent":[
+               49,
+               22.5,
+               70,
+               41
+            ]
+         }
       },
-	  { "order": "2",
-        "path": "./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
-		"credits":""
-      }],
-      "view": {
-        "extent": [49, 22.5,70,41]
-      }
-	  },
-	  {
-      "title": "Stop 5",
-      "text": "Spectral contacts that do not coincide with geomorphic contacts instead indicate compositional variation within a geomorphic unit, such as smooth material on Rachmaninoff’s central crater floor with different compositions. This suggests a mixture of impact melt and younger volcanic plains with a different composition within Rachmaninoff. Spectral contacts that did not coincide with geomorphic contacts were added as new shapes to the geostratigraphic contacts.",
-      "media": [{
-        "path": "./GIS/vector/Spectral_units/PM-MER-C-Rachmaninoff_SpectralUnits.shp",
-        "type": "shapefile",
-      }],
-	   "layers": [{
-        "order": "1",
-        "path": "./GIS/raster/Geomorphic_Basemap.tif",
-		"credits":""
+      {
+         "title":"Stop 3",
+         "text":"Planmap summarised the spectral information in the raster by drawing “spectral contacts” between regions dominated by pixels of different spectral classes. ",
+         "media":[
+            {
+               "path":"./GIS/vector/Spectral_units/PM-MER-C-Rachmaninoff_SpectralUnits.shp",
+               "type":"shapefile"
+            }
+         ],
+         "view":{
+            "extent":[
+               49,
+               22.5,
+               70,
+               41
+            ]
+         }
       },
-	  { "order": "2",
-        "path": "./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
-		"credits":""
-      }],
-      "view": {
-        "extent": [54.8, 25.9,60.2,29.8]
-      }
-	  },
-	  {
-      "title": "Stop 6",
-      "text": "Some spectral units closely coincided with surface features, such as this ray from the distant Hokusai crater or Nathair Facula. These surface features have overprinted the spectral signature of the original underlying geology, but we can make an educated guess about what the spectral class of the underlying geology is. Planmap encoded the spectral class of the ray and facula in their surface feature shapes, and used the surrounding, uncovered geology to estimate what the spectral classes of the geology under these surface features.",
-      "media": [{
-        "path": "./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_5cc_Units.shp",
-        "type": "shapefile",
-      }],
-	   "layers": [{
-        "order": "1",
-        "path": "./GIS/raster/Geomorphic_Basemap.tif",
-		"credits":""
+      {
+         "title":"Stop 4",
+         "text":"The new spectral unit contacts were then compared with the geomorphic contacts. Where spectral and geomorphic contacts closely coincided, we interpret that the geomorphic contact also represents a contact between rock types of different compositions, such as between Rachmaninoff’s impact melt and its ejecta blanket. To make a new combined spectral-geomorphic map (a “geostratigraphic map”), we merged spectral contacts that closely coincided with existing geomorphic contacts. The shape of the original geomorphic contact was always retained, because these were drawn with higher certainty because of the higher spatial resolution of the geomorphic basemap compared with the spectral raster.",
+         "media":[
+            {
+               "path":"./GIS/vector/Spectral_units/PM-MER-C-Rachmaninoff_SpectralUnits.shp",
+               "type":"shapefile"
+            }
+         ],
+         "layers":[
+            {
+               "order":"1",
+               "path":"./GIS/raster/Geomorphic_Basemap.tif",
+               "credits":""
+            },
+            {
+               "order":"2",
+               "path":"./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
+               "credits":""
+            }
+         ],
+         "view":{
+            "extent":[
+               49,
+               22.5,
+               70,
+               41
+            ]
+         }
       },
-	  { "order": "2",
-        "path": "./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
-		"credits":""
-      }],
-      "view": {
-        "extent": [53.4, 30.2,68.6,40.2]
-      }
-	  },
-	  {
-      "title": "Stop 7",
-      "text": "Here is our geostratigraphic map! The colour scheme is very similar to the original geomorphic map. Lighter and darker shades of the same colour represent regions within geomorphic units that have higher and lower reflectance spectral classes, respectively. For example, most of Rachmaninoff’s smooth impact melt pools have a darker spectral signature than the volcanic smooth plains in the northeast of the map.",
-      "media": [{
-        "path": "./GIS/vector/Geostratigraphic_units/PM_MER_GS_Rachmaninoff_5cc_Units.shp",
-        "type": "shapefile",
-      }],
-	   "layers": [{
-        "order": "1",
-        "path": "./GIS/vector/Geostratigraphic_contacts/PM_MER_GS_Rachmaninoff_5cc_Contacts.shp",
-		"credits":""
+      {
+         "title":"Stop 5",
+         "text":"Spectral contacts that do not coincide with geomorphic contacts instead indicate compositional variation within a geomorphic unit, such as smooth material on Rachmaninoff’s central crater floor with different compositions. This suggests a mixture of impact melt and younger volcanic plains with a different composition within Rachmaninoff. Spectral contacts that did not coincide with geomorphic contacts were added as new shapes to the geostratigraphic contacts.",
+         "media":[
+            {
+               "path":"./GIS/vector/Spectral_units/PM-MER-C-Rachmaninoff_SpectralUnits.shp",
+               "type":"shapefile"
+            }
+         ],
+         "layers":[
+            {
+               "order":"1",
+               "path":"./GIS/raster/Geomorphic_Basemap.tif",
+               "credits":""
+            },
+            {
+               "order":"2",
+               "path":"./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
+               "credits":""
+            }
+         ],
+         "view":{
+            "extent":[
+               54.8,
+               25.9,
+               60.2,
+               29.8
+            ]
+         }
       },
-	  { "order": "2",
-        "path": "./GIS/raster/Geomorphic_Basemap.tif",
-		"credits":""
-      }],
-      "view": {
-        "extent": [49, 22.5,70,41]
-      }
-	  },
-	  {
-      "title": "Stop 8",
-      "text": ": The spectral unit characteristic of Rachmaninoff’s smooth melt pools extends over the rough ejecta blanket in between the melt pools. Perhaps this indicates that these regions are draped in a veneer of impact melt that cannot be seen at the resolution of the geomorphic basemap. This is just one observations that makes this geostratigraphic map a great improvement on the original geomorphic map! Have a look around the map and see what observations you can make yourself!",
-      "media": [{
-        "path": "./GIS/vector/Geostratigraphic_units/PM_MER_GS_Rachmaninoff_5cc_Units.shp",
-        "type": "shapefile",
-      }],
-	   "layers": [{
-        "order": "1",
-        "path": "./GIS/vector/Geostratigraphic_contacts/PM_MER_GS_Rachmaninoff_5cc_Contacts.shp",
-		"credits":""
+      {
+         "title":"Stop 6",
+         "text":"Some spectral units closely coincided with surface features, such as this ray from the distant Hokusai crater or Nathair Facula. These surface features have overprinted the spectral signature of the original underlying geology, but we can make an educated guess about what the spectral class of the underlying geology is. Planmap encoded the spectral class of the ray and facula in their surface feature shapes, and used the surrounding, uncovered geology to estimate what the spectral classes of the geology under these surface features.",
+         "media":[
+            {
+               "path":"./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_5cc_Units.shp",
+               "type":"shapefile"
+            }
+         ],
+         "layers":[
+            {
+               "order":"1",
+               "path":"./GIS/raster/Geomorphic_Basemap.tif",
+               "credits":""
+            },
+            {
+               "order":"2",
+               "path":"./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
+               "credits":""
+            }
+         ],
+         "view":{
+            "extent":[
+               53.4,
+               30.2,
+               68.6,
+               40.2
+            ]
+         }
       },
-	  { "order": "2",
-        "path": "./GIS/raster/Geomorphic_Basemap.tif",
-		"credits":""
-      }],
-      "view": {
-        "extent": [51.6, 23.1,55.7,26.1]
+      {
+         "title":"Stop 7",
+         "text":"Here is our geostratigraphic map! The colour scheme is very similar to the original geomorphic map. Lighter and darker shades of the same colour represent regions within geomorphic units that have higher and lower reflectance spectral classes, respectively. For example, most of Rachmaninoff’s smooth impact melt pools have a darker spectral signature than the volcanic smooth plains in the northeast of the map.",
+         "media":[
+            {
+               "path":"./GIS/vector/Geostratigraphic_units/PM_MER_GS_Rachmaninoff_5cc_Units.shp",
+               "type":"shapefile"
+            }
+         ],
+         "layers":[
+            {
+               "order":"1",
+               "path":"./GIS/vector/Geostratigraphic_contacts/PM_MER_GS_Rachmaninoff_5cc_Contacts.shp",
+               "credits":""
+            },
+            {
+               "order":"2",
+               "path":"./GIS/raster/Geomorphic_Basemap.tif",
+               "credits":""
+            }
+         ],
+         "view":{
+            "extent":[
+               49,
+               22.5,
+               70,
+               41
+            ]
+         }
+      },
+      {
+         "title":"Stop 8",
+         "text":": The spectral unit characteristic of Rachmaninoff’s smooth melt pools extends over the rough ejecta blanket in between the melt pools. Perhaps this indicates that these regions are draped in a veneer of impact melt that cannot be seen at the resolution of the geomorphic basemap. This is just one observations that makes this geostratigraphic map a great improvement on the original geomorphic map! Have a look around the map and see what observations you can make yourself!",
+         "media":[
+            {
+               "path":"./GIS/vector/Geostratigraphic_units/PM_MER_GS_Rachmaninoff_5cc_Units.shp",
+               "type":"shapefile"
+            }
+         ],
+         "layers":[
+            {
+               "order":"1",
+               "path":"./GIS/vector/Geostratigraphic_contacts/PM_MER_GS_Rachmaninoff_5cc_Contacts.shp",
+               "credits":""
+            },
+            {
+               "order":"2",
+               "path":"./GIS/raster/Geomorphic_Basemap.tif",
+               "credits":""
+            }
+         ],
+         "view":{
+            "extent":[
+               51.6,
+               23.1,
+               55.7,
+               26.1
+            ]
+         }
       }
-	  },
-	]
-	}
-	}
+   ]
+}
