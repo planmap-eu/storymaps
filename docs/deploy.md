@@ -3,9 +3,10 @@
 ## Development
 
 To start, install [meteor](https://guide.meteor.com/#quickstart) and clone this repository.
-By default, this repo will be cloned in a directory `storymaps/` in your local filesystem.
-Inside `storymaps` there is an `app/` directory, which is where the app source code, Meteor/JS and relevant data files tree lives.
-Under `app/` is where the commands to run the Storymaps app are run.
+
+> By default, this repo will be cloned in a directory `storymaps/` in your local filesystem.
+> Inside `storymaps` there is an `app/` directory, which is where the app source code, Meteor/JS and relevant data files tree lives.
+> Under `app/` is where the commands to run the Storymaps app are run.
 
 During development, the app is simply run by
 ```bash
