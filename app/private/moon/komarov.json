@@ -4,9 +4,9 @@
   "reference": "",
   "planmap_id": "",
   "basemap": {
-    "url": "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-1/0,1,2,3,4/{z}/{x}/{y}.png",
+    "url": "https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-moon-basemap-v0-1/all/{z}/{x}/{y}.png",
     "tms": false,
-    "center": [-4.63, 137.40],
+    "center": [24.85, 152.81],
     "crs": "EPSG3857",
     "options": {
       "maxNativeZoom": 9,
@@ -17,54 +17,54 @@
       "title": "How the polygonal grabens formed",
       "text": "Many authors proposed different formation mechanisms for the origin of the deep fractures (grabens) characterizing the Floor-Fractured Craters (FFCs). The most accepted hypothesis attributes the formation of the grabens to the intrusion of a magmatic body right below the FFC. Such magmatic body would have caused the inflation of the terrain which, in response to this stress, would have been fractured with this characteristic pattern.",
       "media": [{
-        "path": "/stories/mars/komarov/Komarov-1.png",
+        "path": "/stories/moon/komarov/Komarov-1.png",
         "type": "image/png",
         "caption": "First, the grabens were mapped on GIS."
       }],
       "layers": [{
         "order": "1",
-        "path": "/stories/mars/komarov/subsetlunar",
+        "path": "/stories/moon/komarov/subsetlunar",
         "type": "tms",
         "credits": "From LROC-WAC global mosaic"
       }],
       "view": {
-        "extent": [137.2593930, -4.7319811, 137.5040463, -4.5720141]
+        "extent": [147, 21, 163, 29]
       }
     },
     {
       "title": "What can we infer by studying these grabens?",
       "text": "Although the intrusion of a magmatic body is a plausible explanation for the formation of the polygonal grabens within FFCs, a variety of details need further investigations. Our goal is to test a) whether the intrusion (and relative inflation) was followed by a deflation (related to the emptying of the lava conduit or magma chamber) or not; b) the geometry of the intruded magmatic body; c) assess differences between FFCs and other lunar craters. The available data allow correlating lengths of the grabens with their maximum depths (that we assume as the minimum displacement that occurred). We can study these parameters through numerical modeling and better understand the process that generated the grabens.",
       "media": [{
-        "path": "/stories/mars/komarov/fig2.png",
+        "path": "/stories/moon/komarov/fig2.png",
         "type": "image/png",
         "caption": "After the mapping, we estrapolated lengths (L) and max depths (D) of the grabens, and plotted them on graphics."
       }],
       "layers": [{
         "order": "1",
-        "path": "/stories/mars/komarov/slope",
+        "path": "/stories/moon/komarov/slope",
         "type": "tms",
         "credits": "From LOLA-Kaguya blended DEM."
       }],
       "view": {
-        "extent": [137.2593930, -4.7319811, 137.5040463, -4.5720141]
+        "extent": [147, 21, 163, 29]
       }
     },
     {
       "title": "Scaling laws and study of the distribution",
       "text": "By analyzing the relationships between the parameters of the grabens (D, L, but also aperture and dip angle), we can assess a) the mechanical properties of the faulted material; b) the slip distribution, compared to what we observe on Earth; c) whether fault linkage occurred or not; d) the maturity of the faults system, reflected in their degree of symmetry. Even if scaling laws do not help to constrain the formation mechanism, they provide a complete picture of the grabens' characteristics. Afterward, these characteristics can be imported in Coulomb, a software for numerical modeling based on Matlab, to infer the stress changes and the geometry of the intruding body.",
       "media": [{
-        "path": "/stories/mars/komarov/fig3.png",
+        "path": "/stories/moon/komarov/fig3.png",
         "type": "image/png",
         "caption": "After plotting our data, we noticed that in the NW area of Komarov crater grabens show different characteristics from the others (low L, high D)"
       }],
       "layers": [{
         "order": "1",
-        "path": "/stories/mars/komarov/slope",
+        "path": "/stories/moon/komarov/slope",
         "type": "tms",
         "credits": "From LOLA-Kaguya blended DEM."
       }],
       "view": {
-        "extent": [137.2593930, -4.7319811, 137.5040463, -4.5720141]
+        "extent": [147, 21, 163, 29]
       }
     }
   ]
