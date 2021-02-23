@@ -24,20 +24,15 @@
          "layers":[
             {
                "order":"1",
-               "path":"./GIS/raster/Geomorphic_Basemap.tif",
-               "credits":""
-            },
-            {
-               "order":"2",
-               "path":"./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
-               "credits":""
+               "path":"/stories/mercury/rachmaninoff/layers/stop01",
+               "type": "tms"
             }
-         ],
+        ],
          "view":{
             "extent":[
                49,
                22.5,
-               70,
+               79,
                41
             ]
          }
@@ -54,21 +49,16 @@
          "layers":[
             {
                "order":"1",
-               "path":"./GIS/raster/Geomorphic_Basemap.tif",
-               "credits":""
-            },
-            {
-               "order":"2",
-               "path":"./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
-               "credits":""
+               "path":"/stories/mercury/rachmaninoff/layers/stop01",
+               "type": "tms"
             }
          ],
          "view":{
             "extent":[
-               51,
-               23,
-               63,
-               32
+               49,
+               22.5,
+               79,
+               41
             ]
          }
       },
@@ -81,11 +71,18 @@
                "type":"image/png"
             }
          ],
+         "layers":[
+            {
+               "order":"1",
+               "path":"/stories/mercury/rachmaninoff/layers/stop2",
+               "type": "tms"
+            }
+         ],
          "view":{
             "extent":[
                49,
                22.5,
-               70,
+               79,
                41
             ]
          }
@@ -93,11 +90,18 @@
       {
          "title":"Spectral contrasts contacts",
          "text":"Planmap summarised the spectral information in the raster by drawing “spectral contacts” between regions dominated by pixels of different spectral classes. ",
+         "layers":[
+            {
+               "order":"1",
+               "path":"/stories/mercury/rachmaninoff/layers/stop3",
+               "type": "tms"
+            }
+         ],
          "view":{
             "extent":[
                49,
                22.5,
-               70,
+               79,
                41
             ]
          }
@@ -114,20 +118,15 @@
          "layers":[
             {
                "order":"1",
-               "path":"./GIS/raster/Geomorphic_Basemap.tif",
-               "credits":""
-            },
-            {
-               "order":"2",
-               "path":"./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
-               "credits":""
+               "path":"/stories/mercury/rachmaninoff/layers/stop456",
+               "type": "tms"
             }
          ],
          "view":{
             "extent":[
                49,
                22.5,
-               70,
+               79,
                41
             ]
          }
@@ -144,21 +143,16 @@
          "layers":[
             {
                "order":"1",
-               "path":"./GIS/raster/Geomorphic_Basemap.tif",
-               "credits":""
-            },
-            {
-               "order":"2",
-               "path":"./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
-               "credits":""
+               "path":"/stories/mercury/rachmaninoff/layers/stop456",
+               "type": "tms"
             }
          ],
          "view":{
             "extent":[
-               54.8,
-               25.9,
-               60.2,
-               29.8
+               49,
+               22.5,
+               79,
+               41
             ]
          }
       },
@@ -174,21 +168,16 @@
          "layers":[
             {
                "order":"1",
-               "path":"./GIS/raster/Geomorphic_Basemap.tif",
-               "credits":""
-            },
-            {
-               "order":"2",
-               "path":"./GIS/vector/Morphostratigraphic_contacts/PM-MER-MS-Rachmaninoff_contacts.shp",
-               "credits":""
+               "path":"/stories/mercury/rachmaninoff/layers/stop456",
+               "type": "tms"
             }
          ],
          "view":{
             "extent":[
-               53.4,
-               30.2,
-               68.6,
-               40.2
+               49,
+               22.5,
+               79,
+               41
             ]
          }
       },
@@ -204,20 +193,15 @@
          "layers":[
             {
                "order":"1",
-               "path":"./GIS/vector/Geostratigraphic_contacts/PM_MER_GS_Rachmaninoff_5cc_Contacts.shp",
-               "credits":""
-            },
-            {
-               "order":"2",
-               "path":"./GIS/raster/Geomorphic_Basemap.tif",
-               "credits":""
+               "path":"/stories/mercury/rachmaninoff/layers/stop78",
+               "type": "tms"
             }
          ],
          "view":{
             "extent":[
                49,
                22.5,
-               70,
+               79,
                41
             ]
          }
@@ -228,21 +212,16 @@
          "layers":[
             {
                "order":"1",
-               "path":"./GIS/vector/Geostratigraphic_contacts/PM_MER_GS_Rachmaninoff_5cc_Contacts.shp",
-               "credits":""
-            },
-            {
-               "order":"2",
-               "path":"./GIS/raster/Geomorphic_Basemap.tif",
-               "credits":""
+               "path":"/stories/mercury/rachmaninoff/layers/stop78",
+               "type": "tms"
             }
          ],
          "view":{
             "extent":[
-               51.6,
-               23.1,
-               55.7,
-               26.1
+               49,
+               22.5,
+               79,
+               41
             ]
          }
       }
