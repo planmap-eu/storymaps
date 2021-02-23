@@ -4,7 +4,7 @@
    "reference":"",
    "planmap_id":"",
    "basemap":{
-      "url":"http://access.planetserver.eu/planmap/mdis_mosaic_3857/{z}/{x}/{-y}.png",
+      "url":"/stories/mercury/mdis_mosaic_3857/{z}/{x}/{-y}.png",
       "tms":false,
       "center":[
          40,
