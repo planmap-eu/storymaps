@@ -4,6 +4,39 @@ This app was tested with
 * NodeJS 10.13
 * Meteor 1.8
 
+### Data
+
+Data files -- media, raster, vector data -- are stored outside this repo, in our Nextcloud instance (under `~/stories/`).
+Such files should be copied to the app's `/public/stories` directory as explained in 
+[the readme.txt file inthere](https://github.com/planmap-eu/storymaps/blob/master/app/public/stories/readme.txt).
+Files and directories follow the same structure in the app as they have in the cloud repository, e.g (for `komarov` and `rachmaninoff` stories):
+```
+public/stories
+├── mercury
+│   └── rachmaninoff
+│       ├── GIS
+│       ├── Rachmaninoff.json
+│       ├── media
+│       └── text
+├── moon
+│   └── komarov
+│       ├── Komarov-1.png
+│       ├── Slope.tif
+│       ├── fig2.png
+│       ├── fig3.png
+│       ├── komarov.json
+│       ├── readme_tif_2_tiles.txt
+│       ├── slope
+│       ├── slope.wgs84.tif
+│       ├── slope_4326.tif
+│       ├── subsetLunar_LRO_LROC-WAC_Mosaic_global_100m_June20131.tif
+│       ├── subsetlunar
+│       ├── subsetlunar.wgs84.tif
+│       └── subsetlunar_4326.tif
+└── readme.txt
+```
+
+
 ## Development
 
 To start, install [meteor](https://guide.meteor.com/#quickstart) and clone this repository.
