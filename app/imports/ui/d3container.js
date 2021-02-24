@@ -28,7 +28,6 @@ Template.d3container.helpers({
     var chapter_index = Session.get('currentChapter');
     var story = Session.get('currentData');
     var data = story['3dmodel'];
-    var url = data.url;
     // "url": "https://sketchfab.com/models/184a99a8f470456cad5a2ab8cdb23a1d",
     // "sketchfab": true,
     // "options": {
@@ -36,7 +35,10 @@ Template.d3container.helpers({
     //   "annotation_cycle": 5,
     //   "annotation": 1
     // }
-    var embed_url = url + '/embed';
+    var url = data.url;
+    var options = data.options
+    var opts = Object.entries(options).map(([k,v]) => `${k}=${v}`).join('&');
+    var embed_url = url + '/embed?' + opts;
     return embed_url;
   }
 })
