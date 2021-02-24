@@ -13,14 +13,30 @@ import './utils.js';
 Async function to get the story data; It is a call to the server.
 The map (leaflet) can only be built if/when the client gets the data right.
 */
-// const _buildMap = async (body,label) => {
-//     await Meteor.call('getStory', {body,label}, (err, res) => {
-//         if (err) {
-//             console.log(`Something went wrong for story ${body},${label}`);
-//         }
-//         map.build(res.basemap, 'd3container');
-//     })
-// }
+const _buildCanvas = async (body,label) => {
+    await Meteor.call('getStory', {body,label}, (err, res) => {
+        if (err) {
+            console.log(`Something went wrong for story ${body},${label}`);
+        }
+        var canvas = document.getElementById('api-frame');
+        var uid = '184a99a8f470456cad5a2ab8cdb23a1d';
+        var client = new Sketchfab(canvas);
+        client.init(uid, {
+          success: function onSuccess(api) {
+            api.start();
+            api.addEventListener('viewerready', function() {
+                // API is ready to use
+                // Insert your code here
+                console.log('Sketchfab viewer is ready');
+            });
+            d3.setAPI(api);
+          },
+          error: function onError() {
+            console.log('Sketchfab viewer failed to run');
+          }
+        })
+    })
+}
 /* ------------------------------------------------------------------------- */
 
 Template.d3container.helpers({
@@ -49,15 +65,18 @@ Template.d3container.onCreated(function() {
         var story_data = Session.get('currentData');
         if (chapter_index >= 0) {
           console.log(`D3Container autorun: (chapter: '${chapter_index}')`);
-            // if (story_data) {
-            //     var chapter_data = story_data.chapters[chapter_index];
-            //     if (chapter_data) {
-            //       var view = chapter_data.view;
-            //       var marker = chapter_data.marker;
-            //       var layers = chapter_data.layers;
-            //       map.update({view, marker, layers});
-            //     }
-            // }
+          if (story_data) {
+            var chapter_data = story_data.chapters[chapter_index];
+            if (chapter_data) {
+              var view = chapter_data.view;
+              var marker = chapter_data.marker;
+              var layers = chapter_data.layers;
+              // map.update({view, marker, layers});
+              if (d3) {
+                d3.gotoAnnotation(chapter_index);
+              }
+            }
+          }
         }
     })
 })
@@ -67,14 +86,14 @@ Template.d3container.onCreated(function() {
 //     map.clean();
 // })
 //
-// Template.d3container.onRendered(() => {
-//     console.log('<d3container> rendered');
-//     var currentURI = FlowRouter.current();
-//     var BODY = currentURI.params._body;
-//     var LABEL = currentURI.params._story;
-//     var chapter = currentURI.context.hash || 0;
-//     _buildMap(BODY,LABEL);
-// })
+Template.d3container.onRendered(() => {
+    console.log('<d3container> rendered');
+    var currentURI = FlowRouter.current();
+    var BODY = currentURI.params._body;
+    var LABEL = currentURI.params._story;
+    var chapter = currentURI.context.hash || 0;
+    _buildCanvas(BODY,LABEL);
+})
 //
 // Template.d3container.events({
 //   'click #chapters-control .glyphicon'(event) {
