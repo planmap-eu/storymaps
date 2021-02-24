@@ -1,0 +1,32 @@
+{
+  "title": "Yutu on Sinus Iridum",
+  "authors": "Luca Penasa, Riccardo Pozzobon",
+  "reference": "",
+  "planmap_id": "PM-MOO-D-YutuGPR",
+  "3dmodel": {
+    "url": "https://sketchfab.com/models/184a99a8f470456cad5a2ab8cdb23a1d",
+    "sketchfab": true,
+    "options": {
+      "annotations_visible": 1,
+      "annotation_cycle": 5,
+      "annotation": 1
+    }
+  },
+  "chapters": [
+    {
+      "title": "Chang'e landing site"
+    },
+    {
+      "title": "Yutu rover path"
+    },
+    {
+      "title": "Yutu GPR radargram"
+    },
+    {
+      "title": "Modelled radar reflectors"
+    },
+    {
+      "title": "Radar reflector predicted outcrops"
+    }
+  ]
+}

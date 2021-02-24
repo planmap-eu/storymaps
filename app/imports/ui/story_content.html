@@ -9,14 +9,12 @@
 
 
 <template name="storymap">
-  <!--
   {{#if story3D}}
     {{> d3container}}
   {{else}}
-   -->
-  {{> mapcontainer}}
-  {{#with chapter}}
-    {{> storypanel }}
-  {{/with}}
-  <!-- {{/if}} -->
+    {{> mapcontainer}}
+    {{#with chapter}}
+      {{> storypanel }}
+    {{/with}}
+  {{/if}}
 </template>

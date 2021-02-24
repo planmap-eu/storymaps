@@ -36,7 +36,10 @@ const _setStory = async (body,label) => {
         if (err) {
             console.log(`Something went wrong for story ${body},${label}`);
         }
+        var is3D = res['3dmodel'] ? true : false;
         Session.set('currentData', res);
+        Session.set('is3D', is3D);
+        console.log(`Story loaded succesfully (3dStory:${is3D}).`);
     })
 }
 
