@@ -13,13 +13,15 @@ import './utils.js';
 Async function to get the story data; It is a call to the server.
 The map (leaflet) can only be built if/when the client gets the data right.
 */
-const _buildCanvas = async (body,label) => {
+const _buildCanvas = async (body,label,story_data) => {
     await Meteor.call('getStory', {body,label}, (err, res) => {
         if (err) {
             console.log(`Something went wrong for story ${body},${label}`);
         }
+        var data = story_data['3dmodel'];
         var canvas = document.getElementById('api-frame');
-        var uid = '184a99a8f470456cad5a2ab8cdb23a1d';
+        var uid = data.uid;
+        console.log(`Model UID: ${uid}`);
         var client = new Sketchfab(canvas);
         client.init(uid, {
           success: function onSuccess(api) {
@@ -92,7 +94,8 @@ Template.d3container.onRendered(() => {
     var BODY = currentURI.params._body;
     var LABEL = currentURI.params._story;
     var chapter = currentURI.context.hash || 0;
-    _buildCanvas(BODY,LABEL);
+    var story_data = Session.get('currentData');
+    _buildCanvas(BODY,LABEL,story_data);
 })
 //
 // Template.d3container.events({

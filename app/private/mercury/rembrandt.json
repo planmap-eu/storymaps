@@ -1,0 +1,33 @@
+{
+  "title": "Rembrandt basin",
+  "authors": "Riccardo Pozzobon, Luca Penasa",
+  "reference": "",
+  "planmap_id": "PM-MER-D-Rembrandt",
+  "3dmodel": {
+    "url": "https://sketchfab.com/models/d16290aac15f4f6fbb4a2827c94129af",
+    "uid": "d16290aac15f4f6fbb4a2827c94129af",
+    "sketchfab": true,
+    "options": {
+      "annotations_visible": 1,
+      "annotation_cycle": 5,
+      "annotation": 1
+    }
+  },
+  "chapters": [
+    {
+      "title": "Overview"
+    },
+    {
+      "title": "Geologic history"
+    },
+    {
+      "title": "Basin infilling"
+    },
+    {
+      "title": "Inner structures"
+    },
+    {
+      "title": "Outer structures"
+    }
+  ]
+}
